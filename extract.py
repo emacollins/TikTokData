@@ -67,7 +67,7 @@ def run():
     df_final = pd.concat(user_data)
     df_final['data_date'] = datetime.datetime.now().date()
     df_final.set_index('video_id', inplace=True)
-    date = datetime.datetime.now().strftime('%m-%d%-Y')
+    date = datetime.datetime.now().strftime('%m-%d-%Y')
     extract_file_name = f'extract_{date}.csv'
     if extract_file_name in os.listdir('/Users/ericcollins/TikTokData/extract/'):
         df_final.to_csv(f'extract_{date}.csv')
