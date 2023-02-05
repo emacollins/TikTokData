@@ -58,8 +58,9 @@ def extract(data: dict, user: str) -> pd.DataFrame:
 def run():
     users = list(ACCOUNT_LIST.index)
     user_data = []
+    date = datetime.datetime.now().strftime('%m-%d-%Y')
     for user in users:
-        filename = f'harvest/{user}.UserResponse.json'
+        filename = f'harvest/{date}_{user}.UserResponse.json'
         with open(filename, 'r') as f:
             data = json.load(f)
         df_user = extract(data=data, user=user)
@@ -67,11 +68,11 @@ def run():
     df_final = pd.concat(user_data)
     df_final['data_date'] = datetime.datetime.now().date()
     df_final.set_index('video_id', inplace=True)
-    date = datetime.datetime.now().strftime('%m-%d-%Y')
     extract_file_name = f'extract_{date}.csv'
-    if extract_file_name in os.listdir('/Users/ericcollins/TikTokData/extract/'):
-        df_final.to_csv(f'extract_{date}.csv')
+    if extract_file_name not in os.listdir('/Users/ericcollins/TikTokData/extract/'):
+        df_final.to_csv(f'extract/{extract_file_name}')
         print('Extract Complete!')
+        return True
     else:
         print('Data already extracted today!')
         return False
