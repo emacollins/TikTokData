@@ -1,0 +1,4195 @@
+{
+  "AppContext": {
+    "appContext": {
+      "language": "en",
+      "region": "US",
+      "appId": 1233,
+      "appType": "m",
+      "wid": "7197573533562947118",
+      "nonce": "o-8sHh7TItVfPhCnQyMjZ",
+      "botType": "others",
+      "requestId": "15659785675815688577",
+      "clusterRegion": "TTP",
+      "abTestVersion": {
+        "versionName": "70508271,70830115,70894021,70941819,70971375,70405643,70455309",
+        "parameters": {
+          "mobile_vodkit": {
+            "vid": "v1"
+          },
+          "mobile_search_test": {
+            "vid": "v2"
+          },
+          "volume_normalize": {
+            "vid": "v1"
+          },
+          "video_feed_redesign": {
+            "vid": "v1"
+          },
+          "share_button_part1_test": {
+            "vid": "v1"
+          },
+          "cta_test": {
+            "vid": "v4"
+          },
+          "xgplayer_preload_test": {
+            "vid": "v1"
+          },
+          "video_bitrate_adapt": {
+            "vid": "v1"
+          },
+          "video_topic": {
+            "vid": "V2"
+          },
+          "xg_volume_test": {
+            "vid": "v1"
+          },
+          "studio_web_eh_entrance": {
+            "vid": "v1"
+          },
+          "creator_center_test": {
+            "vid": "v2"
+          },
+          "enhance_video_consumption_test": {
+            "vid": "v3"
+          },
+          "increase_detail_page_cover_quantity_test": {
+            "vid": "v3"
+          },
+          "live_end_improved_metrics": {
+            "vid": "v2"
+          },
+          "live_golive_entrance": {
+            "vid": "v2"
+          },
+          "live_lcp_perf_optimize": {
+            "vid": "v3"
+          },
+          "live_room_age_restriction": {
+            "vid": "v2"
+          },
+          "live_top_viewers": {
+            "vid": "v2"
+          },
+          "optimise_browser_mode": {
+            "vid": "v2"
+          },
+          "pumbaa_enable_test": {
+            "vid": "v1"
+          },
+          "related_videos_video_detail_page": {
+            "vid": "v2"
+          },
+          "search_video_lab": {
+            "vid": "v3"
+          },
+          "share_button_embed_test": {
+            "vid": "v2"
+          },
+          "ttlive_broadcast_topic_version_two": {
+            "vid": "v2"
+          },
+          "webapp_recommend_language": {
+            "vid": "v2"
+          },
+          "xgplayer_preload_config": {
+            "vid": "v2"
+          }
+        }
+      },
+      "csrfToken": "yLVKZUCS-G0iFtNrU9B_gOsss44qlsOX2qpc",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.5414.46 Safari/537.36 Edg/109.0.5414.46",
+      "encryptedWebid": "",
+      "host": "www.tiktok.com"
+    },
+    "initialized": true,
+    "lang": "en",
+    "sideNavActive": false
+  },
+  "BizContext": {
+    "bizContext": {
+      "os": "windows",
+      "isMobile": false,
+      "isAndroid": false,
+      "isIOS": false,
+      "jumpType": "m",
+      "navList": [
+        {
+          "title": "Company",
+          "children": [
+            {
+              "title": "About",
+              "href": "https://www.tiktok.com/about?lang=en"
+            },
+            {
+              "title": "Newsroom",
+              "href": "https://newsroom.tiktok.com/"
+            },
+            {
+              "title": "Contact",
+              "href": "https://www.tiktok.com/about/contact?lang=en"
+            },
+            {
+              "title": "Careers",
+              "href": "https://careers.tiktok.com"
+            },
+            {
+              "title": "ByteDance",
+              "href": "https://www.bytedance.com/"
+            }
+          ]
+        },
+        {
+          "title": "Programs",
+          "children": [
+            {
+              "title": "TikTok for Good",
+              "href": "https://www.tiktok.com/forgood"
+            },
+            {
+              "title": "Advertise",
+              "href": "https://www.tiktok.com/business/?attr_source=tt_official_site&attr_medium=tt_official_site_guidance&refer=tiktok_web"
+            },
+            {
+              "title": "Developers",
+              "href": "https://developers.tiktok.com/?refer=tiktok_web"
+            },
+            {
+              "title": "TikTok Rewards",
+              "href": "https://www.tiktok.com/tiktok-rewards/en"
+            },
+            {
+              "title": "TikTok Browse",
+              "href": "https://www.tiktok.com/browse"
+            },
+            {
+              "title": "TikTok Embeds",
+              "href": "https://www.tiktok.com/embed"
+            }
+          ]
+        },
+        {
+          "title": "Support",
+          "children": [
+            {
+              "title": "Help Center",
+              "href": "https://support.tiktok.com/en"
+            },
+            {
+              "title": "Safety Center",
+              "href": "https://www.tiktok.com/safety?lang=en"
+            },
+            {
+              "title": "Creator Portal",
+              "href": "https://www.tiktok.com/creators/creator-portal/en-us/"
+            },
+            {
+              "title": "Community Guidelines",
+              "href": "https://www.tiktok.com/community-guidelines?lang=en"
+            },
+            {
+              "title": "Transparency",
+              "href": "https://www.tiktok.com/transparency?lang=en"
+            },
+            {
+              "title": "Accessibility",
+              "href": "https://www.tiktok.com/accessibility"
+            }
+          ]
+        },
+        {
+          "title": "Legal",
+          "children": [
+            {
+              "title": "Terms of Use",
+              "key": "terms-of-service",
+              "href": "https://www.tiktok.com/legal/terms-of-service?lang=en"
+            },
+            {
+              "title": "Privacy Policy",
+              "key": "privacy-policy-row",
+              "href": "https://www.tiktok.com/legal/privacy-policy-row?lang=en"
+            }
+          ]
+        }
+      ],
+      "config": {
+        "featureFlags": {
+          "ftc": [
+            "desktop",
+            "mobile"
+          ],
+          "feature_bar": false
+        },
+        "signUpOpen": true,
+        "cookieBanner": {
+          "load_dynamically": true,
+          "decline_btn_staged_rollout_area": [
+            "ALL"
+          ],
+          "resource": {
+            "prefix": "/pns/tiktok-cookie-banner",
+            "themes": [
+              "default",
+              "ttm"
+            ],
+            "esm": "/pns/tiktok-cookie-banner/{{VERSION}}/default.esm.js",
+            "nomodule": "/pns/tiktok-cookie-banner/{{VERSION}}/default.js",
+            "version": "1.0.0.186"
+          },
+          "i18n": {
+            "cookieBannerTitle": "cookie_title",
+            "cookieBannerTitleNew": "cookie_title_new",
+            "cookieBannerSubTitle": "cookie_subtitle",
+            "cookieBannerSubTitleNew": "cookie_subtitle_new",
+            "cookieBannerSubTitleV2": "cookie_subtitle_v3",
+            "cookieBannerBtnManage": "cookie_btn_manage",
+            "cookieBannerBtnAccept": "cookie_btn_accpet",
+            "cookieBannerBtnDecline": "cookie_btn_decline",
+            "cookiesBannerDetails": "cookies_banner_details",
+            "cookiesBannerCookiesPolicy": "cookies_banner_cookies_policy",
+            "cookiesBannerAccept": "cookies_banner_accept",
+            "webDoNotSellSettingsSavedToast": "web_do_not_sell_settings_saved_toast",
+            "cookieSettingManageYourCookieTitle": "cookie_banner_category_manage",
+            "cookieSettingSave": "save_settings",
+            "cookieSettingAnalyticsAndMarketing": "cookie_banner_subcategory_cookies",
+            "cookieSettingNecessary": "cookie_setting_page_nc_title",
+            "cookieSettingNecessarySubtitle": "cookie_setting_page_nc_subtitle",
+            "cookieSettingNecessaryV2": "cookie_banner_subcategory_essential",
+            "cookieSettingNecessarySubtitleV2": "cookies_essential_desc",
+            "cookieSettingAnalyticsAndMarketingSubtitle": "cookie_setting_page_aam_subtitle",
+            "cookieSettingAnalyticsAndMarketingSubtitleV2": "cookie_analytics_marketing_desc",
+            "cookieManageTip": "cookie_manage_desc"
+          }
+        },
+        "isGrayFilter": false,
+        "nickNameControlDay": "7"
+      },
+      "domains": {
+        "kind": "us",
+        "captcha": "//verification.us.tiktok.com",
+        "imApi": "https://im-api.us.tiktok.com",
+        "imFrontier": "wss://im-ws.us.tiktok.com/ws/v2",
+        "mTApi": "https://us.tiktok.com",
+        "rootApi": "https://us.tiktok.com",
+        "secSDK": "",
+        "slardar": "mon.us.tiktokv.com",
+        "starling": "https://starling.us.tiktokv.com/",
+        "tea": "https://mcs.us.tiktok.com",
+        "libraWebSDK": "https://vmweb.us.tiktok.com",
+        "webcastApi": "https://webcast.us.tiktok.com",
+        "webcastRootApi": "https://webcast.us.tiktok.com",
+        "tcc": "",
+        "search": "https://tx-search.tiktokd.net",
+        "aweme": "https://api.us.tiktok.com"
+      },
+      "downloadLink": {
+        "microsoft": {
+          "visible": true,
+          "normal": "https://www.microsoft.com/store/apps/9NH2GPH4JZS4"
+        },
+        "apple": {
+          "visible": true,
+          "normal": "https://www.tiktok.com/download-link/af/id835599320"
+        },
+        "amazon": {
+          "visible": true,
+          "normal": "https://www.amazon.com/dp/B0117U0G3M/"
+        },
+        "google": {
+          "visible": true,
+          "normal": "https://www.tiktok.com/download-link/af/com.zhiliaoapp.musically"
+        }
+      },
+      "deviceLimitRegisterExpired": true,
+      "subdivisions": [
+        "Arizona"
+      ],
+      "geo": [
+        "5551752"
+      ],
+      "geoCity": {
+        "City": "Maricopa County",
+        "Subdivisions": "Arizona",
+        "OriginalSubdivisions": [
+          {
+            "GeoNameID": "5551752",
+            "ASCIName": "Arizona",
+            "Name": "Arizona"
+          }
+        ],
+        "SubdivisionsArr": [
+          "Arizona"
+        ]
+      },
+      "isGoogleBot": false,
+      "isBingBot": false,
+      "isBot": false,
+      "isSearchEngineBot": false,
+      "isTTP": true,
+      "dateFmtLocale": {
+        "name": "en",
+        "months": [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December"
+        ],
+        "monthsShort": [
+          "Jan",
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "Jun",
+          "Jul",
+          "Aug",
+          "Sep",
+          "Oct",
+          "Nov",
+          "Dec"
+        ],
+        "weekdays": [
+          "Sunday",
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "weekdaysShort": [
+          "Sun",
+          "Mon",
+          "Tues",
+          "Wed",
+          "Thurs",
+          "Fri",
+          "Sat"
+        ],
+        "weekdaysMin": [
+          "Su",
+          "Mo",
+          "Tu",
+          "We",
+          "Th",
+          "Fr",
+          "Sa"
+        ],
+        "longDateFormat": {
+          "LT": "h:mm A",
+          "LTS": "h:mm:ss A",
+          "L": "MM/DD/YYYY",
+          "LL": "MMMM D, YYYY",
+          "LLL": "MMMM D, YYYY HH:mm",
+          "LLLL": "dddd MMMM D, YYYY HH:mm",
+          "l": "M/D/YYYY",
+          "ll": "MMM D, YYYY",
+          "lll": "MMM D, YYYY h:mm A",
+          "llll": "ddd MMM D, YYYY h:mm A",
+          "LL-Y": "MMMM D"
+        },
+        "meridiem": {
+          "am": "am",
+          "pm": "pm",
+          "AM": "AM",
+          "PM": "PM"
+        }
+      },
+      "videoPlayerConfig": {
+        "fallback": false
+      },
+      "playbackNormalizePath": {
+        "path": [
+          "/foryou",
+          "/following"
+        ]
+      },
+      "bitrateConfig": {
+        "bitrateLower": 200000,
+        "bitrateRange": [
+          200000,
+          2500000
+        ],
+        "bitrateUpper": 2000000,
+        "mode": "buffer-info",
+        "paramBf": 0.3,
+        "paramBp": 0.7,
+        "paramLower": 0.5,
+        "paramUpper": 1.4,
+        "paramUpperBl": 0.4,
+        "paramVl1": 0.7,
+        "paramVl2": 1,
+        "paramVlLower": 0.5,
+        "paramVlUpper": 0.8,
+        "slidingWindowCountThreshold": 10,
+        "slidingWindowExtraction": "weighted_median",
+        "slidingWindowType": "by_weight",
+        "slidingWindowWeight": "size",
+        "slidingWindowWeightThreshold": 10000000
+      },
+      "searchVideoForLoggedin": true,
+      "studioDownloadEntrance": {
+        "regions": [
+          "BY",
+          "TJ",
+          "TM",
+          "KZ",
+          "GB",
+          "DE",
+          "ES",
+          "FR",
+          "UZ",
+          "KG",
+          "MD",
+          "AC",
+          "AD",
+          "AF",
+          "AG",
+          "AI",
+          "AL",
+          "AM",
+          "AO",
+          "AQ",
+          "AS",
+          "AU",
+          "AW",
+          "AX",
+          "BA",
+          "BB",
+          "BD",
+          "BF",
+          "BG",
+          "BI",
+          "BJ",
+          "BL",
+          "BM",
+          "BN",
+          "BQ",
+          "BS",
+          "BT",
+          "BV",
+          "BW",
+          "BZ",
+          "CA",
+          "CC",
+          "CD",
+          "CF",
+          "CG",
+          "CI",
+          "CK",
+          "CM",
+          "CN",
+          "CS",
+          "CU",
+          "CV",
+          "CW",
+          "CX",
+          "CY",
+          "DK",
+          "DM",
+          "DR",
+          "EA",
+          "EE",
+          "EH",
+          "EN",
+          "ET",
+          "FJ",
+          "FK",
+          "FM",
+          "FO",
+          "GA",
+          "GD",
+          "GE",
+          "GF",
+          "GG",
+          "GH",
+          "GI",
+          "GL",
+          "GN",
+          "GP",
+          "GQ",
+          "GS",
+          "GU",
+          "GW",
+          "GY",
+          "HK",
+          "HR",
+          "HT",
+          "IC",
+          "IE",
+          "IL",
+          "IM",
+          "IN",
+          "IO",
+          "IS",
+          "JE",
+          "KE",
+          "KH",
+          "KI",
+          "KN",
+          "KY",
+          "LA",
+          "LC",
+          "LI",
+          "LK",
+          "LR",
+          "LS",
+          "LU",
+          "LV",
+          "MC",
+          "ME",
+          "MF",
+          "MG",
+          "MH",
+          "MK",
+          "ML",
+          "MM",
+          "MN",
+          "MO",
+          "MP",
+          "MQ",
+          "MS",
+          "MT",
+          "MU",
+          "MV",
+          "MW",
+          "MZ",
+          "NA",
+          "NC",
+          "NE",
+          "NF",
+          "NG",
+          "NJ",
+          "NO",
+          "NR",
+          "NU",
+          "NZ",
+          "PF",
+          "PG",
+          "PK",
+          "PM",
+          "PN",
+          "PR",
+          "PW",
+          "QS",
+          "RE",
+          "RW",
+          "SB",
+          "SC",
+          "SH",
+          "SI",
+          "SJ",
+          "SL",
+          "SM",
+          "SN",
+          "SR",
+          "ST",
+          "SX",
+          "SZ",
+          "TC",
+          "TF",
+          "TG",
+          "TK",
+          "TL",
+          "TO",
+          "TP",
+          "TS",
+          "TV",
+          "TZ",
+          "UG",
+          "UM",
+          "VA",
+          "VC",
+          "VG",
+          "VI",
+          "VU",
+          "WF",
+          "WS",
+          "XA",
+          "XB",
+          "XK",
+          "XX",
+          "YJ",
+          "YT",
+          "ZA",
+          "ZG",
+          "ZM",
+          "ZN",
+          "ZW",
+          "ZZ",
+          "ES",
+          "TR",
+          "AZ",
+          "MA",
+          "LB",
+          "DZ",
+          "ER",
+          "TN",
+          "SS",
+          "BR",
+          "MX",
+          "TH",
+          "ID",
+          "MY",
+          "VN",
+          "PH",
+          "SG",
+          "KR",
+          "JP",
+          "EG",
+          "SY",
+          "PS",
+          "JO",
+          "IQ",
+          "DJ",
+          "KM",
+          "SO",
+          "TD",
+          "OM",
+          "QA",
+          "KW",
+          "AE",
+          "BH",
+          "SA",
+          "YE",
+          "LY",
+          "SD",
+          "MR",
+          "LT",
+          "JM",
+          "CH",
+          "IR",
+          "AN",
+          "FI",
+          "PY",
+          "AR",
+          "GR",
+          "UY",
+          "CR",
+          "DO",
+          "PE",
+          "IT",
+          "TT",
+          "SV",
+          "CZ",
+          "BE",
+          "CO",
+          "TW",
+          "HN",
+          "EC",
+          "SK",
+          "NP",
+          "RS",
+          "NI",
+          "SE",
+          "GT",
+          "CL",
+          "NL",
+          "RO",
+          "HU",
+          "VE",
+          "AT",
+          "PL",
+          "PA",
+          "BO",
+          "GM",
+          "PT"
+        ],
+        "userRegions": [
+          "US",
+          "AS",
+          "GU",
+          "MP",
+          "PR",
+          "VI",
+          "UM"
+        ],
+        "allRegions": false
+      },
+      "liveSuggestConfig": {
+        "isBlockedArea": false,
+        "isRiskArea": true
+      },
+      "liveCenterConfig": {
+        "entrance": true,
+        "showCreatorHubRegion": [
+          "GB",
+          "IQ",
+          "SA",
+          "EG",
+          "AE",
+          "DZ",
+          "MA",
+          "JO",
+          "KW",
+          "LB",
+          "TN",
+          "QA",
+          "OM",
+          "LY",
+          "SO",
+          "YE",
+          "BH",
+          "PS",
+          "MR",
+          "DJ",
+          "SS"
+        ]
+      },
+      "liveStudioEnable": false,
+      "xgplayerInitHost": {
+        "group1": [
+          "v16-webapp.tiktok.com",
+          "v16m-webapp.tiktokcdn-us.com"
+        ],
+        "group2": [
+          "v16-webapp-prime.tiktok.com",
+          "v16-webapp-prime.us.tiktok.com",
+          "v19-webapp-prime.us.tiktok.com",
+          "v19-webapp-prime.tiktok.com"
+        ]
+      },
+      "videoOrder": {
+        "videoOrder": [
+          {
+            "property": "QualityType",
+            "detail": [
+              10,
+              28,
+              30
+            ]
+          },
+          {
+            "property": "Bitrate",
+            "order": "desc"
+          }
+        ]
+      }
+    },
+    "initialized": true
+  },
+  "SEO": {
+    "metaParams": {
+      "title": "Fig Gluten Free (@glutenfreefig) | TikTok",
+      "description": "Fig Gluten Free (@glutenfreefig) on TikTok | 333 Likes. 170 Followers. Find gluten-free food you CAN eat!  Download the Fig app!Watch the latest video from Fig Gluten Free (@glutenfreefig).",
+      "canonicalHref": "https://www.tiktok.com/@glutenfreefig",
+      "robotsContent": "index, follow, max-image-preview:large",
+      "applicableDevice": "pc, mobile"
+    },
+    "jsonldList": [
+      [
+        "ItemList",
+        {
+          "itemListElement": []
+        }
+      ],
+      [
+        "BreadcrumbList",
+        {
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@type": "Thing",
+                "@id": "https://www.tiktok.com",
+                "name": "TikTok"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@type": "Thing",
+                "@id": "https://www.tiktok.com/@glutenfreefig",
+                "name": "Fig Gluten Free (@glutenfreefig) | TikTok"
+              }
+            }
+          ]
+        }
+      ],
+      [
+        "Person",
+        {
+          "name": "Fig Gluten Free",
+          "description": "Find gluten-free food you CAN eat!\n\nDownload the Fig app!",
+          "alternateName": "glutenfreefig",
+          "mainEntityOfPage": {
+            "@type": "ProfilePage",
+            "@id": "https://www.tiktok.com/@glutenfreefig"
+          }
+        }
+      ]
+    ],
+    "abtest": {
+      "pageId": "1133953017162927401",
+      "vidList": [],
+      "parameters": {
+        "user_page_serp_compliance": {
+          "vid": "v2"
+        }
+      }
+    },
+    "loading": false,
+    "canonical": "https://www.tiktok.com/@glutenfreefig",
+    "pageType": 999,
+    "launchMode": "direct",
+    "directoryConfig": {
+      "type": "json",
+      "default": {
+        "kepDirectoryVersion1": {
+          "isOpen": false,
+          "itemNumber": 0,
+          "hashSize": 8000,
+          "upperLimitHash": 8000,
+          "lowerLimitHash": 0
+        },
+        "kepDirectoryVersion2": {
+          "isOpen": false,
+          "itemNumber": 0,
+          "hashSize": 160000,
+          "bucketSize": 8000,
+          "upperLimitHash": 160000,
+          "lowerLimitHash": 0,
+          "updatedFrequencyTimer": 21600
+        },
+        "userProfileDirectory": {
+          "isOpen": false,
+          "itemNumber": 400,
+          "hashSize": 40000,
+          "upperLimitHash": 200,
+          "lowerLimitHash": 0
+        },
+        "recommendVideoDirectory": {
+          "isOpen": false,
+          "itemNumber": 400,
+          "hashSize": 40000,
+          "upperLimitHash": 200,
+          "lowerLimitHash": 0
+        },
+        "userVideoDirectory": {
+          "isOpen": false,
+          "itemNumber": 200
+        },
+        "musicVideoDirectory": {
+          "isOpen": false,
+          "itemNumber": 200
+        },
+        "hashtagVideoDirectory": {
+          "isOpen": false,
+          "itemNumber": 200
+        }
+      }
+    }
+  },
+  "SharingMeta": {
+    "value": {
+      "al:ios:url": "snssdk1233://user/profile/",
+      "al:android:url": "snssdk1233://user/profile/",
+      "al:ios:app_store_id": "835599320",
+      "al:ios:app_name": "musical.ly",
+      "al:android:app_name": "musical.ly",
+      "al:android:package": "com.zhiliaoapp.musically",
+      "og:site_name": "TikTok",
+      "og:type": "website",
+      "og:title": "Fig Gluten Free (@glutenfreefig) | TikTok",
+      "og:description": "Fig Gluten Free (@glutenfreefig) on TikTok | 333 Likes. 170 Followers. Find gluten-free food you CAN eat!  Download the Fig app!Watch the latest video from Fig Gluten Free (@glutenfreefig).",
+      "fb:app_id": "597615686992125",
+      "twitter:app:id:iphone": "835599320",
+      "twitter:app:id:googleplay": "com.zhiliaoapp.musically",
+      "twitter:card": "summary",
+      "twitter:site": "TikTok",
+      "twitter:title": "Fig Gluten Free (@glutenfreefig) | TikTok",
+      "twitter:description": "Fig Gluten Free (@glutenfreefig) on TikTok | 333 Likes. 170 Followers. Find gluten-free food you CAN eat!  Download the Fig app!Watch the latest video from Fig Gluten Free (@glutenfreefig).",
+      "og:image": "https://p19-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/6d04f3d90e09c3f922035412f0741061~c5_720x720.jpeg?x-expires=1675987200&x-signature=5lsi2rkdj5kyxSVeXqh%2Bj%2FJHYiU%3D",
+      "twitter:image": "https://p19-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/6d04f3d90e09c3f922035412f0741061~c5_720x720.jpeg?x-expires=1675987200&x-signature=5lsi2rkdj5kyxSVeXqh%2Bj%2FJHYiU%3D",
+      "og:image:width": "360",
+      "og:image:height": "360",
+      "og:image:alt": "Fig Gluten Free (@glutenfreefig) | TikTok"
+    }
+  },
+  "ItemList": {
+    "user-post": {
+      "list": [
+        "7196809890340359466",
+        "7195738489218960686",
+        "7194994814729866542",
+        "7194184033377635630",
+        "7193144859417480490",
+        "7192287338511256875",
+        "7191485712485698858",
+        "7190058060457577771",
+        "7188880377522441515",
+        "7187845246875733294",
+        "7186685533773417770",
+        "7185922364595653931"
+      ],
+      "browserList": [
+        "7196809890340359466",
+        "7195738489218960686",
+        "7194994814729866542",
+        "7194184033377635630",
+        "7193144859417480490",
+        "7192287338511256875",
+        "7191485712485698858",
+        "7190058060457577771",
+        "7188880377522441515",
+        "7187845246875733294",
+        "7186685533773417770",
+        "7185922364595653931"
+      ],
+      "loading": false,
+      "statusCode": 0,
+      "hasMore": false,
+      "cursor": "1673102961000",
+      "preloadList": [
+        {
+          "url": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c004-tx/9af19b63389f447d936fb479aa95db71/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=2624&bt=1312&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=ZTloZzo2MzU4PGZpNDo0N0BpMzp1Mzk6Zjc2aTMzZzczNEAyMV41Xy8yXzExX2NjMWItYSMyMzNzcjRfNGRgLS1kMS9zcw%3D%3D&expire=1675837322&l=2023020800212883A78A008610802FF895&policy=2&signature=882fc22ce2ea138cd0985e0dd09b70b7&tk=tt_chain_token",
+          "id": "7196809890340359466"
+        },
+        {
+          "url": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-pve-0068-tx/f04ba661a50b4a69b5ee97b772d5c5f9/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C1%7C0&cv=1&br=2322&bt=1161&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=Nzg5Njo3NzxmZDc3NmZlNEBpM3U3NzU6Zmg5aTMzZzczNEAwYmEuXjAwNTMxYl5jLzEzYSNoYi1ncjQwNmJgLS1kMS9zcw%3D%3D&expire=1675837326&l=2023020800212883A78A008610802FF895&policy=2&signature=c5b67136c7a5f53552984b559e1f3670&tk=tt_chain_token",
+          "id": "7195738489218960686"
+        },
+        {
+          "url": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-pve-0068-tx/a63b9efb210a43238c1077493f9670e2/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=2604&bt=1302&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=ZjNnNDtkZGc7aTdoOTRnZkBpMzhrOTc6ZnB1aTMzZzczNEAtLzMuMTFjNTIxL2BfYjNhYSM1Z3JqcjRncmBgLS1kMS9zcw%3D%3D&expire=1675837313&l=2023020800212883A78A008610802FF895&policy=2&signature=124fcebe9975832f3fba2a7d86912704&tk=tt_chain_token",
+          "id": "7194994814729866542"
+        },
+        {
+          "url": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c001-tx/d5032e82a0594220851c70fccfad9949/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=2218&bt=1109&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=NzdmNGU6PGdmZWQ5Nmg8O0BpMzQ1eDw6ZndnaTMzZzczNEA1L2ExYGFeNTYxXjQxYTRjYSNeci5gcjQwcl9gLS1kMS9zcw%3D%3D&expire=1675837322&l=2023020800212883A78A008610802FF895&policy=2&signature=f050f3acbce1f167188e2aca5c179930&tk=tt_chain_token",
+          "id": "7194184033377635630"
+        },
+        {
+          "url": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c004-tx/6426a5a300cf429bb3b540b68098a4e8/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=3486&bt=1743&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=ODw2OTczNjMzM2Y5O2U2O0BpanNmOTc6ZnZsaTMzZzczNEAzYi8xYF8wXjExMjBiLy00YSNmMG9qcjRvcDZgLS1kMS9zcw%3D%3D&expire=1675837309&l=2023020800212883A78A008610802FF895&policy=2&signature=aa7a53e826d853423409d7f2f9638d50&tk=tt_chain_token",
+          "id": "7193144859417480490"
+        },
+        {
+          "url": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c002-tx/0650d6cab59d45ad95fc96c95be5f89b/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=3026&bt=1513&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=Nmc6M2Y4ZmgzODw2OGdpaUBpanBrbWc6ZjU1aTMzZzczNEAtMzIwYzNgNi0xLjFhYmNjYSNfYV9zcjQwLjVgLS1kMS9zcw%3D%3D&expire=1675837323&l=2023020800212883A78A008610802FF895&policy=2&signature=2281965538ab773a2d143ba0b06bc75a&tk=tt_chain_token",
+          "id": "7192287338511256875"
+        },
+        {
+          "url": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c002-tx/75a779731b6c445b9ae35ea77dd413d8/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=2650&bt=1325&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=NjllO2U5OTNlODRnPGk7aEBpanc8bTQ6ZnJuaTMzZzczNEA2YTEtL2M1XjYxMDNgYjE1YSMuaS4ucjRvZjNgLS1kMS9zcw%3D%3D&expire=1675837320&l=2023020800212883A78A008610802FF895&policy=2&signature=619137ce08b000ef7c808515a3bb4b68&tk=tt_chain_token",
+          "id": "7191485712485698858"
+        },
+        {
+          "url": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c001-tx/815ff8632b8c46418504563709aeedac/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=3988&bt=1994&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=ZDQ5OWU1M2ZkO2k0NDtnOUBpM3NqbTc6Zjo2aTMzZzczNEAyYmBhMC0xXjQxMjUvLzA1YSMwM2s0cjRvYzFgLS1kMS9zcw%3D%3D&expire=1675837325&l=2023020800212883A78A008610802FF895&policy=2&signature=c987fd46eb32071454b735f98ce5768f&tk=tt_chain_token",
+          "id": "7190058060457577771"
+        },
+        {
+          "url": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c002-tx/7efd451e34054860a60842efffba4609/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=2836&bt=1418&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=PDZnNzs6ZjplZzU8OzYzZkBpMztzaTw6ZjgzaTMzZzczNEAwMDAwYjMwXzMxXzRgLTYzYSNfYjEwcjQwZC9gLS1kMS9zcw%3D%3D&expire=1675837317&l=2023020800212883A78A008610802FF895&policy=2&signature=c4f3e78a1e7e7529acbf62c78f4d30e6&tk=tt_chain_token",
+          "id": "7188880377522441515"
+        },
+        {
+          "url": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c003-tx/733372e915184528aeb29189af287c2a/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=1814&bt=907&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=ODk6OTg4aTU8Ozc0NmY2NUBpM2xnbTo6Zjo4aTMzZzczNEBgYjNiXjA2NjYxLjJfM2E2YSMvbzVtcjRnai1gLS1kMS9zcw%3D%3D&expire=1675837323&l=2023020800212883A78A008610802FF895&policy=2&signature=6cc22baa95057aea77d135e936e1ec4c&tk=tt_chain_token",
+          "id": "7187845246875733294"
+        },
+        {
+          "url": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c002-tx/38c6c42df1574643bc77ff8b6f6c7339/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=2578&bt=1289&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=Zmg2ZDk0O2U4OWU6NDpoZUBpM2p2czo6ZjU2aDMzZzczNEAvYjNeNGFhNl8xLy81NWNjYSMyby9rcjRfbHJgLS1kMS9zcw%3D%3D&expire=1675837306&l=2023020800212883A78A008610802FF895&policy=2&signature=57332655c63d9ad9de3e0e2bc9764943&tk=tt_chain_token",
+          "id": "7186685533773417770"
+        },
+        {
+          "url": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c004-tx/cf59d43aed15426783713d6215f3b33f/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=3150&bt=1575&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=M2Y4Nzc7NzU0MzVoZWk1ZUBpamZpOjc6ZmRyaDMzZzczNEBgYDQtYS1fNi0xYTBhLTZjYSM1bm1qcjQwYHBgLS1kMS9zcw%3D%3D&expire=1675837313&l=2023020800212883A78A008610802FF895&policy=2&signature=7c0bbe8e74d82de22ffab6bf609c51b3&tk=tt_chain_token",
+          "id": "7185922364595653931"
+        }
+      ]
+    },
+    "user-liked": {
+      "list": [],
+      "browserList": [],
+      "loading": true,
+      "statusCode": 0,
+      "hasMore": true,
+      "cursor": "0",
+      "preloadList": []
+    }
+  },
+  "ItemModule": {
+    "7196809890340359466": {
+      "id": "7196809890340359466",
+      "desc": "Whats your favorite valentines day treat? \ud83e\udef6\ud83c\udffc #glutenfree #glutenfreefig #glutenfreetiktok ",
+      "createTime": "1675637893",
+      "scheduleTime": 0,
+      "video": {
+        "id": "7196809890340359466",
+        "height": 1024,
+        "width": 576,
+        "duration": 34,
+        "ratio": "720p",
+        "cover": "https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/8773d5ad660e4901a3cd9de2692a8712?x-expires=1675836000&x-signature=mP3p3N9vl4xxp9tDSRR%2FTWlXAeI%3D",
+        "originCover": "https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/04d709b510164bfd8d22aa51fca96f10_1675637895?x-expires=1675836000&x-signature=xkQlHOvcLWKsrz1yvEk299Gf9v8%3D",
+        "dynamicCover": "https://p19-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/0d919159eb2e42258b2391c012b76e62_1675637895?x-expires=1675836000&x-signature=W50iOJBdNVrzWIpwTkeClpixqYM%3D",
+        "playAddr": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c004-tx/9af19b63389f447d936fb479aa95db71/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=2624&bt=1312&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=ZTloZzo2MzU4PGZpNDo0N0BpMzp1Mzk6Zjc2aTMzZzczNEAyMV41Xy8yXzExX2NjMWItYSMyMzNzcjRfNGRgLS1kMS9zcw%3D%3D&expire=1675837322&l=2023020800212883A78A008610802FF895&policy=2&signature=882fc22ce2ea138cd0985e0dd09b70b7&tk=tt_chain_token",
+        "downloadAddr": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c004-tx/9af19b63389f447d936fb479aa95db71/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=2624&bt=1312&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=ZTloZzo2MzU4PGZpNDo0N0BpMzp1Mzk6Zjc2aTMzZzczNEAyMV41Xy8yXzExX2NjMWItYSMyMzNzcjRfNGRgLS1kMS9zcw%3D%3D&expire=1675837322&l=2023020800212883A78A008610802FF895&policy=2&signature=882fc22ce2ea138cd0985e0dd09b70b7&tk=tt_chain_token",
+        "shareCover": [
+          "",
+          "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/04d709b510164bfd8d22aa51fca96f10_1675637895~tplv-tiktok-play.jpeg?x-expires=1676419200&x-signature=sxiRdrdT%2BhoB0dCgcy8c%2BSoWFNQ%3D",
+          "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/04d709b510164bfd8d22aa51fca96f10_1675637895~tplv-tiktokx-share-play.jpeg?x-expires=1676419200&x-signature=xiJTIqN%2BfCIBD9lpLYIY3qIYCfw%3D"
+        ],
+        "reflowCover": "https://p19-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/8773d5ad660e4901a3cd9de2692a8712?x-expires=1675836000&x-signature=E2io4D0pzpsX4FaXq9Wr6N3Yi%2Bg%3D",
+        "bitrate": 1344066,
+        "encodedType": "normal",
+        "format": "mp4",
+        "videoQuality": "normal",
+        "encodeUserTag": "",
+        "codecType": "h264",
+        "definition": "720p",
+        "subtitleInfos": [],
+        "zoomCover": {
+          "240": "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/8773d5ad660e4901a3cd9de2692a8712~tplv-r00ih4996s-1:240:240.jpeg?x-expires=1675836000&x-signature=mwkODDwn9ViFXyG6u15%2BsyqR8dk%3D",
+          "480": "https://p19-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/8773d5ad660e4901a3cd9de2692a8712~tplv-r00ih4996s-1:480:480.jpeg?x-expires=1675836000&x-signature=tgFmaghZcPpK8G3jNnIJOsrTpZM%3D",
+          "720": "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/8773d5ad660e4901a3cd9de2692a8712~tplv-r00ih4996s-1:720:720.jpeg?x-expires=1675836000&x-signature=fDGj8OX4j1IxILW5X9iKwtFyF30%3D",
+          "960": "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/8773d5ad660e4901a3cd9de2692a8712~tplv-r00ih4996s-1:960:960.jpeg?x-expires=1675836000&x-signature=3ttfFhQP6QUDAPyZRhizqjm617M%3D"
+        },
+        "volumeInfo": {
+          "Loudness": -9.2,
+          "Peak": 0.97724
+        },
+        "bitrateInfo": [
+          {
+            "GearName": "normal_720_0",
+            "Bitrate": 1344066,
+            "QualityType": 10,
+            "PlayAddr": {
+              "Uri": "v12044gd0000cfg374bc77u6v06r6750",
+              "UrlList": [
+                "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c004-tx/9af19b63389f447d936fb479aa95db71/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=2624&bt=1312&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=ZTloZzo2MzU4PGZpNDo0N0BpMzp1Mzk6Zjc2aTMzZzczNEAyMV41Xy8yXzExX2NjMWItYSMyMzNzcjRfNGRgLS1kMS9zcw%3D%3D&expire=1675837322&l=2023020800212883A78A008610802FF895&policy=2&signature=882fc22ce2ea138cd0985e0dd09b70b7&tk=tt_chain_token",
+                "https://v19-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c004-tx/9af19b63389f447d936fb479aa95db71/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=2624&bt=1312&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=ZTloZzo2MzU4PGZpNDo0N0BpMzp1Mzk6Zjc2aTMzZzczNEAyMV41Xy8yXzExX2NjMWItYSMyMzNzcjRfNGRgLS1kMS9zcw%3D%3D&expire=1675837322&l=2023020800212883A78A008610802FF895&policy=2&signature=882fc22ce2ea138cd0985e0dd09b70b7&tk=tt_chain_token"
+              ],
+              "DataSize": "5742021",
+              "UrlKey": "v12044gd0000cfg374bc77u6v06r6750_h264_720p_1344066",
+              "FileHash": "143664da518404192f623c79ddd9d2b2",
+              "FileCs": "c:0-28010-00b2"
+            },
+            "CodecType": "h264"
+          }
+        ]
+      },
+      "author": "glutenfreefig",
+      "music": {
+        "id": "7021602803818694657",
+        "title": "I Love You So",
+        "playUrl": "https://sf16-ies-music-sg.tiktokcdn.com/obj/tos-alisg-ve-2774/5e7f3b06b8aa46c5be4799a8336671f6",
+        "coverLarge": "https://p16-sg.tiktokcdn.com/aweme/720x720/tos-alisg-v-2774/32b134f4ca934b58b0567ecb420afd67.jpeg",
+        "coverMedium": "https://p16-sg.tiktokcdn.com/aweme/200x200/tos-alisg-v-2774/32b134f4ca934b58b0567ecb420afd67.jpeg",
+        "coverThumb": "https://p16-sg.tiktokcdn.com/aweme/100x100/tos-alisg-v-2774/32b134f4ca934b58b0567ecb420afd67.jpeg",
+        "authorName": "The Walters",
+        "original": false,
+        "duration": 60,
+        "album": "I Love You So",
+        "scheduleSearchTime": 0
+      },
+      "challenges": [
+        {
+          "id": "141847",
+          "title": "glutenfree",
+          "desc": "",
+          "profileLarger": "",
+          "profileMedium": "",
+          "profileThumb": "",
+          "coverLarger": "",
+          "coverMedium": "",
+          "coverThumb": "",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        },
+        {
+          "id": "7185921247291637802",
+          "title": "glutenfreefig",
+          "desc": "",
+          "profileLarger": "",
+          "profileMedium": "",
+          "profileThumb": "",
+          "coverLarger": "",
+          "coverMedium": "",
+          "coverThumb": "",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        },
+        {
+          "id": "1675293355966469",
+          "title": "glutenfreetiktok",
+          "desc": "",
+          "profileLarger": "",
+          "profileMedium": "",
+          "profileThumb": "",
+          "coverLarger": "",
+          "coverMedium": "",
+          "coverThumb": "",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        }
+      ],
+      "stats": {
+        "diggCount": 28,
+        "shareCount": 1,
+        "commentCount": 2,
+        "playCount": 308
+      },
+      "duetInfo": {
+        "duetFromId": "0"
+      },
+      "warnInfo": [],
+      "originalItem": false,
+      "officalItem": false,
+      "textExtra": [
+        {
+          "awemeId": "",
+          "start": 47,
+          "end": 58,
+          "hashtagId": "141847",
+          "hashtagName": "glutenfree",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        },
+        {
+          "awemeId": "",
+          "start": 59,
+          "end": 73,
+          "hashtagId": "7185921247291637802",
+          "hashtagName": "glutenfreefig",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        },
+        {
+          "awemeId": "",
+          "start": 74,
+          "end": 91,
+          "hashtagId": "1675293355966469",
+          "hashtagName": "glutenfreetiktok",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        }
+      ],
+      "secret": false,
+      "forFriend": false,
+      "digged": false,
+      "itemCommentStatus": 0,
+      "showNotPass": false,
+      "vl1": false,
+      "takeDown": 0,
+      "itemMute": false,
+      "effectStickers": [],
+      "authorStats": {
+        "followerCount": 170,
+        "followingCount": 5,
+        "heart": 333,
+        "heartCount": 333,
+        "videoCount": 12,
+        "diggCount": 8
+      },
+      "privateItem": false,
+      "duetEnabled": true,
+      "stitchEnabled": true,
+      "stickersOnItem": [
+        {
+          "stickerText": [
+            "Let\u2019s find\nGluten Free\nValentine\u2019s Day \nCandy!"
+          ],
+          "stickerType": 4
+        }
+      ],
+      "isAd": false,
+      "shareEnabled": true,
+      "comments": [],
+      "duetDisplay": 0,
+      "stitchDisplay": 0,
+      "indexEnabled": true,
+      "adAuthorization": false,
+      "adLabelVersion": 0,
+      "locationCreated": "US",
+      "BAInfo": "",
+      "nickname": "Fig Gluten Free",
+      "authorId": "7184587664987800618",
+      "authorSecId": "MS4wLjABAAAAJmbzjMOWSU9NCiShbWLnbyKclg8_eSBakOOlXA0NQ3mBlRho5Fwy1fvJMJhQraHs",
+      "avatarThumb": "https://p16-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/6d04f3d90e09c3f922035412f0741061~c5_100x100.jpeg?x-expires=1675987200&x-signature=l5ZJB7%2Fv0CJF4Fi6Iaq05liyXuw%3D",
+      "downloadSetting": 0,
+      "authorPrivate": false
+    },
+    "7195738489218960686": {
+      "id": "7195738489218960686",
+      "desc": "What else was a surprise? #glutenfree #glutenfreefig #celiac #glutenfreetiktok ",
+      "createTime": "1675388430",
+      "scheduleTime": 0,
+      "video": {
+        "id": "7195738489218960686",
+        "height": 1024,
+        "width": 576,
+        "duration": 38,
+        "ratio": "720p",
+        "cover": "https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/e60e4a2cec7f4ef89a2d597e08844dd6?x-expires=1675836000&x-signature=1IRy%2FvPAvMxN%2FQMPhUxNvlrZe0Y%3D",
+        "originCover": "https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/d89a4cbc54ef4b30843b600abae2483d_1675388432?x-expires=1675836000&x-signature=m26QwmxGtK786G4bd%2BXyAJ5z7xc%3D",
+        "dynamicCover": "https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/9d935cfb0c6f48dd9ba53cb3ab73caef_1675388432?x-expires=1675836000&x-signature=TJ9fJ%2F5fLzabv4nCjVFf7QQszmM%3D",
+        "playAddr": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-pve-0068-tx/f04ba661a50b4a69b5ee97b772d5c5f9/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C1%7C0&cv=1&br=2322&bt=1161&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=Nzg5Njo3NzxmZDc3NmZlNEBpM3U3NzU6Zmg5aTMzZzczNEAwYmEuXjAwNTMxYl5jLzEzYSNoYi1ncjQwNmJgLS1kMS9zcw%3D%3D&expire=1675837326&l=2023020800212883A78A008610802FF895&policy=2&signature=c5b67136c7a5f53552984b559e1f3670&tk=tt_chain_token",
+        "downloadAddr": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-pve-0068-tx/f04ba661a50b4a69b5ee97b772d5c5f9/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C1%7C0&cv=1&br=2322&bt=1161&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=Nzg5Njo3NzxmZDc3NmZlNEBpM3U3NzU6Zmg5aTMzZzczNEAwYmEuXjAwNTMxYl5jLzEzYSNoYi1ncjQwNmJgLS1kMS9zcw%3D%3D&expire=1675837326&l=2023020800212883A78A008610802FF895&policy=2&signature=c5b67136c7a5f53552984b559e1f3670&tk=tt_chain_token",
+        "shareCover": [
+          "",
+          "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/d89a4cbc54ef4b30843b600abae2483d_1675388432~tplv-tiktok-play.jpeg?x-expires=1676419200&x-signature=XeW5YyGa0ya6uQBdLe0gHhJUUGA%3D",
+          "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/d89a4cbc54ef4b30843b600abae2483d_1675388432~tplv-tiktokx-share-play.jpeg?x-expires=1676419200&x-signature=WGm1zGVLf7Rp8%2BFlZ7LwYEoxeQ0%3D"
+        ],
+        "reflowCover": "https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/e60e4a2cec7f4ef89a2d597e08844dd6?x-expires=1675836000&x-signature=1IRy%2FvPAvMxN%2FQMPhUxNvlrZe0Y%3D",
+        "bitrate": 1189307,
+        "encodedType": "normal",
+        "format": "mp4",
+        "videoQuality": "normal",
+        "encodeUserTag": "",
+        "codecType": "h264",
+        "definition": "720p",
+        "subtitleInfos": [
+          {
+            "LanguageID": "2",
+            "LanguageCodeName": "eng-US",
+            "Url": "https://v16m-webapp.tiktokcdn-us.com/2e1db8dd27cca8e6bfb70d7ff6c73bc4/63e33f8e/video/tos/useast5/tos-useast5-v-0068-tx/4ac82727297c4f8f8b5ee0573a62902d/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C1%7C0&cv=1&br=8834&bt=4417&ds=4&ft=4KLMeMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=13&rc=M3U3NzU6Zmg5aTMzZzczNEBpM3U3NzU6Zmg5aTMzZzczNEBoYi1ncjQwNmJgLS1kMS9zYSNoYi1ncjQwNmJgLS1kMS9zcw%3D%3D&l=2023020800212883A78A008610802FF895",
+            "UrlExpire": "1675837326",
+            "Format": "webvtt",
+            "Version": "1",
+            "Source": "ASR",
+            "VideoSubtitleID": 1615566632,
+            "Size": "1711"
+          }
+        ],
+        "zoomCover": {
+          "240": "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/e60e4a2cec7f4ef89a2d597e08844dd6~tplv-r00ih4996s-1:240:240.jpeg?x-expires=1675836000&x-signature=BppLS1d3QXqkGVYy401k07gUn9U%3D",
+          "480": "https://p19-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/e60e4a2cec7f4ef89a2d597e08844dd6~tplv-r00ih4996s-1:480:480.jpeg?x-expires=1675836000&x-signature=PH%2FsMZKAH7u%2FLWcpPwk8bldWNYM%3D",
+          "720": "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/e60e4a2cec7f4ef89a2d597e08844dd6~tplv-r00ih4996s-1:720:720.jpeg?x-expires=1675836000&x-signature=KXbBjHdu2dxsjPI6SOWQ624n1a0%3D",
+          "960": "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/e60e4a2cec7f4ef89a2d597e08844dd6~tplv-r00ih4996s-1:960:960.jpeg?x-expires=1675836000&x-signature=wLHZwYLcjZP8XaP62SEyg57%2BTTo%3D"
+        },
+        "volumeInfo": {
+          "Loudness": -13.8,
+          "Peak": 1
+        },
+        "bitrateInfo": [
+          {
+            "GearName": "normal_720_0",
+            "Bitrate": 1189307,
+            "QualityType": 10,
+            "PlayAddr": {
+              "Uri": "v12044gd0000cfe69e3c77u2j404erk0",
+              "UrlList": [
+                "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-pve-0068-tx/f04ba661a50b4a69b5ee97b772d5c5f9/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C1%7C0&cv=1&br=2322&bt=1161&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=Nzg5Njo3NzxmZDc3NmZlNEBpM3U3NzU6Zmg5aTMzZzczNEAwYmEuXjAwNTMxYl5jLzEzYSNoYi1ncjQwNmJgLS1kMS9zcw%3D%3D&expire=1675837326&l=2023020800212883A78A008610802FF895&policy=2&signature=c5b67136c7a5f53552984b559e1f3670&tk=tt_chain_token",
+                "https://v19-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-pve-0068-tx/f04ba661a50b4a69b5ee97b772d5c5f9/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C1%7C0&cv=1&br=2322&bt=1161&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=Nzg5Njo3NzxmZDc3NmZlNEBpM3U3NzU6Zmg5aTMzZzczNEAwYmEuXjAwNTMxYl5jLzEzYSNoYi1ncjQwNmJgLS1kMS9zcw%3D%3D&expire=1675837326&l=2023020800212883A78A008610802FF895&policy=2&signature=c5b67136c7a5f53552984b559e1f3670&tk=tt_chain_token"
+              ],
+              "DataSize": "5667794",
+              "UrlKey": "v12044gd0000cfe69e3c77u2j404erk0_h264_720p_1189307",
+              "FileHash": "90e80d39487fddbab4c5feb1cee6629c",
+              "FileCs": "c:0-31614-bc84"
+            },
+            "CodecType": "h264"
+          }
+        ]
+      },
+      "author": "glutenfreefig",
+      "music": {
+        "id": "6792956373559691266",
+        "title": "Roxanne - Instrumental",
+        "playUrl": "https://sf16-ies-music-sg.tiktokcdn.com/obj/tos-alisg-ve-2774/0a0d743b51564fbd96b8860762a9c05b",
+        "coverLarge": "https://p16-sg.tiktokcdn.com/aweme/720x720/tos-alisg-v-2774/bacb082abf4b409ab862d5e1d7fc062d.jpeg",
+        "coverMedium": "https://p16-sg.tiktokcdn.com/aweme/200x200/tos-alisg-v-2774/bacb082abf4b409ab862d5e1d7fc062d.jpeg",
+        "coverThumb": "https://p16-sg.tiktokcdn.com/aweme/100x100/tos-alisg-v-2774/bacb082abf4b409ab862d5e1d7fc062d.jpeg",
+        "authorName": "Califa Azul",
+        "original": false,
+        "duration": 60,
+        "album": "Roxanne - Instrumental",
+        "scheduleSearchTime": 0
+      },
+      "challenges": [
+        {
+          "id": "141847",
+          "title": "glutenfree",
+          "desc": "",
+          "profileLarger": "",
+          "profileMedium": "",
+          "profileThumb": "",
+          "coverLarger": "",
+          "coverMedium": "",
+          "coverThumb": "",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        },
+        {
+          "id": "7185921247291637802",
+          "title": "glutenfreefig",
+          "desc": "",
+          "profileLarger": "",
+          "profileMedium": "",
+          "profileThumb": "",
+          "coverLarger": "",
+          "coverMedium": "",
+          "coverThumb": "",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        },
+        {
+          "id": "3210073",
+          "title": "celiac",
+          "desc": "",
+          "profileLarger": "",
+          "profileMedium": "",
+          "profileThumb": "",
+          "coverLarger": "",
+          "coverMedium": "",
+          "coverThumb": "",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        },
+        {
+          "id": "1675293355966469",
+          "title": "glutenfreetiktok",
+          "desc": "",
+          "profileLarger": "",
+          "profileMedium": "",
+          "profileThumb": "",
+          "coverLarger": "",
+          "coverMedium": "",
+          "coverThumb": "",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        }
+      ],
+      "stats": {
+        "diggCount": 51,
+        "shareCount": 2,
+        "commentCount": 0,
+        "playCount": 1355
+      },
+      "duetInfo": {
+        "duetFromId": "0"
+      },
+      "warnInfo": [],
+      "originalItem": false,
+      "officalItem": false,
+      "textExtra": [
+        {
+          "awemeId": "",
+          "start": 26,
+          "end": 37,
+          "hashtagId": "141847",
+          "hashtagName": "glutenfree",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        },
+        {
+          "awemeId": "",
+          "start": 38,
+          "end": 52,
+          "hashtagId": "7185921247291637802",
+          "hashtagName": "glutenfreefig",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        },
+        {
+          "awemeId": "",
+          "start": 53,
+          "end": 60,
+          "hashtagId": "3210073",
+          "hashtagName": "celiac",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        },
+        {
+          "awemeId": "",
+          "start": 61,
+          "end": 78,
+          "hashtagId": "1675293355966469",
+          "hashtagName": "glutenfreetiktok",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        }
+      ],
+      "secret": false,
+      "forFriend": false,
+      "digged": false,
+      "itemCommentStatus": 0,
+      "showNotPass": false,
+      "vl1": false,
+      "takeDown": 0,
+      "itemMute": false,
+      "effectStickers": [],
+      "authorStats": {
+        "followerCount": 170,
+        "followingCount": 5,
+        "heart": 333,
+        "heartCount": 333,
+        "videoCount": 12,
+        "diggCount": 8
+      },
+      "privateItem": false,
+      "duetEnabled": true,
+      "stitchEnabled": true,
+      "stickersOnItem": [
+        {
+          "stickerText": [
+            "Things I didn\u2019t know \nhad gluten in it!"
+          ],
+          "stickerType": 4
+        }
+      ],
+      "isAd": false,
+      "shareEnabled": true,
+      "comments": [],
+      "duetDisplay": 0,
+      "stitchDisplay": 0,
+      "indexEnabled": true,
+      "adAuthorization": false,
+      "adLabelVersion": 0,
+      "locationCreated": "US",
+      "BAInfo": "",
+      "nickname": "Fig Gluten Free",
+      "authorId": "7184587664987800618",
+      "authorSecId": "MS4wLjABAAAAJmbzjMOWSU9NCiShbWLnbyKclg8_eSBakOOlXA0NQ3mBlRho5Fwy1fvJMJhQraHs",
+      "avatarThumb": "https://p16-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/6d04f3d90e09c3f922035412f0741061~c5_100x100.jpeg?x-expires=1675987200&x-signature=l5ZJB7%2Fv0CJF4Fi6Iaq05liyXuw%3D",
+      "downloadSetting": 0,
+      "authorPrivate": false
+    },
+    "7194994814729866542": {
+      "id": "7194994814729866542",
+      "desc": "nothing like some sorbet to end the night \ud83d\ude0b #glutenfreefig #glutenfree #figapp #glutenfreetiktok #glutendairyfree ",
+      "createTime": "1675215283",
+      "scheduleTime": 0,
+      "video": {
+        "id": "7194994814729866542",
+        "height": 1024,
+        "width": 576,
+        "duration": 25,
+        "ratio": "720p",
+        "cover": "https://p19-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/85b1a9a393d9448f87d6585bcbc9e1f1?x-expires=1675836000&x-signature=KqQWa2cXv5lF%2FI1cnAv3SZg0Rx0%3D",
+        "originCover": "https://p19-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/41bb3d2987034e359905cc5097322462_1675215284?x-expires=1675836000&x-signature=kIaYivKR9CwY1ff5YgOXTdEumvs%3D",
+        "dynamicCover": "https://p19-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/776f00345e91427fb2d491489515a7ef_1675215284?x-expires=1675836000&x-signature=fmQjyFbXOOCEKbWiyGOXyEmbW7k%3D",
+        "playAddr": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-pve-0068-tx/a63b9efb210a43238c1077493f9670e2/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=2604&bt=1302&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=ZjNnNDtkZGc7aTdoOTRnZkBpMzhrOTc6ZnB1aTMzZzczNEAtLzMuMTFjNTIxL2BfYjNhYSM1Z3JqcjRncmBgLS1kMS9zcw%3D%3D&expire=1675837313&l=2023020800212883A78A008610802FF895&policy=2&signature=124fcebe9975832f3fba2a7d86912704&tk=tt_chain_token",
+        "downloadAddr": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-pve-0068-tx/a63b9efb210a43238c1077493f9670e2/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=2604&bt=1302&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=ZjNnNDtkZGc7aTdoOTRnZkBpMzhrOTc6ZnB1aTMzZzczNEAtLzMuMTFjNTIxL2BfYjNhYSM1Z3JqcjRncmBgLS1kMS9zcw%3D%3D&expire=1675837313&l=2023020800212883A78A008610802FF895&policy=2&signature=124fcebe9975832f3fba2a7d86912704&tk=tt_chain_token",
+        "shareCover": [
+          "",
+          "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/41bb3d2987034e359905cc5097322462_1675215284~tplv-tiktok-play.jpeg?x-expires=1676419200&x-signature=WSuplVVwCfRCTdzzGD8kioXBq%2FU%3D",
+          "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/41bb3d2987034e359905cc5097322462_1675215284~tplv-tiktokx-share-play.jpeg?x-expires=1676419200&x-signature=mwXNS%2FmEDo6IqultbZE0Z0VUzbs%3D"
+        ],
+        "reflowCover": "https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/85b1a9a393d9448f87d6585bcbc9e1f1?x-expires=1675836000&x-signature=AuvdjyV6TNVX7EIgPK%2F3NFowk0w%3D",
+        "bitrate": 1333963,
+        "encodedType": "normal",
+        "format": "mp4",
+        "videoQuality": "normal",
+        "encodeUserTag": "",
+        "codecType": "h264",
+        "definition": "720p",
+        "subtitleInfos": [],
+        "zoomCover": {
+          "240": "https://p19-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/85b1a9a393d9448f87d6585bcbc9e1f1~tplv-r00ih4996s-1:240:240.jpeg?x-expires=1675836000&x-signature=L5LaaM61yZuhh2SxxYkWjvsKYFA%3D",
+          "480": "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/85b1a9a393d9448f87d6585bcbc9e1f1~tplv-r00ih4996s-1:480:480.jpeg?x-expires=1675836000&x-signature=JX2Ngp3n04z%2F1990rCvl0XTAD0c%3D",
+          "720": "https://p19-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/85b1a9a393d9448f87d6585bcbc9e1f1~tplv-r00ih4996s-1:720:720.jpeg?x-expires=1675836000&x-signature=YDyqXEAKktiPjrLz29CScilkpzU%3D",
+          "960": "https://p19-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/85b1a9a393d9448f87d6585bcbc9e1f1~tplv-r00ih4996s-1:960:960.jpeg?x-expires=1675836000&x-signature=tDDsKWSEQ5j4caZAB0HVC71ZlsY%3D"
+        },
+        "volumeInfo": {
+          "Loudness": -11.2,
+          "Peak": 1
+        },
+        "bitrateInfo": [
+          {
+            "GearName": "normal_720_0",
+            "Bitrate": 1333963,
+            "QualityType": 10,
+            "PlayAddr": {
+              "Uri": "v12044gd0000cfcrumjc77u4m6uhj580",
+              "UrlList": [
+                "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-pve-0068-tx/a63b9efb210a43238c1077493f9670e2/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=2604&bt=1302&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=ZjNnNDtkZGc7aTdoOTRnZkBpMzhrOTc6ZnB1aTMzZzczNEAtLzMuMTFjNTIxL2BfYjNhYSM1Z3JqcjRncmBgLS1kMS9zcw%3D%3D&expire=1675837313&l=2023020800212883A78A008610802FF895&policy=2&signature=124fcebe9975832f3fba2a7d86912704&tk=tt_chain_token",
+                "https://v19-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-pve-0068-tx/a63b9efb210a43238c1077493f9670e2/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=2604&bt=1302&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=ZjNnNDtkZGc7aTdoOTRnZkBpMzhrOTc6ZnB1aTMzZzczNEAtLzMuMTFjNTIxL2BfYjNhYSM1Z3JqcjRncmBgLS1kMS9zcw%3D%3D&expire=1675837313&l=2023020800212883A78A008610802FF895&policy=2&signature=124fcebe9975832f3fba2a7d86912704&tk=tt_chain_token"
+              ],
+              "DataSize": "4301197",
+              "UrlKey": "v12044gd0000cfcrumjc77u4m6uhj580_h264_720p_1333963",
+              "FileHash": "919e23b7c56e482b2141ab3b7006debd",
+              "FileCs": "c:0-21802-f6f9"
+            },
+            "CodecType": "h264"
+          }
+        ]
+      },
+      "author": "glutenfreefig",
+      "music": {
+        "id": "7187816271247853569",
+        "title": "Flowers",
+        "playUrl": "https://sf16-ies-music-sg.tiktokcdn.com/obj/tos-alisg-ve-2774/oMXWwbf4UIz6uHOBBRcwt6hGxAUysH7Ao1OCQA",
+        "coverLarge": "https://p16-sg.tiktokcdn.com/aweme/720x720/tos-alisg-v-2774/a08acf6ecd8b430596a484b4150c4cfe.jpeg",
+        "coverMedium": "https://p16-sg.tiktokcdn.com/aweme/200x200/tos-alisg-v-2774/a08acf6ecd8b430596a484b4150c4cfe.jpeg",
+        "coverThumb": "https://p16-sg.tiktokcdn.com/aweme/100x100/tos-alisg-v-2774/a08acf6ecd8b430596a484b4150c4cfe.jpeg",
+        "authorName": "Miley Cyrus",
+        "original": false,
+        "duration": 60,
+        "album": "Flowers",
+        "scheduleSearchTime": 0
+      },
+      "challenges": [
+        {
+          "id": "7185921247291637802",
+          "title": "glutenfreefig",
+          "desc": "",
+          "profileLarger": "",
+          "profileMedium": "",
+          "profileThumb": "",
+          "coverLarger": "",
+          "coverMedium": "",
+          "coverThumb": "",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        },
+        {
+          "id": "141847",
+          "title": "glutenfree",
+          "desc": "",
+          "profileLarger": "",
+          "profileMedium": "",
+          "profileThumb": "",
+          "coverLarger": "",
+          "coverMedium": "",
+          "coverThumb": "",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        },
+        {
+          "id": "1693701297048581",
+          "title": "figapp",
+          "desc": "",
+          "profileLarger": "",
+          "profileMedium": "",
+          "profileThumb": "",
+          "coverLarger": "",
+          "coverMedium": "",
+          "coverThumb": "",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        },
+        {
+          "id": "1675293355966469",
+          "title": "glutenfreetiktok",
+          "desc": "",
+          "profileLarger": "",
+          "profileMedium": "",
+          "profileThumb": "",
+          "coverLarger": "",
+          "coverMedium": "",
+          "coverThumb": "",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        },
+        {
+          "id": "1688892919386114",
+          "title": "glutendairyfree",
+          "desc": "",
+          "profileLarger": "",
+          "profileMedium": "",
+          "profileThumb": "",
+          "coverLarger": "",
+          "coverMedium": "",
+          "coverThumb": "",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        }
+      ],
+      "stats": {
+        "diggCount": 19,
+        "shareCount": 0,
+        "commentCount": 0,
+        "playCount": 384
+      },
+      "duetInfo": {
+        "duetFromId": "0"
+      },
+      "warnInfo": [],
+      "originalItem": false,
+      "officalItem": false,
+      "textExtra": [
+        {
+          "awemeId": "",
+          "start": 45,
+          "end": 59,
+          "hashtagId": "7185921247291637802",
+          "hashtagName": "glutenfreefig",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        },
+        {
+          "awemeId": "",
+          "start": 60,
+          "end": 71,
+          "hashtagId": "141847",
+          "hashtagName": "glutenfree",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        },
+        {
+          "awemeId": "",
+          "start": 72,
+          "end": 79,
+          "hashtagId": "1693701297048581",
+          "hashtagName": "figapp",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        },
+        {
+          "awemeId": "",
+          "start": 80,
+          "end": 97,
+          "hashtagId": "1675293355966469",
+          "hashtagName": "glutenfreetiktok",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        },
+        {
+          "awemeId": "",
+          "start": 98,
+          "end": 114,
+          "hashtagId": "1688892919386114",
+          "hashtagName": "glutendairyfree",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        }
+      ],
+      "secret": false,
+      "forFriend": false,
+      "digged": false,
+      "itemCommentStatus": 0,
+      "showNotPass": false,
+      "vl1": false,
+      "takeDown": 0,
+      "itemMute": false,
+      "effectStickers": [],
+      "authorStats": {
+        "followerCount": 170,
+        "followingCount": 5,
+        "heart": 333,
+        "heartCount": 333,
+        "videoCount": 12,
+        "diggCount": 8
+      },
+      "privateItem": false,
+      "duetEnabled": true,
+      "stitchEnabled": true,
+      "stickersOnItem": [
+        {
+          "stickerText": [
+            "let\u2019s find a gluten and dairy free ice cream"
+          ],
+          "stickerType": 4
+        }
+      ],
+      "isAd": false,
+      "shareEnabled": true,
+      "comments": [],
+      "duetDisplay": 0,
+      "stitchDisplay": 0,
+      "indexEnabled": true,
+      "adAuthorization": false,
+      "adLabelVersion": 0,
+      "locationCreated": "US",
+      "BAInfo": "",
+      "nickname": "Fig Gluten Free",
+      "authorId": "7184587664987800618",
+      "authorSecId": "MS4wLjABAAAAJmbzjMOWSU9NCiShbWLnbyKclg8_eSBakOOlXA0NQ3mBlRho5Fwy1fvJMJhQraHs",
+      "avatarThumb": "https://p16-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/6d04f3d90e09c3f922035412f0741061~c5_100x100.jpeg?x-expires=1675987200&x-signature=l5ZJB7%2Fv0CJF4Fi6Iaq05liyXuw%3D",
+      "downloadSetting": 0,
+      "authorPrivate": false
+    },
+    "7194184033377635630": {
+      "id": "7194184033377635630",
+      "desc": "who knows about natural flavors and the gluten free diet?\ud83d\ude4b\ud83c\udffc\u200d\u2640\ufe0f #glutenfree #glutenfreefig #fig #glutenfreetravel #glutenfreetiktok ",
+      "createTime": "1675026515",
+      "scheduleTime": 0,
+      "video": {
+        "id": "7194184033377635630",
+        "height": 1024,
+        "width": 576,
+        "duration": 34,
+        "ratio": "720p",
+        "cover": "https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/96aae096e7f44bb9b78eb0316a737578?x-expires=1675836000&x-signature=1Nl%2FgGVRX61JcaH5BxMQm%2BjGRdk%3D",
+        "originCover": "https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/ce61684336a2443c92f7c9695e5187d9_1675026515?x-expires=1675836000&x-signature=LGokGM1hdl38yAiE62HPZ8H9P3w%3D",
+        "dynamicCover": "https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/34094222451a47c99b3bd2d0d1b1c5aa_1675026516?x-expires=1675836000&x-signature=n%2F6HO7fRVmD%2BKTFMjUMsUDLO4jk%3D",
+        "playAddr": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c001-tx/d5032e82a0594220851c70fccfad9949/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=2218&bt=1109&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=NzdmNGU6PGdmZWQ5Nmg8O0BpMzQ1eDw6ZndnaTMzZzczNEA1L2ExYGFeNTYxXjQxYTRjYSNeci5gcjQwcl9gLS1kMS9zcw%3D%3D&expire=1675837322&l=2023020800212883A78A008610802FF895&policy=2&signature=f050f3acbce1f167188e2aca5c179930&tk=tt_chain_token",
+        "downloadAddr": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c001-tx/d5032e82a0594220851c70fccfad9949/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=2218&bt=1109&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=NzdmNGU6PGdmZWQ5Nmg8O0BpMzQ1eDw6ZndnaTMzZzczNEA1L2ExYGFeNTYxXjQxYTRjYSNeci5gcjQwcl9gLS1kMS9zcw%3D%3D&expire=1675837322&l=2023020800212883A78A008610802FF895&policy=2&signature=f050f3acbce1f167188e2aca5c179930&tk=tt_chain_token",
+        "shareCover": [
+          "",
+          "https://p19-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/ce61684336a2443c92f7c9695e5187d9_1675026515~tplv-tiktok-play.jpeg?x-expires=1676419200&x-signature=U8s%2FjE8b15N%2FR6PJFb%2FyyeGiVrY%3D",
+          "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/ce61684336a2443c92f7c9695e5187d9_1675026515~tplv-tiktokx-share-play.jpeg?x-expires=1676419200&x-signature=0vEzhvfyhWII3WM6aoN5n1Rkz%2FE%3D"
+        ],
+        "reflowCover": "https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/96aae096e7f44bb9b78eb0316a737578?x-expires=1675836000&x-signature=1Nl%2FgGVRX61JcaH5BxMQm%2BjGRdk%3D",
+        "bitrate": 1136259,
+        "encodedType": "normal",
+        "format": "mp4",
+        "videoQuality": "normal",
+        "encodeUserTag": "",
+        "codecType": "h264",
+        "definition": "720p",
+        "subtitleInfos": [],
+        "zoomCover": {
+          "240": "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/96aae096e7f44bb9b78eb0316a737578~tplv-r00ih4996s-1:240:240.jpeg?x-expires=1675836000&x-signature=lL1wxxU6sLCcPvU1tepIlXDAhc4%3D",
+          "480": "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/96aae096e7f44bb9b78eb0316a737578~tplv-r00ih4996s-1:480:480.jpeg?x-expires=1675836000&x-signature=Gv6u3l8DZBd4viJGEtJYBAFoznQ%3D",
+          "720": "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/96aae096e7f44bb9b78eb0316a737578~tplv-r00ih4996s-1:720:720.jpeg?x-expires=1675836000&x-signature=J9tBZDNoOU%2BrkE0BCy6eaY%2BKZRQ%3D",
+          "960": "https://p19-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/96aae096e7f44bb9b78eb0316a737578~tplv-r00ih4996s-1:960:960.jpeg?x-expires=1675836000&x-signature=%2FLfEI7AJcJpLx88h0KgftS1uGDw%3D"
+        },
+        "volumeInfo": {
+          "Loudness": -9.4,
+          "Peak": 1
+        },
+        "bitrateInfo": [
+          {
+            "GearName": "normal_720_0",
+            "Bitrate": 1136259,
+            "QualityType": 10,
+            "PlayAddr": {
+              "Uri": "v12044gd0000cfbdut3c77u9cu12u1a0",
+              "UrlList": [
+                "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c001-tx/d5032e82a0594220851c70fccfad9949/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=2218&bt=1109&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=NzdmNGU6PGdmZWQ5Nmg8O0BpMzQ1eDw6ZndnaTMzZzczNEA1L2ExYGFeNTYxXjQxYTRjYSNeci5gcjQwcl9gLS1kMS9zcw%3D%3D&expire=1675837322&l=2023020800212883A78A008610802FF895&policy=2&signature=f050f3acbce1f167188e2aca5c179930&tk=tt_chain_token",
+                "https://v19-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c001-tx/d5032e82a0594220851c70fccfad9949/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=2218&bt=1109&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=NzdmNGU6PGdmZWQ5Nmg8O0BpMzQ1eDw6ZndnaTMzZzczNEA1L2ExYGFeNTYxXjQxYTRjYSNeci5gcjQwcl9gLS1kMS9zcw%3D%3D&expire=1675837322&l=2023020800212883A78A008610802FF895&policy=2&signature=f050f3acbce1f167188e2aca5c179930&tk=tt_chain_token"
+              ],
+              "DataSize": "4864184",
+              "UrlKey": "v12044gd0000cfbdut3c77u9cu12u1a0_h264_720p_1136259",
+              "FileHash": "ca4d351d38e27bc89091097a0847fbb7",
+              "FileCs": "c:0-28610-3043"
+            },
+            "CodecType": "h264"
+          }
+        ]
+      },
+      "author": "glutenfreefig",
+      "music": {
+        "id": "6771640057083201538",
+        "title": "Ooh Ahh (My Life Be Like) [feat. Tobymac]",
+        "playUrl": "https://sf16-ies-music-sg.tiktokcdn.com/obj/tos-alisg-ve-2774/66ef0810e3af4de8865ddcc33974be9e",
+        "coverLarge": "https://p16-sg.tiktokcdn.com/aweme/720x720/tos-alisg-v-2774/290b61fec310429dbdc5c59857e7442a.jpeg",
+        "coverMedium": "https://p16-sg.tiktokcdn.com/aweme/200x200/tos-alisg-v-2774/290b61fec310429dbdc5c59857e7442a.jpeg",
+        "coverThumb": "https://p16-sg.tiktokcdn.com/aweme/100x100/tos-alisg-v-2774/290b61fec310429dbdc5c59857e7442a.jpeg",
+        "authorName": "Grits",
+        "original": false,
+        "duration": 60,
+        "album": "The Greatest Hits",
+        "scheduleSearchTime": 0
+      },
+      "challenges": [
+        {
+          "id": "141847",
+          "title": "glutenfree",
+          "desc": "",
+          "profileLarger": "",
+          "profileMedium": "",
+          "profileThumb": "",
+          "coverLarger": "",
+          "coverMedium": "",
+          "coverThumb": "",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        },
+        {
+          "id": "7185921247291637802",
+          "title": "glutenfreefig",
+          "desc": "",
+          "profileLarger": "",
+          "profileMedium": "",
+          "profileThumb": "",
+          "coverLarger": "",
+          "coverMedium": "",
+          "coverThumb": "",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        },
+        {
+          "id": "549369",
+          "title": "fig",
+          "desc": "",
+          "profileLarger": "",
+          "profileMedium": "",
+          "profileThumb": "",
+          "coverLarger": "",
+          "coverMedium": "",
+          "coverThumb": "",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        },
+        {
+          "id": "1662960680058886",
+          "title": "glutenfreetravel",
+          "desc": "",
+          "profileLarger": "",
+          "profileMedium": "",
+          "profileThumb": "",
+          "coverLarger": "",
+          "coverMedium": "",
+          "coverThumb": "",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        },
+        {
+          "id": "1675293355966469",
+          "title": "glutenfreetiktok",
+          "desc": "",
+          "profileLarger": "",
+          "profileMedium": "",
+          "profileThumb": "",
+          "coverLarger": "",
+          "coverMedium": "",
+          "coverThumb": "",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        }
+      ],
+      "stats": {
+        "diggCount": 19,
+        "shareCount": 0,
+        "commentCount": 0,
+        "playCount": 327
+      },
+      "duetInfo": {
+        "duetFromId": "0"
+      },
+      "warnInfo": [],
+      "originalItem": false,
+      "officalItem": false,
+      "textExtra": [
+        {
+          "awemeId": "",
+          "start": 65,
+          "end": 76,
+          "hashtagId": "141847",
+          "hashtagName": "glutenfree",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        },
+        {
+          "awemeId": "",
+          "start": 77,
+          "end": 91,
+          "hashtagId": "7185921247291637802",
+          "hashtagName": "glutenfreefig",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        },
+        {
+          "awemeId": "",
+          "start": 92,
+          "end": 96,
+          "hashtagId": "549369",
+          "hashtagName": "fig",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        },
+        {
+          "awemeId": "",
+          "start": 97,
+          "end": 114,
+          "hashtagId": "1662960680058886",
+          "hashtagName": "glutenfreetravel",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        },
+        {
+          "awemeId": "",
+          "start": 115,
+          "end": 132,
+          "hashtagId": "1675293355966469",
+          "hashtagName": "glutenfreetiktok",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        }
+      ],
+      "secret": false,
+      "forFriend": false,
+      "digged": false,
+      "itemCommentStatus": 0,
+      "showNotPass": false,
+      "vl1": false,
+      "takeDown": 0,
+      "itemMute": false,
+      "effectStickers": [],
+      "authorStats": {
+        "followerCount": 170,
+        "followingCount": 5,
+        "heart": 333,
+        "heartCount": 333,
+        "videoCount": 12,
+        "diggCount": 8
+      },
+      "privateItem": false,
+      "duetEnabled": true,
+      "stitchEnabled": true,
+      "stickersOnItem": [
+        {
+          "stickerText": [
+            "Let\u2019s find\ngluten free snacks \nat the airport with \nFig!",
+            "\ud83d\udc4e"
+          ],
+          "stickerType": 4
+        }
+      ],
+      "isAd": false,
+      "shareEnabled": true,
+      "comments": [],
+      "duetDisplay": 0,
+      "stitchDisplay": 0,
+      "indexEnabled": true,
+      "adAuthorization": false,
+      "adLabelVersion": 0,
+      "locationCreated": "US",
+      "BAInfo": "",
+      "nickname": "Fig Gluten Free",
+      "authorId": "7184587664987800618",
+      "authorSecId": "MS4wLjABAAAAJmbzjMOWSU9NCiShbWLnbyKclg8_eSBakOOlXA0NQ3mBlRho5Fwy1fvJMJhQraHs",
+      "avatarThumb": "https://p16-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/6d04f3d90e09c3f922035412f0741061~c5_100x100.jpeg?x-expires=1675987200&x-signature=l5ZJB7%2Fv0CJF4Fi6Iaq05liyXuw%3D",
+      "downloadSetting": 0,
+      "authorPrivate": false
+    },
+    "7193144859417480490": {
+      "id": "7193144859417480490",
+      "desc": "Keep your eye on the oats! #glutenfree #glutenfreefig #oats #glutenfreeoats #fyp #glutenfreetiktok ",
+      "createTime": "1674784557",
+      "scheduleTime": 0,
+      "video": {
+        "id": "7193144859417480490",
+        "height": 1024,
+        "width": 576,
+        "duration": 21,
+        "ratio": "720p",
+        "cover": "https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/d04489a04f4b4f2d80c72ee72c852702?x-expires=1675836000&x-signature=61Jv2rxYkxmgrmcSQG9f7SHh4ug%3D",
+        "originCover": "https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/acd36f3b983849d598f2245106b2c56e_1674784559?x-expires=1675836000&x-signature=PaQ7nKBdALS1Kk1mnrbP7cWRh7A%3D",
+        "dynamicCover": "https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/0743753cea8643bd890fc81f11eda756_1674784559?x-expires=1675836000&x-signature=UQsuQ0S7s3YcizcIXqIlS7mrnZ4%3D",
+        "playAddr": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c004-tx/6426a5a300cf429bb3b540b68098a4e8/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=3486&bt=1743&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=ODw2OTczNjMzM2Y5O2U2O0BpanNmOTc6ZnZsaTMzZzczNEAzYi8xYF8wXjExMjBiLy00YSNmMG9qcjRvcDZgLS1kMS9zcw%3D%3D&expire=1675837309&l=2023020800212883A78A008610802FF895&policy=2&signature=aa7a53e826d853423409d7f2f9638d50&tk=tt_chain_token",
+        "downloadAddr": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c004-tx/6426a5a300cf429bb3b540b68098a4e8/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=3486&bt=1743&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=ODw2OTczNjMzM2Y5O2U2O0BpanNmOTc6ZnZsaTMzZzczNEAzYi8xYF8wXjExMjBiLy00YSNmMG9qcjRvcDZgLS1kMS9zcw%3D%3D&expire=1675837309&l=2023020800212883A78A008610802FF895&policy=2&signature=aa7a53e826d853423409d7f2f9638d50&tk=tt_chain_token",
+        "shareCover": [
+          "",
+          "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/acd36f3b983849d598f2245106b2c56e_1674784559~tplv-tiktok-play.jpeg?x-expires=1676419200&x-signature=eSEIoLOdPS44LqFdjF%2BQvK9dyB4%3D",
+          "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/acd36f3b983849d598f2245106b2c56e_1674784559~tplv-tiktokx-share-play.jpeg?x-expires=1676419200&x-signature=dqDP%2Br%2FxAfCZ5b7tI6KTTVvDj20%3D"
+        ],
+        "reflowCover": "https://p19-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/d04489a04f4b4f2d80c72ee72c852702?x-expires=1675836000&x-signature=OEIMdRNcLX5Wusf%2FphKww20hpYs%3D",
+        "bitrate": 1785413,
+        "encodedType": "normal",
+        "format": "mp4",
+        "videoQuality": "normal",
+        "encodeUserTag": "",
+        "codecType": "h264",
+        "definition": "720p",
+        "subtitleInfos": [],
+        "zoomCover": {
+          "240": "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/d04489a04f4b4f2d80c72ee72c852702~tplv-r00ih4996s-1:240:240.jpeg?x-expires=1675836000&x-signature=GR3tQGAI%2FKvnBZeIcUrWUuDJL6U%3D",
+          "480": "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/d04489a04f4b4f2d80c72ee72c852702~tplv-r00ih4996s-1:480:480.jpeg?x-expires=1675836000&x-signature=SdxfefvEXCKiEWDh0UyV%2Fq3W4zg%3D",
+          "720": "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/d04489a04f4b4f2d80c72ee72c852702~tplv-r00ih4996s-1:720:720.jpeg?x-expires=1675836000&x-signature=DnqlfuGEpzcgpXOIZPSc6pNT%2BKQ%3D",
+          "960": "https://p19-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/d04489a04f4b4f2d80c72ee72c852702~tplv-r00ih4996s-1:960:960.jpeg?x-expires=1675836000&x-signature=VBenQg2bI0a9XfKNfuXAHnkXlfs%3D"
+        },
+        "volumeInfo": {
+          "Loudness": -14.5,
+          "Peak": 0.95499
+        },
+        "bitrateInfo": [
+          {
+            "GearName": "normal_720_0",
+            "Bitrate": 1785413,
+            "QualityType": 10,
+            "PlayAddr": {
+              "Uri": "v12044gd0000cf9issrc77u4m6rc3pig",
+              "UrlList": [
+                "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c004-tx/6426a5a300cf429bb3b540b68098a4e8/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=3486&bt=1743&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=ODw2OTczNjMzM2Y5O2U2O0BpanNmOTc6ZnZsaTMzZzczNEAzYi8xYF8wXjExMjBiLy00YSNmMG9qcjRvcDZgLS1kMS9zcw%3D%3D&expire=1675837309&l=2023020800212883A78A008610802FF895&policy=2&signature=aa7a53e826d853423409d7f2f9638d50&tk=tt_chain_token",
+                "https://v19-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c004-tx/6426a5a300cf429bb3b540b68098a4e8/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=3486&bt=1743&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=ODw2OTczNjMzM2Y5O2U2O0BpanNmOTc6ZnZsaTMzZzczNEAzYi8xYF8wXjExMjBiLy00YSNmMG9qcjRvcDZgLS1kMS9zcw%3D%3D&expire=1675837309&l=2023020800212883A78A008610802FF895&policy=2&signature=aa7a53e826d853423409d7f2f9638d50&tk=tt_chain_token"
+              ],
+              "DataSize": "4746298",
+              "UrlKey": "v12044gd0000cf9issrc77u4m6rc3pig_h264_720p_1785413",
+              "FileHash": "2742012cd534323bbe3497f3bad7a6d8",
+              "FileCs": "c:0-18154-81e7"
+            },
+            "CodecType": "h264"
+          }
+        ]
+      },
+      "author": "glutenfreefig",
+      "music": {
+        "id": "6433566413058738946",
+        "title": "Good Day ",
+        "playUrl": "https://sf16-ies-music-sg.tiktokcdn.com/obj/tos-alisg-ve-2774/f673334e7fe7491f921336c9eaf4434f",
+        "coverLarge": "https://p16-sg.tiktokcdn.com/aweme/720x720/tos-alisg-v-2774/f28d963295b54548a8d1bebe42accf33.jpeg",
+        "coverMedium": "https://p16-sg.tiktokcdn.com/aweme/200x200/tos-alisg-v-2774/f28d963295b54548a8d1bebe42accf33.jpeg",
+        "coverThumb": "https://p16-sg.tiktokcdn.com/aweme/100x100/tos-alisg-v-2774/f28d963295b54548a8d1bebe42accf33.jpeg",
+        "authorName": "Nappy\u00a0Roots",
+        "original": false,
+        "duration": 30,
+        "album": "",
+        "scheduleSearchTime": 0
+      },
+      "challenges": [
+        {
+          "id": "141847",
+          "title": "glutenfree",
+          "desc": "",
+          "profileLarger": "",
+          "profileMedium": "",
+          "profileThumb": "",
+          "coverLarger": "",
+          "coverMedium": "",
+          "coverThumb": "",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        },
+        {
+          "id": "7185921247291637802",
+          "title": "glutenfreefig",
+          "desc": "",
+          "profileLarger": "",
+          "profileMedium": "",
+          "profileThumb": "",
+          "coverLarger": "",
+          "coverMedium": "",
+          "coverThumb": "",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        },
+        {
+          "id": "801285",
+          "title": "oats",
+          "desc": "",
+          "profileLarger": "",
+          "profileMedium": "",
+          "profileThumb": "",
+          "coverLarger": "",
+          "coverMedium": "",
+          "coverThumb": "",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        },
+        {
+          "id": "1659615920914438",
+          "title": "glutenfreeoats",
+          "desc": "",
+          "profileLarger": "",
+          "profileMedium": "",
+          "profileThumb": "",
+          "coverLarger": "",
+          "coverMedium": "",
+          "coverThumb": "",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        },
+        {
+          "id": "229207",
+          "title": "fyp",
+          "desc": "",
+          "profileLarger": "",
+          "profileMedium": "",
+          "profileThumb": "",
+          "coverLarger": "",
+          "coverMedium": "",
+          "coverThumb": "",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        },
+        {
+          "id": "1675293355966469",
+          "title": "glutenfreetiktok",
+          "desc": "",
+          "profileLarger": "",
+          "profileMedium": "",
+          "profileThumb": "",
+          "coverLarger": "",
+          "coverMedium": "",
+          "coverThumb": "",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        }
+      ],
+      "stats": {
+        "diggCount": 40,
+        "shareCount": 0,
+        "commentCount": 1,
+        "playCount": 329
+      },
+      "duetInfo": {
+        "duetFromId": "0"
+      },
+      "warnInfo": [],
+      "originalItem": false,
+      "officalItem": false,
+      "textExtra": [
+        {
+          "awemeId": "",
+          "start": 27,
+          "end": 38,
+          "hashtagId": "141847",
+          "hashtagName": "glutenfree",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        },
+        {
+          "awemeId": "",
+          "start": 39,
+          "end": 53,
+          "hashtagId": "7185921247291637802",
+          "hashtagName": "glutenfreefig",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        },
+        {
+          "awemeId": "",
+          "start": 54,
+          "end": 59,
+          "hashtagId": "801285",
+          "hashtagName": "oats",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        },
+        {
+          "awemeId": "",
+          "start": 60,
+          "end": 75,
+          "hashtagId": "1659615920914438",
+          "hashtagName": "glutenfreeoats",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        },
+        {
+          "awemeId": "",
+          "start": 76,
+          "end": 80,
+          "hashtagId": "229207",
+          "hashtagName": "fyp",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        },
+        {
+          "awemeId": "",
+          "start": 81,
+          "end": 98,
+          "hashtagId": "1675293355966469",
+          "hashtagName": "glutenfreetiktok",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        }
+      ],
+      "secret": false,
+      "forFriend": false,
+      "digged": false,
+      "itemCommentStatus": 0,
+      "showNotPass": false,
+      "vl1": false,
+      "takeDown": 0,
+      "itemMute": false,
+      "effectStickers": [],
+      "authorStats": {
+        "followerCount": 170,
+        "followingCount": 5,
+        "heart": 333,
+        "heartCount": 333,
+        "videoCount": 12,
+        "diggCount": 8
+      },
+      "privateItem": false,
+      "duetEnabled": true,
+      "stitchEnabled": true,
+      "stickersOnItem": [
+        {
+          "stickerText": [
+            "Did you know\nnot all oats are\ngluten free?"
+          ],
+          "stickerType": 4
+        }
+      ],
+      "isAd": false,
+      "shareEnabled": true,
+      "comments": [],
+      "duetDisplay": 0,
+      "stitchDisplay": 0,
+      "indexEnabled": true,
+      "adAuthorization": false,
+      "adLabelVersion": 0,
+      "locationCreated": "US",
+      "BAInfo": "",
+      "nickname": "Fig Gluten Free",
+      "authorId": "7184587664987800618",
+      "authorSecId": "MS4wLjABAAAAJmbzjMOWSU9NCiShbWLnbyKclg8_eSBakOOlXA0NQ3mBlRho5Fwy1fvJMJhQraHs",
+      "avatarThumb": "https://p16-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/6d04f3d90e09c3f922035412f0741061~c5_100x100.jpeg?x-expires=1675987200&x-signature=l5ZJB7%2Fv0CJF4Fi6Iaq05liyXuw%3D",
+      "downloadSetting": 0,
+      "authorPrivate": false
+    },
+    "7192287338511256875": {
+      "id": "7192287338511256875",
+      "desc": "Let Fig help you find your new favorite gluten free meals\ud83d\ude0b Download Fig in the app store today! #glutenfree #glutenfreefig #glutenfreerecipes #glutenfreetiktok #glutendairyfree ",
+      "createTime": "1674584915",
+      "scheduleTime": 0,
+      "video": {
+        "id": "7192287338511256875",
+        "height": 1024,
+        "width": 576,
+        "duration": 35,
+        "ratio": "720p",
+        "cover": "https://p19-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/9081ccecff704cf2ae7c3b953bca6f30?x-expires=1675836000&x-signature=9859XC0pWv9qJp%2FOTCk%2FMxRpez8%3D",
+        "originCover": "https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/7eb890ac526f41b5a99ce385fefbe9b2_1674584918?x-expires=1675836000&x-signature=RGrLlxIYo9kacYR9MHelYyS9yaE%3D",
+        "dynamicCover": "https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/6da8ae83245e4e23a78cc23da12468bf_1674584916?x-expires=1675836000&x-signature=Jf9mRTKy9eN%2FpLs8ffeYCr%2BDK4c%3D",
+        "playAddr": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c002-tx/0650d6cab59d45ad95fc96c95be5f89b/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=3026&bt=1513&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=Nmc6M2Y4ZmgzODw2OGdpaUBpanBrbWc6ZjU1aTMzZzczNEAtMzIwYzNgNi0xLjFhYmNjYSNfYV9zcjQwLjVgLS1kMS9zcw%3D%3D&expire=1675837323&l=2023020800212883A78A008610802FF895&policy=2&signature=2281965538ab773a2d143ba0b06bc75a&tk=tt_chain_token",
+        "downloadAddr": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c002-tx/0650d6cab59d45ad95fc96c95be5f89b/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=3026&bt=1513&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=Nmc6M2Y4ZmgzODw2OGdpaUBpanBrbWc6ZjU1aTMzZzczNEAtMzIwYzNgNi0xLjFhYmNjYSNfYV9zcjQwLjVgLS1kMS9zcw%3D%3D&expire=1675837323&l=2023020800212883A78A008610802FF895&policy=2&signature=2281965538ab773a2d143ba0b06bc75a&tk=tt_chain_token",
+        "shareCover": [
+          "",
+          "https://p19-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/7eb890ac526f41b5a99ce385fefbe9b2_1674584918~tplv-tiktok-play.jpeg?x-expires=1676419200&x-signature=kLYSG6xB0V0lGh%2F961%2Fdq6d9avE%3D",
+          "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/7eb890ac526f41b5a99ce385fefbe9b2_1674584918~tplv-tiktokx-share-play.jpeg?x-expires=1676419200&x-signature=z75OpUH4%2B9Rf5V1YvkLeYFZUBY0%3D"
+        ],
+        "reflowCover": "https://p19-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/9081ccecff704cf2ae7c3b953bca6f30?x-expires=1675836000&x-signature=9859XC0pWv9qJp%2FOTCk%2FMxRpez8%3D",
+        "bitrate": 1550044,
+        "encodedType": "normal",
+        "format": "mp4",
+        "videoQuality": "normal",
+        "encodeUserTag": "",
+        "codecType": "h264",
+        "definition": "720p",
+        "subtitleInfos": [],
+        "zoomCover": {
+          "240": "https://p19-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/9081ccecff704cf2ae7c3b953bca6f30~tplv-r00ih4996s-1:240:240.jpeg?x-expires=1675836000&x-signature=ASysnMc65qleciBokvqCqBXxqgc%3D",
+          "480": "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/9081ccecff704cf2ae7c3b953bca6f30~tplv-r00ih4996s-1:480:480.jpeg?x-expires=1675836000&x-signature=xa%2BF8DgaHz02x2iaw9reDqNM3Vc%3D",
+          "720": "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/9081ccecff704cf2ae7c3b953bca6f30~tplv-r00ih4996s-1:720:720.jpeg?x-expires=1675836000&x-signature=Zg2lYComc5MeZE9E8mfycNN8mpA%3D",
+          "960": "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/9081ccecff704cf2ae7c3b953bca6f30~tplv-r00ih4996s-1:960:960.jpeg?x-expires=1675836000&x-signature=yX2uawsZ6krjYWyqV49D%2BE7CjzU%3D"
+        },
+        "volumeInfo": {
+          "Loudness": -8.4,
+          "Peak": 1
+        },
+        "bitrateInfo": [
+          {
+            "GearName": "normal_720_0",
+            "Bitrate": 1550044,
+            "QualityType": 10,
+            "PlayAddr": {
+              "Uri": "v12044gd0000cf82123c77udvjbhdmbg",
+              "UrlList": [
+                "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c002-tx/0650d6cab59d45ad95fc96c95be5f89b/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=3026&bt=1513&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=Nmc6M2Y4ZmgzODw2OGdpaUBpanBrbWc6ZjU1aTMzZzczNEAtMzIwYzNgNi0xLjFhYmNjYSNfYV9zcjQwLjVgLS1kMS9zcw%3D%3D&expire=1675837323&l=2023020800212883A78A008610802FF895&policy=2&signature=2281965538ab773a2d143ba0b06bc75a&tk=tt_chain_token",
+                "https://v19-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c002-tx/0650d6cab59d45ad95fc96c95be5f89b/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=3026&bt=1513&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=Nmc6M2Y4ZmgzODw2OGdpaUBpanBrbWc6ZjU1aTMzZzczNEAtMzIwYzNgNi0xLjFhYmNjYSNfYV9zcjQwLjVgLS1kMS9zcw%3D%3D&expire=1675837323&l=2023020800212883A78A008610802FF895&policy=2&signature=2281965538ab773a2d143ba0b06bc75a&tk=tt_chain_token"
+              ],
+              "DataSize": "6869602",
+              "UrlKey": "v12044gd0000cf82123c77udvjbhdmbg_h264_720p_1550044",
+              "FileHash": "f1c40676c132de6de003461d796fb659",
+              "FileCs": "c:0-29246-f844"
+            },
+            "CodecType": "h264"
+          }
+        ]
+      },
+      "author": "glutenfreefig",
+      "music": {
+        "id": "7187816271247853569",
+        "title": "Flowers",
+        "playUrl": "https://sf16-ies-music-sg.tiktokcdn.com/obj/tos-alisg-ve-2774/oMXWwbf4UIz6uHOBBRcwt6hGxAUysH7Ao1OCQA",
+        "coverLarge": "https://p16-sg.tiktokcdn.com/aweme/720x720/tos-alisg-v-2774/a08acf6ecd8b430596a484b4150c4cfe.jpeg",
+        "coverMedium": "https://p16-sg.tiktokcdn.com/aweme/200x200/tos-alisg-v-2774/a08acf6ecd8b430596a484b4150c4cfe.jpeg",
+        "coverThumb": "https://p16-sg.tiktokcdn.com/aweme/100x100/tos-alisg-v-2774/a08acf6ecd8b430596a484b4150c4cfe.jpeg",
+        "authorName": "Miley Cyrus",
+        "original": false,
+        "duration": 60,
+        "album": "Flowers",
+        "scheduleSearchTime": 0
+      },
+      "challenges": [
+        {
+          "id": "141847",
+          "title": "glutenfree",
+          "desc": "",
+          "profileLarger": "",
+          "profileMedium": "",
+          "profileThumb": "",
+          "coverLarger": "",
+          "coverMedium": "",
+          "coverThumb": "",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        },
+        {
+          "id": "7185921247291637802",
+          "title": "glutenfreefig",
+          "desc": "",
+          "profileLarger": "",
+          "profileMedium": "",
+          "profileThumb": "",
+          "coverLarger": "",
+          "coverMedium": "",
+          "coverThumb": "",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        },
+        {
+          "id": "1648692907822086",
+          "title": "glutenfreerecipes",
+          "desc": "",
+          "profileLarger": "",
+          "profileMedium": "",
+          "profileThumb": "",
+          "coverLarger": "",
+          "coverMedium": "",
+          "coverThumb": "",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        },
+        {
+          "id": "1675293355966469",
+          "title": "glutenfreetiktok",
+          "desc": "",
+          "profileLarger": "",
+          "profileMedium": "",
+          "profileThumb": "",
+          "coverLarger": "",
+          "coverMedium": "",
+          "coverThumb": "",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        },
+        {
+          "id": "1688892919386114",
+          "title": "glutendairyfree",
+          "desc": "",
+          "profileLarger": "",
+          "profileMedium": "",
+          "profileThumb": "",
+          "coverLarger": "",
+          "coverMedium": "",
+          "coverThumb": "",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        }
+      ],
+      "stats": {
+        "diggCount": 19,
+        "shareCount": 0,
+        "commentCount": 0,
+        "playCount": 322
+      },
+      "duetInfo": {
+        "duetFromId": "0"
+      },
+      "warnInfo": [],
+      "originalItem": false,
+      "officalItem": false,
+      "textExtra": [
+        {
+          "awemeId": "",
+          "start": 97,
+          "end": 108,
+          "hashtagId": "141847",
+          "hashtagName": "glutenfree",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        },
+        {
+          "awemeId": "",
+          "start": 109,
+          "end": 123,
+          "hashtagId": "7185921247291637802",
+          "hashtagName": "glutenfreefig",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        },
+        {
+          "awemeId": "",
+          "start": 124,
+          "end": 142,
+          "hashtagId": "1648692907822086",
+          "hashtagName": "glutenfreerecipes",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        },
+        {
+          "awemeId": "",
+          "start": 143,
+          "end": 160,
+          "hashtagId": "1675293355966469",
+          "hashtagName": "glutenfreetiktok",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        },
+        {
+          "awemeId": "",
+          "start": 161,
+          "end": 177,
+          "hashtagId": "1688892919386114",
+          "hashtagName": "glutendairyfree",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        }
+      ],
+      "secret": false,
+      "forFriend": false,
+      "digged": false,
+      "itemCommentStatus": 0,
+      "showNotPass": false,
+      "vl1": false,
+      "takeDown": 0,
+      "itemMute": false,
+      "effectStickers": [],
+      "authorStats": {
+        "followerCount": 170,
+        "followingCount": 5,
+        "heart": 333,
+        "heartCount": 333,
+        "videoCount": 12,
+        "diggCount": 8
+      },
+      "privateItem": false,
+      "duetEnabled": true,
+      "stitchEnabled": true,
+      "stickersOnItem": [
+        {
+          "stickerText": [
+            "Let\u2019s Find\nNEW Gluten Free\nFood with\nFig!",
+            "not gluten free :( \n\nLet\u2019s keep looking!",
+            "Thanks Fig \nfor the yummy find \ud83d\ude0b"
+          ],
+          "stickerType": 4
+        }
+      ],
+      "isAd": false,
+      "shareEnabled": true,
+      "comments": [],
+      "duetDisplay": 0,
+      "stitchDisplay": 0,
+      "indexEnabled": true,
+      "adAuthorization": false,
+      "adLabelVersion": 0,
+      "locationCreated": "US",
+      "BAInfo": "",
+      "nickname": "Fig Gluten Free",
+      "authorId": "7184587664987800618",
+      "authorSecId": "MS4wLjABAAAAJmbzjMOWSU9NCiShbWLnbyKclg8_eSBakOOlXA0NQ3mBlRho5Fwy1fvJMJhQraHs",
+      "avatarThumb": "https://p16-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/6d04f3d90e09c3f922035412f0741061~c5_100x100.jpeg?x-expires=1675987200&x-signature=l5ZJB7%2Fv0CJF4Fi6Iaq05liyXuw%3D",
+      "downloadSetting": 0,
+      "authorPrivate": false
+    },
+    "7191485712485698858": {
+      "id": "7191485712485698858",
+      "desc": "what are your favorite granola bars? \ud83d\udc9a#glutenfree #glutenfreefig ",
+      "createTime": "1674398277",
+      "scheduleTime": 0,
+      "video": {
+        "id": "7191485712485698858",
+        "height": 1024,
+        "width": 576,
+        "duration": 32,
+        "ratio": "720p",
+        "cover": "https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/5c4ce341b8b84a1a8a8ad9c7ba06cc7b?x-expires=1675836000&x-signature=KznRfKk0dLdze3etXmF09IgXM7s%3D",
+        "originCover": "https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/d5c6264d59b540198d143304edc501af_1674398278?x-expires=1675836000&x-signature=ZBtxjoRy4VbdfyoN5HROYAi4whU%3D",
+        "dynamicCover": "https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/5fa431e4d8da46fc85c4e9bf8210e2b3_1674398278?x-expires=1675836000&x-signature=Fjy%2FjgctsDxn9DdRcSTMhIAaCmo%3D",
+        "playAddr": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c002-tx/75a779731b6c445b9ae35ea77dd413d8/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=2650&bt=1325&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=NjllO2U5OTNlODRnPGk7aEBpanc8bTQ6ZnJuaTMzZzczNEA2YTEtL2M1XjYxMDNgYjE1YSMuaS4ucjRvZjNgLS1kMS9zcw%3D%3D&expire=1675837320&l=2023020800212883A78A008610802FF895&policy=2&signature=619137ce08b000ef7c808515a3bb4b68&tk=tt_chain_token",
+        "downloadAddr": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c002-tx/75a779731b6c445b9ae35ea77dd413d8/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=2650&bt=1325&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=NjllO2U5OTNlODRnPGk7aEBpanc8bTQ6ZnJuaTMzZzczNEA2YTEtL2M1XjYxMDNgYjE1YSMuaS4ucjRvZjNgLS1kMS9zcw%3D%3D&expire=1675837320&l=2023020800212883A78A008610802FF895&policy=2&signature=619137ce08b000ef7c808515a3bb4b68&tk=tt_chain_token",
+        "shareCover": [
+          "",
+          "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/d5c6264d59b540198d143304edc501af_1674398278~tplv-tiktok-play.jpeg?x-expires=1676419200&x-signature=oewpypa%2Fqj9Cb0wN6IYHbSHKE14%3D",
+          "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/d5c6264d59b540198d143304edc501af_1674398278~tplv-tiktokx-share-play.jpeg?x-expires=1676419200&x-signature=cheTw1PERqyJXUKZeu9gVMoyec4%3D"
+        ],
+        "reflowCover": "https://p19-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/5c4ce341b8b84a1a8a8ad9c7ba06cc7b?x-expires=1675836000&x-signature=cBiidLmA7tmVMBtGOsE5OlFzeYs%3D",
+        "bitrate": 1356988,
+        "encodedType": "normal",
+        "format": "mp4",
+        "videoQuality": "normal",
+        "encodeUserTag": "",
+        "codecType": "h264",
+        "definition": "720p",
+        "subtitleInfos": [],
+        "zoomCover": {
+          "240": "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/5c4ce341b8b84a1a8a8ad9c7ba06cc7b~tplv-r00ih4996s-1:240:240.jpeg?x-expires=1675836000&x-signature=7Jh3KnK3auHzDLHY2CHX3E3OVoo%3D",
+          "480": "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/5c4ce341b8b84a1a8a8ad9c7ba06cc7b~tplv-r00ih4996s-1:480:480.jpeg?x-expires=1675836000&x-signature=JzJc2a85Yew03HUp7m0JXbFEgnw%3D",
+          "720": "https://p19-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/5c4ce341b8b84a1a8a8ad9c7ba06cc7b~tplv-r00ih4996s-1:720:720.jpeg?x-expires=1675836000&x-signature=8ZWfe52L%2BwaPtJSzQEnJNoShvVY%3D",
+          "960": "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/5c4ce341b8b84a1a8a8ad9c7ba06cc7b~tplv-r00ih4996s-1:960:960.jpeg?x-expires=1675836000&x-signature=ccq74fUBcbsLS3HoKHCWLVExlLo%3D"
+        },
+        "volumeInfo": {
+          "Loudness": -15.1,
+          "Peak": 0.91201
+        },
+        "bitrateInfo": [
+          {
+            "GearName": "normal_720_0",
+            "Bitrate": 1356988,
+            "QualityType": 10,
+            "PlayAddr": {
+              "Uri": "v12044gd0000cf6kiorc77u11j19lt1g",
+              "UrlList": [
+                "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c002-tx/75a779731b6c445b9ae35ea77dd413d8/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=2650&bt=1325&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=NjllO2U5OTNlODRnPGk7aEBpanc8bTQ6ZnJuaTMzZzczNEA2YTEtL2M1XjYxMDNgYjE1YSMuaS4ucjRvZjNgLS1kMS9zcw%3D%3D&expire=1675837320&l=2023020800212883A78A008610802FF895&policy=2&signature=619137ce08b000ef7c808515a3bb4b68&tk=tt_chain_token",
+                "https://v19-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c002-tx/75a779731b6c445b9ae35ea77dd413d8/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=2650&bt=1325&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=NjllO2U5OTNlODRnPGk7aEBpanc8bTQ6ZnJuaTMzZzczNEA2YTEtL2M1XjYxMDNgYjE1YSMuaS4ucjRvZjNgLS1kMS9zcw%3D%3D&expire=1675837320&l=2023020800212883A78A008610802FF895&policy=2&signature=619137ce08b000ef7c808515a3bb4b68&tk=tt_chain_token"
+              ],
+              "DataSize": "5498008",
+              "UrlKey": "v12044gd0000cf6kiorc77u11j19lt1g_h264_720p_1356988",
+              "FileHash": "09256e0b2b65285e7bcb6336ea8b5306",
+              "FileCs": "c:0-26766-5c2f"
+            },
+            "CodecType": "h264"
+          }
+        ]
+      },
+      "author": "glutenfreefig",
+      "music": {
+        "id": "6759641455448295425",
+        "title": "The Home Depot Beat",
+        "playUrl": "https://sf16-ies-music-sg.tiktokcdn.com/obj/tos-alisg-ve-2774/550098cffcf04e018d04d15ec906a262",
+        "coverLarge": "https://p16-sg.tiktokcdn.com/aweme/720x720/tos-alisg-v-2774/ad1759572d6145609074ff360d014498.jpeg",
+        "coverMedium": "https://p16-sg.tiktokcdn.com/aweme/200x200/tos-alisg-v-2774/ad1759572d6145609074ff360d014498.jpeg",
+        "coverThumb": "https://p16-sg.tiktokcdn.com/aweme/100x100/tos-alisg-v-2774/ad1759572d6145609074ff360d014498.jpeg",
+        "authorName": "The Home Depot",
+        "original": false,
+        "duration": 35,
+        "album": "The Home Depot Beat",
+        "scheduleSearchTime": 0
+      },
+      "challenges": [
+        {
+          "id": "141847",
+          "title": "glutenfree",
+          "desc": "",
+          "profileLarger": "",
+          "profileMedium": "",
+          "profileThumb": "",
+          "coverLarger": "",
+          "coverMedium": "",
+          "coverThumb": "",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        },
+        {
+          "id": "7185921247291637802",
+          "title": "glutenfreefig",
+          "desc": "",
+          "profileLarger": "",
+          "profileMedium": "",
+          "profileThumb": "",
+          "coverLarger": "",
+          "coverMedium": "",
+          "coverThumb": "",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        }
+      ],
+      "stats": {
+        "diggCount": 39,
+        "shareCount": 0,
+        "commentCount": 0,
+        "playCount": 317
+      },
+      "duetInfo": {
+        "duetFromId": "0"
+      },
+      "warnInfo": [],
+      "originalItem": false,
+      "officalItem": false,
+      "textExtra": [
+        {
+          "awemeId": "",
+          "start": 39,
+          "end": 50,
+          "hashtagId": "141847",
+          "hashtagName": "glutenfree",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        },
+        {
+          "awemeId": "",
+          "start": 51,
+          "end": 65,
+          "hashtagId": "7185921247291637802",
+          "hashtagName": "glutenfreefig",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        }
+      ],
+      "secret": false,
+      "forFriend": false,
+      "digged": false,
+      "itemCommentStatus": 0,
+      "showNotPass": false,
+      "vl1": false,
+      "takeDown": 0,
+      "itemMute": false,
+      "effectStickers": [],
+      "authorStats": {
+        "followerCount": 170,
+        "followingCount": 5,
+        "heart": 333,
+        "heartCount": 333,
+        "videoCount": 12,
+        "diggCount": 8
+      },
+      "privateItem": false,
+      "duetEnabled": true,
+      "stitchEnabled": true,
+      "stickersOnItem": [
+        {
+          "stickerText": [
+            "Let\u2019s find \nGLUTE FREE\ngranola bars \nwith Fig!",
+            "Download Fig \nin the App Store \ntoday!"
+          ],
+          "stickerType": 4
+        }
+      ],
+      "isAd": false,
+      "shareEnabled": true,
+      "comments": [],
+      "duetDisplay": 0,
+      "stitchDisplay": 0,
+      "indexEnabled": true,
+      "adAuthorization": false,
+      "adLabelVersion": 0,
+      "locationCreated": "US",
+      "BAInfo": "",
+      "nickname": "Fig Gluten Free",
+      "authorId": "7184587664987800618",
+      "authorSecId": "MS4wLjABAAAAJmbzjMOWSU9NCiShbWLnbyKclg8_eSBakOOlXA0NQ3mBlRho5Fwy1fvJMJhQraHs",
+      "avatarThumb": "https://p16-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/6d04f3d90e09c3f922035412f0741061~c5_100x100.jpeg?x-expires=1675987200&x-signature=l5ZJB7%2Fv0CJF4Fi6Iaq05liyXuw%3D",
+      "downloadSetting": 0,
+      "authorPrivate": false
+    },
+    "7190058060457577771": {
+      "id": "7190058060457577771",
+      "desc": "5 things to know when starting your diet! #glutenfreefig #glutenfree #celiac ",
+      "createTime": "1674065862",
+      "scheduleTime": 0,
+      "video": {
+        "id": "7190058060457577771",
+        "height": 1024,
+        "width": 576,
+        "duration": 37,
+        "ratio": "720p",
+        "cover": "https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/d85a1d5421e342a2b550dc8f02d379ce_1674065863?x-expires=1675836000&x-signature=MRoSqglg28U7NiWtCJ%2BtIhW%2F58U%3D",
+        "originCover": "https://p19-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/48ff89c198574a959e1da3103385b355_1674065863?x-expires=1675836000&x-signature=0HFND5gh85nexMHTjXVckjT88V4%3D",
+        "dynamicCover": "https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/7cbd653005444192b08e9ccc1d16a82e_1674065863?x-expires=1675836000&x-signature=Z4VAFAmQvIjAp%2ByGSjPjGGRrHBA%3D",
+        "playAddr": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c001-tx/815ff8632b8c46418504563709aeedac/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=3988&bt=1994&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=ZDQ5OWU1M2ZkO2k0NDtnOUBpM3NqbTc6Zjo2aTMzZzczNEAyYmBhMC0xXjQxMjUvLzA1YSMwM2s0cjRvYzFgLS1kMS9zcw%3D%3D&expire=1675837325&l=2023020800212883A78A008610802FF895&policy=2&signature=c987fd46eb32071454b735f98ce5768f&tk=tt_chain_token",
+        "downloadAddr": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c001-tx/815ff8632b8c46418504563709aeedac/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=3988&bt=1994&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=ZDQ5OWU1M2ZkO2k0NDtnOUBpM3NqbTc6Zjo2aTMzZzczNEAyYmBhMC0xXjQxMjUvLzA1YSMwM2s0cjRvYzFgLS1kMS9zcw%3D%3D&expire=1675837325&l=2023020800212883A78A008610802FF895&policy=2&signature=c987fd46eb32071454b735f98ce5768f&tk=tt_chain_token",
+        "shareCover": [
+          "",
+          "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/48ff89c198574a959e1da3103385b355_1674065863~tplv-tiktok-play.jpeg?x-expires=1676419200&x-signature=F2FDaGG99gkFl0tKGxgTP2wxG04%3D",
+          "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/48ff89c198574a959e1da3103385b355_1674065863~tplv-tiktokx-share-play.jpeg?x-expires=1676419200&x-signature=TALAcE0BjRVlbyLcr8uOfP%2Fc%2FoY%3D"
+        ],
+        "reflowCover": "https://p19-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/d85a1d5421e342a2b550dc8f02d379ce_1674065863?x-expires=1675836000&x-signature=VI9Y4SMZuhpJWO0jfPlcRk5WNNc%3D",
+        "bitrate": 2042634,
+        "encodedType": "normal",
+        "format": "mp4",
+        "videoQuality": "normal",
+        "encodeUserTag": "",
+        "codecType": "h264",
+        "definition": "720p",
+        "subtitleInfos": [],
+        "zoomCover": {
+          "240": "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/d85a1d5421e342a2b550dc8f02d379ce_1674065863~tplv-r00ih4996s-1:240:240.jpeg?x-expires=1675836000&x-signature=T0wUUJvTl143%2BXUp61%2BvSeVV1SQ%3D",
+          "480": "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/d85a1d5421e342a2b550dc8f02d379ce_1674065863~tplv-r00ih4996s-1:480:480.jpeg?x-expires=1675836000&x-signature=VU4REi9tl9fpvJtrFwU%2F3xldbqI%3D",
+          "720": "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/d85a1d5421e342a2b550dc8f02d379ce_1674065863~tplv-r00ih4996s-1:720:720.jpeg?x-expires=1675836000&x-signature=zo3zD%2Bk8PPoCtAp3q96KdfxcCoM%3D",
+          "960": "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/d85a1d5421e342a2b550dc8f02d379ce_1674065863~tplv-r00ih4996s-1:960:960.jpeg?x-expires=1675836000&x-signature=%2BdUzVPWoF6uTKHr6gGX6i4sXNCk%3D"
+        },
+        "volumeInfo": {
+          "Loudness": -17.1,
+          "Peak": 0.92257
+        },
+        "bitrateInfo": [
+          {
+            "GearName": "normal_720_0",
+            "Bitrate": 2042634,
+            "QualityType": 10,
+            "PlayAddr": {
+              "Uri": "v12044gd0000cf43f7rc77u47jng6p30",
+              "UrlList": [
+                "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c001-tx/815ff8632b8c46418504563709aeedac/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=3988&bt=1994&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=ZDQ5OWU1M2ZkO2k0NDtnOUBpM3NqbTc6Zjo2aTMzZzczNEAyYmBhMC0xXjQxMjUvLzA1YSMwM2s0cjRvYzFgLS1kMS9zcw%3D%3D&expire=1675837325&l=2023020800212883A78A008610802FF895&policy=2&signature=c987fd46eb32071454b735f98ce5768f&tk=tt_chain_token",
+                "https://v19-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c001-tx/815ff8632b8c46418504563709aeedac/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=3988&bt=1994&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=ZDQ5OWU1M2ZkO2k0NDtnOUBpM3NqbTc6Zjo2aTMzZzczNEAyYmBhMC0xXjQxMjUvLzA1YSMwM2s0cjRvYzFgLS1kMS9zcw%3D%3D&expire=1675837325&l=2023020800212883A78A008610802FF895&policy=2&signature=c987fd46eb32071454b735f98ce5768f&tk=tt_chain_token"
+              ],
+              "DataSize": "9562340",
+              "UrlKey": "v12044gd0000cf43f7rc77u47jng6p30_h264_720p_2042634",
+              "FileHash": "0add0af684dc218e4cfebafde02dbbfb",
+              "FileCs": "c:0-32010-681b"
+            },
+            "CodecType": "h264"
+          }
+        ]
+      },
+      "author": "glutenfreefig",
+      "music": {
+        "id": "7190058049569098539",
+        "title": "original sound",
+        "playUrl": "https://sf19.tiktokcdn-us.com/obj/ies-music-tx/7190058082716650282.mp3",
+        "coverLarge": "https://p16-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/6d04f3d90e09c3f922035412f0741061~c5_1080x1080.jpeg?x-expires=1675987200&x-signature=sYqYIMlr34I8kDRhXXrfgvWpRg8%3D",
+        "coverMedium": "https://p16-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/6d04f3d90e09c3f922035412f0741061~c5_720x720.jpeg?x-expires=1675987200&x-signature=mBfdrrgHtIh8UBVbc4cfroL6yYg%3D",
+        "coverThumb": "https://p16-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/6d04f3d90e09c3f922035412f0741061~c5_100x100.jpeg?x-expires=1675987200&x-signature=l5ZJB7%2Fv0CJF4Fi6Iaq05liyXuw%3D",
+        "authorName": "Fig Gluten Free",
+        "original": true,
+        "duration": 37,
+        "album": "",
+        "scheduleSearchTime": 0
+      },
+      "challenges": [
+        {
+          "id": "7185921247291637802",
+          "title": "glutenfreefig",
+          "desc": "",
+          "profileLarger": "",
+          "profileMedium": "",
+          "profileThumb": "",
+          "coverLarger": "",
+          "coverMedium": "",
+          "coverThumb": "",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        },
+        {
+          "id": "141847",
+          "title": "glutenfree",
+          "desc": "",
+          "profileLarger": "",
+          "profileMedium": "",
+          "profileThumb": "",
+          "coverLarger": "",
+          "coverMedium": "",
+          "coverThumb": "",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        },
+        {
+          "id": "3210073",
+          "title": "celiac",
+          "desc": "",
+          "profileLarger": "",
+          "profileMedium": "",
+          "profileThumb": "",
+          "coverLarger": "",
+          "coverMedium": "",
+          "coverThumb": "",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        }
+      ],
+      "stats": {
+        "diggCount": 30,
+        "shareCount": 1,
+        "commentCount": 0,
+        "playCount": 362
+      },
+      "duetInfo": {
+        "duetFromId": "0"
+      },
+      "warnInfo": [],
+      "originalItem": false,
+      "officalItem": false,
+      "textExtra": [
+        {
+          "awemeId": "",
+          "start": 42,
+          "end": 56,
+          "hashtagId": "7185921247291637802",
+          "hashtagName": "glutenfreefig",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        },
+        {
+          "awemeId": "",
+          "start": 57,
+          "end": 68,
+          "hashtagId": "141847",
+          "hashtagName": "glutenfree",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        },
+        {
+          "awemeId": "",
+          "start": 69,
+          "end": 76,
+          "hashtagId": "3210073",
+          "hashtagName": "celiac",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        }
+      ],
+      "secret": false,
+      "forFriend": false,
+      "digged": false,
+      "itemCommentStatus": 0,
+      "showNotPass": false,
+      "vl1": false,
+      "takeDown": 0,
+      "itemMute": false,
+      "effectStickers": [
+        {
+          "name": "Green Screen",
+          "ID": "263840"
+        }
+      ],
+      "authorStats": {
+        "followerCount": 170,
+        "followingCount": 5,
+        "heart": 333,
+        "heartCount": 333,
+        "videoCount": 12,
+        "diggCount": 8
+      },
+      "privateItem": false,
+      "duetEnabled": true,
+      "stitchEnabled": true,
+      "stickersOnItem": [
+        {
+          "stickerText": [
+            "5 things I wish I knew when starting the\nGluten-Free diet ",
+            "1. Cross contamination ",
+            "2. Soy Sauce isn\u2019t gluten free",
+            "3. Not all medication is \ngluten-free",
+            "4. Not all oats are gluten free",
+            "5. the Fig app exists!!"
+          ],
+          "stickerType": 4
+        }
+      ],
+      "isAd": false,
+      "shareEnabled": true,
+      "comments": [],
+      "duetDisplay": 0,
+      "stitchDisplay": 0,
+      "indexEnabled": true,
+      "adAuthorization": false,
+      "adLabelVersion": 0,
+      "locationCreated": "US",
+      "BAInfo": "",
+      "nickname": "Fig Gluten Free",
+      "authorId": "7184587664987800618",
+      "authorSecId": "MS4wLjABAAAAJmbzjMOWSU9NCiShbWLnbyKclg8_eSBakOOlXA0NQ3mBlRho5Fwy1fvJMJhQraHs",
+      "avatarThumb": "https://p16-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/6d04f3d90e09c3f922035412f0741061~c5_100x100.jpeg?x-expires=1675987200&x-signature=l5ZJB7%2Fv0CJF4Fi6Iaq05liyXuw%3D",
+      "downloadSetting": 0,
+      "authorPrivate": false
+    },
+    "7188880377522441515": {
+      "id": "7188880377522441515",
+      "desc": "We love chipotle & we love the Fig app! Available in the app store \ud83d\udc9a #fig #glutenfree #glutenfreefig ",
+      "createTime": "1673791675",
+      "scheduleTime": 0,
+      "video": {
+        "id": "7188880377522441515",
+        "height": 1024,
+        "width": 576,
+        "duration": 29,
+        "ratio": "720p",
+        "cover": "https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/94c8c36f9f9342e29326fed095913264_1673791675?x-expires=1675836000&x-signature=s3sg1uud9zc%2Bu5AoLTZwvBvkowg%3D",
+        "originCover": "https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/4de638fcc669468c81bf28187c7a447c_1673791675?x-expires=1675836000&x-signature=swzpridO2ovpK5d%2FjCjWyRhLkFQ%3D",
+        "dynamicCover": "https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/434711a2524a4c65b2447a4347dc0219_1673791676?x-expires=1675836000&x-signature=xvP1ca3g6nl4QHxlqHMef9T3Z8c%3D",
+        "playAddr": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c002-tx/7efd451e34054860a60842efffba4609/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=2836&bt=1418&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=PDZnNzs6ZjplZzU8OzYzZkBpMztzaTw6ZjgzaTMzZzczNEAwMDAwYjMwXzMxXzRgLTYzYSNfYjEwcjQwZC9gLS1kMS9zcw%3D%3D&expire=1675837317&l=2023020800212883A78A008610802FF895&policy=2&signature=c4f3e78a1e7e7529acbf62c78f4d30e6&tk=tt_chain_token",
+        "downloadAddr": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c002-tx/7efd451e34054860a60842efffba4609/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=2836&bt=1418&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=PDZnNzs6ZjplZzU8OzYzZkBpMztzaTw6ZjgzaTMzZzczNEAwMDAwYjMwXzMxXzRgLTYzYSNfYjEwcjQwZC9gLS1kMS9zcw%3D%3D&expire=1675837317&l=2023020800212883A78A008610802FF895&policy=2&signature=c4f3e78a1e7e7529acbf62c78f4d30e6&tk=tt_chain_token",
+        "shareCover": [
+          "",
+          "https://p19-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/4de638fcc669468c81bf28187c7a447c_1673791675~tplv-tiktok-play.jpeg?x-expires=1676419200&x-signature=UzTa21IQOQFKATycwJLlPziEeEc%3D",
+          "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/4de638fcc669468c81bf28187c7a447c_1673791675~tplv-tiktokx-share-play.jpeg?x-expires=1676419200&x-signature=8cVTFzCqeqiSwZgVd6Q6wKPkqjk%3D"
+        ],
+        "reflowCover": "https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/94c8c36f9f9342e29326fed095913264_1673791675?x-expires=1675836000&x-signature=s3sg1uud9zc%2Bu5AoLTZwvBvkowg%3D",
+        "bitrate": 1452255,
+        "encodedType": "normal",
+        "format": "mp4",
+        "videoQuality": "normal",
+        "encodeUserTag": "",
+        "codecType": "h264",
+        "definition": "720p",
+        "subtitleInfos": [],
+        "zoomCover": {
+          "240": "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/94c8c36f9f9342e29326fed095913264_1673791675~tplv-r00ih4996s-1:240:240.jpeg?x-expires=1675836000&x-signature=ZAf4bzcHgBz0orQdMDlRVNypcOE%3D",
+          "480": "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/94c8c36f9f9342e29326fed095913264_1673791675~tplv-r00ih4996s-1:480:480.jpeg?x-expires=1675836000&x-signature=bFKqk18FR1%2BsQ9ZQUSPyi2Xj1wA%3D",
+          "720": "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/94c8c36f9f9342e29326fed095913264_1673791675~tplv-r00ih4996s-1:720:720.jpeg?x-expires=1675836000&x-signature=JmYVPZ9pUFRX%2FIaGiNK18ekYU64%3D",
+          "960": "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/94c8c36f9f9342e29326fed095913264_1673791675~tplv-r00ih4996s-1:960:960.jpeg?x-expires=1675836000&x-signature=CkJEQBdZRvxJppfSIT1Skb%2F7vmo%3D"
+        },
+        "volumeInfo": {
+          "Loudness": -13.8,
+          "Peak": 0.95499
+        },
+        "bitrateInfo": [
+          {
+            "GearName": "normal_720_0",
+            "Bitrate": 1452255,
+            "QualityType": 10,
+            "PlayAddr": {
+              "Uri": "v12044gd0000cf20g53c77u93f4pe8b0",
+              "UrlList": [
+                "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c002-tx/7efd451e34054860a60842efffba4609/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=2836&bt=1418&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=PDZnNzs6ZjplZzU8OzYzZkBpMztzaTw6ZjgzaTMzZzczNEAwMDAwYjMwXzMxXzRgLTYzYSNfYjEwcjQwZC9gLS1kMS9zcw%3D%3D&expire=1675837317&l=2023020800212883A78A008610802FF895&policy=2&signature=c4f3e78a1e7e7529acbf62c78f4d30e6&tk=tt_chain_token",
+                "https://v19-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c002-tx/7efd451e34054860a60842efffba4609/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=2836&bt=1418&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=PDZnNzs6ZjplZzU8OzYzZkBpMztzaTw6ZjgzaTMzZzczNEAwMDAwYjMwXzMxXzRgLTYzYSNfYjEwcjQwZC9gLS1kMS9zcw%3D%3D&expire=1675837317&l=2023020800212883A78A008610802FF895&policy=2&signature=c4f3e78a1e7e7529acbf62c78f4d30e6&tk=tt_chain_token"
+              ],
+              "DataSize": "5403479",
+              "UrlKey": "v12044gd0000cf20g53c77u93f4pe8b0_h264_720p_1452255",
+              "FileHash": "dadb950fd281cb2c5f4d340f7a8492e9",
+              "FileCs": "c:0-24630-cfa5"
+            },
+            "CodecType": "h264"
+          }
+        ]
+      },
+      "author": "glutenfreefig",
+      "music": {
+        "id": "7188880415745149739",
+        "title": "original sound",
+        "playUrl": "https://sf16.tiktokcdn-us.com/obj/ies-music-tx/7188880446460103466.mp3",
+        "coverLarge": "https://p16-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/6d04f3d90e09c3f922035412f0741061~c5_1080x1080.jpeg?x-expires=1675987200&x-signature=sYqYIMlr34I8kDRhXXrfgvWpRg8%3D",
+        "coverMedium": "https://p16-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/6d04f3d90e09c3f922035412f0741061~c5_720x720.jpeg?x-expires=1675987200&x-signature=mBfdrrgHtIh8UBVbc4cfroL6yYg%3D",
+        "coverThumb": "https://p16-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/6d04f3d90e09c3f922035412f0741061~c5_100x100.jpeg?x-expires=1675987200&x-signature=l5ZJB7%2Fv0CJF4Fi6Iaq05liyXuw%3D",
+        "authorName": "Fig Gluten Free",
+        "original": true,
+        "duration": 29,
+        "album": "",
+        "scheduleSearchTime": 0
+      },
+      "challenges": [
+        {
+          "id": "549369",
+          "title": "fig",
+          "desc": "",
+          "profileLarger": "",
+          "profileMedium": "",
+          "profileThumb": "",
+          "coverLarger": "",
+          "coverMedium": "",
+          "coverThumb": "",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        },
+        {
+          "id": "141847",
+          "title": "glutenfree",
+          "desc": "",
+          "profileLarger": "",
+          "profileMedium": "",
+          "profileThumb": "",
+          "coverLarger": "",
+          "coverMedium": "",
+          "coverThumb": "",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        },
+        {
+          "id": "7185921247291637802",
+          "title": "glutenfreefig",
+          "desc": "",
+          "profileLarger": "",
+          "profileMedium": "",
+          "profileThumb": "",
+          "coverLarger": "",
+          "coverMedium": "",
+          "coverThumb": "",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        }
+      ],
+      "stats": {
+        "diggCount": 10,
+        "shareCount": 0,
+        "commentCount": 0,
+        "playCount": 108
+      },
+      "duetInfo": {
+        "duetFromId": "0"
+      },
+      "warnInfo": [],
+      "originalItem": false,
+      "officalItem": false,
+      "textExtra": [
+        {
+          "awemeId": "",
+          "start": 70,
+          "end": 74,
+          "hashtagId": "549369",
+          "hashtagName": "fig",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        },
+        {
+          "awemeId": "",
+          "start": 75,
+          "end": 86,
+          "hashtagId": "141847",
+          "hashtagName": "glutenfree",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        },
+        {
+          "awemeId": "",
+          "start": 87,
+          "end": 101,
+          "hashtagId": "7185921247291637802",
+          "hashtagName": "glutenfreefig",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        }
+      ],
+      "secret": false,
+      "forFriend": false,
+      "digged": false,
+      "itemCommentStatus": 0,
+      "showNotPass": false,
+      "vl1": false,
+      "takeDown": 0,
+      "itemMute": false,
+      "effectStickers": [],
+      "authorStats": {
+        "followerCount": 170,
+        "followingCount": 5,
+        "heart": 333,
+        "heartCount": 333,
+        "videoCount": 12,
+        "diggCount": 8
+      },
+      "privateItem": false,
+      "duetEnabled": true,
+      "stitchEnabled": true,
+      "stickersOnItem": [
+        {
+          "stickerText": [
+            "Let\u2019s find\nGluten free\nFood with \nFig!"
+          ],
+          "stickerType": 4
+        }
+      ],
+      "isAd": false,
+      "shareEnabled": true,
+      "comments": [],
+      "duetDisplay": 0,
+      "stitchDisplay": 0,
+      "indexEnabled": true,
+      "adAuthorization": false,
+      "adLabelVersion": 0,
+      "locationCreated": "US",
+      "BAInfo": "",
+      "nickname": "Fig Gluten Free",
+      "authorId": "7184587664987800618",
+      "authorSecId": "MS4wLjABAAAAJmbzjMOWSU9NCiShbWLnbyKclg8_eSBakOOlXA0NQ3mBlRho5Fwy1fvJMJhQraHs",
+      "avatarThumb": "https://p16-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/6d04f3d90e09c3f922035412f0741061~c5_100x100.jpeg?x-expires=1675987200&x-signature=l5ZJB7%2Fv0CJF4Fi6Iaq05liyXuw%3D",
+      "downloadSetting": 0,
+      "authorPrivate": false
+    },
+    "7187845246875733294": {
+      "id": "7187845246875733294",
+      "desc": "Bag full of yummy dips thanks to the Fig app! Download Fig in the app store today! #fig #glutenfreefig #glutenfree #groceryshopping ",
+      "createTime": "1673550645",
+      "scheduleTime": 0,
+      "video": {
+        "id": "7187845246875733294",
+        "height": 1024,
+        "width": 576,
+        "duration": 36,
+        "ratio": "720p",
+        "cover": "https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/a72899ea8f084e2e8b66aa54b5e7c105?x-expires=1675836000&x-signature=Vd1Y2fBqbuNTBgIQITa10C3MAs4%3D",
+        "originCover": "https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/519d3474c16747879d1f12a5544f5c58_1673550647?x-expires=1675836000&x-signature=eu0PKTHpHj5eqi2yM9u9Xvc5Nfs%3D",
+        "dynamicCover": "https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/348626df2c9e40e08c2fc49f724ce457_1673550648?x-expires=1675836000&x-signature=JrQ%2FREjjcJrAhc7TvMUEy8h3%2BRU%3D",
+        "playAddr": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c003-tx/733372e915184528aeb29189af287c2a/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=1814&bt=907&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=ODk6OTg4aTU8Ozc0NmY2NUBpM2xnbTo6Zjo4aTMzZzczNEBgYjNiXjA2NjYxLjJfM2E2YSMvbzVtcjRnai1gLS1kMS9zcw%3D%3D&expire=1675837323&l=2023020800212883A78A008610802FF895&policy=2&signature=6cc22baa95057aea77d135e936e1ec4c&tk=tt_chain_token",
+        "downloadAddr": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c003-tx/733372e915184528aeb29189af287c2a/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=1814&bt=907&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=ODk6OTg4aTU8Ozc0NmY2NUBpM2xnbTo6Zjo4aTMzZzczNEBgYjNiXjA2NjYxLjJfM2E2YSMvbzVtcjRnai1gLS1kMS9zcw%3D%3D&expire=1675837323&l=2023020800212883A78A008610802FF895&policy=2&signature=6cc22baa95057aea77d135e936e1ec4c&tk=tt_chain_token",
+        "shareCover": [
+          "",
+          "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/519d3474c16747879d1f12a5544f5c58_1673550647~tplv-tiktok-play.jpeg?x-expires=1676419200&x-signature=TCTc0Rfo2mOR5sxcqqkT8k1MsUk%3D",
+          "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/519d3474c16747879d1f12a5544f5c58_1673550647~tplv-tiktokx-share-play.jpeg?x-expires=1676419200&x-signature=J6DHyLCJUvC5oasPsIklpdnxrZY%3D"
+        ],
+        "reflowCover": "https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/a72899ea8f084e2e8b66aa54b5e7c105?x-expires=1675836000&x-signature=Vd1Y2fBqbuNTBgIQITa10C3MAs4%3D",
+        "bitrate": 928907,
+        "encodedType": "normal",
+        "format": "mp4",
+        "videoQuality": "normal",
+        "encodeUserTag": "",
+        "codecType": "h264",
+        "definition": "720p",
+        "subtitleInfos": [],
+        "zoomCover": {
+          "240": "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/a72899ea8f084e2e8b66aa54b5e7c105~tplv-r00ih4996s-1:240:240.jpeg?x-expires=1675836000&x-signature=RK1U4CfrsJ99ofHf5ojIJxENQUo%3D",
+          "480": "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/a72899ea8f084e2e8b66aa54b5e7c105~tplv-r00ih4996s-1:480:480.jpeg?x-expires=1675836000&x-signature=se3mLUTLyoesNnP%2FN3bekSWUwnc%3D",
+          "720": "https://p19-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/a72899ea8f084e2e8b66aa54b5e7c105~tplv-r00ih4996s-1:720:720.jpeg?x-expires=1675836000&x-signature=ebY1xzFOayrr0Td68gx2H%2B0BIso%3D",
+          "960": "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/a72899ea8f084e2e8b66aa54b5e7c105~tplv-r00ih4996s-1:960:960.jpeg?x-expires=1675836000&x-signature=Y3JZYQ%2BISAnbvDcfAFrlLg82QQw%3D"
+        },
+        "volumeInfo": {
+          "Loudness": -9.3,
+          "Peak": 1
+        },
+        "bitrateInfo": [
+          {
+            "GearName": "normal_720_0",
+            "Bitrate": 928907,
+            "QualityType": 10,
+            "PlayAddr": {
+              "Uri": "v12044gd0000cf05m7jc77u7pj8dri20",
+              "UrlList": [
+                "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c003-tx/733372e915184528aeb29189af287c2a/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=1814&bt=907&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=ODk6OTg4aTU8Ozc0NmY2NUBpM2xnbTo6Zjo4aTMzZzczNEBgYjNiXjA2NjYxLjJfM2E2YSMvbzVtcjRnai1gLS1kMS9zcw%3D%3D&expire=1675837323&l=2023020800212883A78A008610802FF895&policy=2&signature=6cc22baa95057aea77d135e936e1ec4c&tk=tt_chain_token",
+                "https://v19-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c003-tx/733372e915184528aeb29189af287c2a/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=1814&bt=907&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=ODk6OTg4aTU8Ozc0NmY2NUBpM2xnbTo6Zjo4aTMzZzczNEBgYjNiXjA2NjYxLjJfM2E2YSMvbzVtcjRnai1gLS1kMS9zcw%3D%3D&expire=1675837323&l=2023020800212883A78A008610802FF895&policy=2&signature=6cc22baa95057aea77d135e936e1ec4c&tk=tt_chain_token"
+              ],
+              "DataSize": "4192277",
+              "UrlKey": "v12044gd0000cf05m7jc77u7pj8dri20_h264_720p_928907",
+              "FileHash": "005fb2ebe06accf774775acfdba1bfd3",
+              "FileCs": "c:0-30286-cf74"
+            },
+            "CodecType": "h264"
+          }
+        ]
+      },
+      "author": "glutenfreefig",
+      "music": {
+        "id": "6696823466353494017",
+        "title": "Valerie (Version Revisited)",
+        "playUrl": "https://sf16-ies-music-sg.tiktokcdn.com/obj/tos-alisg-ve-2774/ed258b1714464005a18cdad120d77e0c",
+        "coverLarge": "https://p16-sg.tiktokcdn.com/aweme/720x720/tos-alisg-v-2774/51cfe563fc09434e85c8bd8b60d8b5f2.jpeg",
+        "coverMedium": "https://p16-sg.tiktokcdn.com/aweme/200x200/tos-alisg-v-2774/51cfe563fc09434e85c8bd8b60d8b5f2.jpeg",
+        "coverThumb": "https://p16-sg.tiktokcdn.com/aweme/100x100/tos-alisg-v-2774/51cfe563fc09434e85c8bd8b60d8b5f2.jpeg",
+        "authorName": "Mark Ronson",
+        "original": false,
+        "duration": 60,
+        "album": "Version",
+        "scheduleSearchTime": 0
+      },
+      "challenges": [
+        {
+          "id": "549369",
+          "title": "fig",
+          "desc": "",
+          "profileLarger": "",
+          "profileMedium": "",
+          "profileThumb": "",
+          "coverLarger": "",
+          "coverMedium": "",
+          "coverThumb": "",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        },
+        {
+          "id": "7185921247291637802",
+          "title": "glutenfreefig",
+          "desc": "",
+          "profileLarger": "",
+          "profileMedium": "",
+          "profileThumb": "",
+          "coverLarger": "",
+          "coverMedium": "",
+          "coverThumb": "",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        },
+        {
+          "id": "141847",
+          "title": "glutenfree",
+          "desc": "",
+          "profileLarger": "",
+          "profileMedium": "",
+          "profileThumb": "",
+          "coverLarger": "",
+          "coverMedium": "",
+          "coverThumb": "",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        },
+        {
+          "id": "181172",
+          "title": "groceryshopping",
+          "desc": "",
+          "profileLarger": "",
+          "profileMedium": "",
+          "profileThumb": "",
+          "coverLarger": "",
+          "coverMedium": "",
+          "coverThumb": "",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        }
+      ],
+      "stats": {
+        "diggCount": 42,
+        "shareCount": 0,
+        "commentCount": 1,
+        "playCount": 395
+      },
+      "duetInfo": {
+        "duetFromId": "0"
+      },
+      "warnInfo": [],
+      "originalItem": false,
+      "officalItem": false,
+      "textExtra": [
+        {
+          "awemeId": "",
+          "start": 83,
+          "end": 87,
+          "hashtagId": "549369",
+          "hashtagName": "fig",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        },
+        {
+          "awemeId": "",
+          "start": 88,
+          "end": 102,
+          "hashtagId": "7185921247291637802",
+          "hashtagName": "glutenfreefig",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        },
+        {
+          "awemeId": "",
+          "start": 103,
+          "end": 114,
+          "hashtagId": "141847",
+          "hashtagName": "glutenfree",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        },
+        {
+          "awemeId": "",
+          "start": 115,
+          "end": 131,
+          "hashtagId": "181172",
+          "hashtagName": "groceryshopping",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        }
+      ],
+      "secret": false,
+      "forFriend": false,
+      "digged": false,
+      "itemCommentStatus": 0,
+      "showNotPass": false,
+      "vl1": false,
+      "takeDown": 0,
+      "itemMute": false,
+      "effectStickers": [],
+      "authorStats": {
+        "followerCount": 170,
+        "followingCount": 5,
+        "heart": 333,
+        "heartCount": 333,
+        "videoCount": 12,
+        "diggCount": 8
+      },
+      "privateItem": false,
+      "duetEnabled": true,
+      "stitchEnabled": true,
+      "stickersOnItem": [
+        {
+          "stickerText": [
+            "Let\u2019s find \nGluten free \ndips with \nFig!"
+          ],
+          "stickerType": 4
+        }
+      ],
+      "isAd": false,
+      "shareEnabled": true,
+      "comments": [],
+      "duetDisplay": 0,
+      "stitchDisplay": 0,
+      "indexEnabled": true,
+      "adAuthorization": false,
+      "adLabelVersion": 0,
+      "locationCreated": "US",
+      "BAInfo": "",
+      "nickname": "Fig Gluten Free",
+      "authorId": "7184587664987800618",
+      "authorSecId": "MS4wLjABAAAAJmbzjMOWSU9NCiShbWLnbyKclg8_eSBakOOlXA0NQ3mBlRho5Fwy1fvJMJhQraHs",
+      "avatarThumb": "https://p16-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/6d04f3d90e09c3f922035412f0741061~c5_100x100.jpeg?x-expires=1675987200&x-signature=l5ZJB7%2Fv0CJF4Fi6Iaq05liyXuw%3D",
+      "downloadSetting": 0,
+      "authorPrivate": false
+    },
+    "7186685533773417770": {
+      "id": "7186685533773417770",
+      "desc": "Fig saving me on my travel days! Fig is available in the App Store! #fig #glutenfreefig #celiac ",
+      "createTime": "1673280645",
+      "scheduleTime": 0,
+      "video": {
+        "id": "7186685533773417770",
+        "height": 1024,
+        "width": 576,
+        "duration": 18,
+        "ratio": "720p",
+        "cover": "https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/3414aad3c2244aa6b03d467a17e90ff6?x-expires=1675836000&x-signature=Ar4Tyky8U%2ByctI%2Fo2WmBQV6mUWU%3D",
+        "originCover": "https://p19-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/52ff5d23748f443eb7d69fd10bb207f7_1673280645?x-expires=1675836000&x-signature=lW89v6Vv%2Flm5fm%2Fsu9Cr4%2FxCKjk%3D",
+        "dynamicCover": "https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/4efb98e531a7404e88b40d08e161ceeb_1673280646?x-expires=1675836000&x-signature=HoiKR1ZdOjTdBv4ylVK84WNh1rk%3D",
+        "playAddr": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c002-tx/38c6c42df1574643bc77ff8b6f6c7339/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=2578&bt=1289&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=Zmg2ZDk0O2U4OWU6NDpoZUBpM2p2czo6ZjU2aDMzZzczNEAvYjNeNGFhNl8xLy81NWNjYSMyby9rcjRfbHJgLS1kMS9zcw%3D%3D&expire=1675837306&l=2023020800212883A78A008610802FF895&policy=2&signature=57332655c63d9ad9de3e0e2bc9764943&tk=tt_chain_token",
+        "downloadAddr": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c002-tx/38c6c42df1574643bc77ff8b6f6c7339/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=2578&bt=1289&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=Zmg2ZDk0O2U4OWU6NDpoZUBpM2p2czo6ZjU2aDMzZzczNEAvYjNeNGFhNl8xLy81NWNjYSMyby9rcjRfbHJgLS1kMS9zcw%3D%3D&expire=1675837306&l=2023020800212883A78A008610802FF895&policy=2&signature=57332655c63d9ad9de3e0e2bc9764943&tk=tt_chain_token",
+        "shareCover": [
+          "",
+          "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/52ff5d23748f443eb7d69fd10bb207f7_1673280645~tplv-tiktok-play.jpeg?x-expires=1676419200&x-signature=i1Ahp%2BR1bTZ%2FyK1qa%2BfIdKfs9T4%3D",
+          "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/52ff5d23748f443eb7d69fd10bb207f7_1673280645~tplv-tiktokx-share-play.jpeg?x-expires=1676419200&x-signature=Nz%2BvqpLzFD3e%2FDfcs1fV9cEvB0c%3D"
+        ],
+        "reflowCover": "https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/3414aad3c2244aa6b03d467a17e90ff6?x-expires=1675836000&x-signature=Ar4Tyky8U%2ByctI%2Fo2WmBQV6mUWU%3D",
+        "bitrate": 1320248,
+        "encodedType": "normal",
+        "format": "mp4",
+        "videoQuality": "normal",
+        "encodeUserTag": "",
+        "codecType": "h264",
+        "definition": "720p",
+        "subtitleInfos": [],
+        "zoomCover": {
+          "240": "https://p19-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/3414aad3c2244aa6b03d467a17e90ff6~tplv-r00ih4996s-1:240:240.jpeg?x-expires=1675836000&x-signature=xzjKTpDGScbFYyndDd4l280yqXY%3D",
+          "480": "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/3414aad3c2244aa6b03d467a17e90ff6~tplv-r00ih4996s-1:480:480.jpeg?x-expires=1675836000&x-signature=fVrncOJt8aNplyHKbLPONVBO6ZE%3D",
+          "720": "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/3414aad3c2244aa6b03d467a17e90ff6~tplv-r00ih4996s-1:720:720.jpeg?x-expires=1675836000&x-signature=aFHT6ZRyPSxGdw4KfEZYAXYsuKc%3D",
+          "960": "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/3414aad3c2244aa6b03d467a17e90ff6~tplv-r00ih4996s-1:960:960.jpeg?x-expires=1675836000&x-signature=LM4P0flNCcI2O%2BJbN77e%2FD%2BNwzU%3D"
+        },
+        "volumeInfo": {
+          "Loudness": -14.5,
+          "Peak": 0.90157
+        },
+        "bitrateInfo": [
+          {
+            "GearName": "normal_720_0",
+            "Bitrate": 1320248,
+            "QualityType": 10,
+            "PlayAddr": {
+              "Uri": "v12044gd0000ceu3o2bc77u7np2srg50",
+              "UrlList": [
+                "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c002-tx/38c6c42df1574643bc77ff8b6f6c7339/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=2578&bt=1289&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=Zmg2ZDk0O2U4OWU6NDpoZUBpM2p2czo6ZjU2aDMzZzczNEAvYjNeNGFhNl8xLy81NWNjYSMyby9rcjRfbHJgLS1kMS9zcw%3D%3D&expire=1675837306&l=2023020800212883A78A008610802FF895&policy=2&signature=57332655c63d9ad9de3e0e2bc9764943&tk=tt_chain_token",
+                "https://v19-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c002-tx/38c6c42df1574643bc77ff8b6f6c7339/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=2578&bt=1289&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=Zmg2ZDk0O2U4OWU6NDpoZUBpM2p2czo6ZjU2aDMzZzczNEAvYjNeNGFhNl8xLy81NWNjYSMyby9rcjRfbHJgLS1kMS9zcw%3D%3D&expire=1675837306&l=2023020800212883A78A008610802FF895&policy=2&signature=57332655c63d9ad9de3e0e2bc9764943&tk=tt_chain_token"
+              ],
+              "DataSize": "3053734",
+              "UrlKey": "v12044gd0000ceu3o2bc77u7np2srg50_h264_720p_1320248",
+              "FileHash": "acb42d91b4ff10ae4d366ab92e572ffe",
+              "FileCs": "c:0-16158-c329"
+            },
+            "CodecType": "h264"
+          }
+        ]
+      },
+      "author": "glutenfreefig",
+      "music": {
+        "id": "6874378805834680322",
+        "title": "Morning Coffee",
+        "playUrl": "https://sf16-ies-music-sg.tiktokcdn.com/obj/tos-alisg-ve-2774/7a1a45bd6e1947bdb7d6b8b3afe8743a",
+        "coverLarge": "https://p16-sg.tiktokcdn.com/aweme/720x720/tos-alisg-v-2774/28d7e83afb60476d936a9a9e23e54fc1.jpeg",
+        "coverMedium": "https://p16-sg.tiktokcdn.com/aweme/200x200/tos-alisg-v-2774/28d7e83afb60476d936a9a9e23e54fc1.jpeg",
+        "coverThumb": "https://p16-sg.tiktokcdn.com/aweme/100x100/tos-alisg-v-2774/28d7e83afb60476d936a9a9e23e54fc1.jpeg",
+        "authorName": "Chevy & Nalba",
+        "original": false,
+        "duration": 60,
+        "album": "Morning Coffee",
+        "scheduleSearchTime": 0
+      },
+      "challenges": [
+        {
+          "id": "549369",
+          "title": "fig",
+          "desc": "",
+          "profileLarger": "",
+          "profileMedium": "",
+          "profileThumb": "",
+          "coverLarger": "",
+          "coverMedium": "",
+          "coverThumb": "",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        },
+        {
+          "id": "7185921247291637802",
+          "title": "glutenfreefig",
+          "desc": "",
+          "profileLarger": "",
+          "profileMedium": "",
+          "profileThumb": "",
+          "coverLarger": "",
+          "coverMedium": "",
+          "coverThumb": "",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        },
+        {
+          "id": "3210073",
+          "title": "celiac",
+          "desc": "",
+          "profileLarger": "",
+          "profileMedium": "",
+          "profileThumb": "",
+          "coverLarger": "",
+          "coverMedium": "",
+          "coverThumb": "",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        }
+      ],
+      "stats": {
+        "diggCount": 11,
+        "shareCount": 0,
+        "commentCount": 0,
+        "playCount": 351
+      },
+      "duetInfo": {
+        "duetFromId": "0"
+      },
+      "warnInfo": [],
+      "originalItem": false,
+      "officalItem": false,
+      "textExtra": [
+        {
+          "awemeId": "",
+          "start": 68,
+          "end": 72,
+          "hashtagId": "549369",
+          "hashtagName": "fig",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        },
+        {
+          "awemeId": "",
+          "start": 73,
+          "end": 87,
+          "hashtagId": "7185921247291637802",
+          "hashtagName": "glutenfreefig",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        },
+        {
+          "awemeId": "",
+          "start": 88,
+          "end": 95,
+          "hashtagId": "3210073",
+          "hashtagName": "celiac",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        }
+      ],
+      "secret": false,
+      "forFriend": false,
+      "digged": false,
+      "itemCommentStatus": 0,
+      "showNotPass": false,
+      "vl1": false,
+      "takeDown": 0,
+      "itemMute": false,
+      "effectStickers": [],
+      "authorStats": {
+        "followerCount": 170,
+        "followingCount": 5,
+        "heart": 333,
+        "heartCount": 333,
+        "videoCount": 12,
+        "diggCount": 8
+      },
+      "privateItem": false,
+      "duetEnabled": true,
+      "stitchEnabled": true,
+      "stickersOnItem": [
+        {
+          "stickerText": [
+            "Let\u2019s find \ngluten free\nCoffee with\nFig!",
+            "Download \nFig to find all your\ngluten free foods!"
+          ],
+          "stickerType": 4
+        }
+      ],
+      "isAd": false,
+      "shareEnabled": true,
+      "comments": [],
+      "duetDisplay": 0,
+      "stitchDisplay": 0,
+      "indexEnabled": true,
+      "adAuthorization": false,
+      "adLabelVersion": 0,
+      "locationCreated": "US",
+      "BAInfo": "",
+      "nickname": "Fig Gluten Free",
+      "authorId": "7184587664987800618",
+      "authorSecId": "MS4wLjABAAAAJmbzjMOWSU9NCiShbWLnbyKclg8_eSBakOOlXA0NQ3mBlRho5Fwy1fvJMJhQraHs",
+      "avatarThumb": "https://p16-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/6d04f3d90e09c3f922035412f0741061~c5_100x100.jpeg?x-expires=1675987200&x-signature=l5ZJB7%2Fv0CJF4Fi6Iaq05liyXuw%3D",
+      "downloadSetting": 0,
+      "authorPrivate": false
+    },
+    "7185922364595653931": {
+      "id": "7185922364595653931",
+      "desc": "Download Fig in app store! #fig #glutenfree #glutenfreefig #celiac #groceryshopping   #greenscreen #greenscreenvideo ",
+      "createTime": "1673102961",
+      "scheduleTime": 0,
+      "video": {
+        "id": "7185922364595653931",
+        "height": 1024,
+        "width": 576,
+        "duration": 25,
+        "ratio": "720p",
+        "cover": "https://p19-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/352c45994c954d3a90655ab405c91a4f_1673102962?x-expires=1675836000&x-signature=%2B3huLBkvfzgAFhvLx%2FVxUGnb%2B5Y%3D",
+        "originCover": "https://p19-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/2561741246db4aa086971475871a2351_1673102962?x-expires=1675836000&x-signature=M85FJNINQoDEybYW3e8ytzoQq%2FA%3D",
+        "dynamicCover": "https://p19-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/53627a704b4f43a5adb1b6f1e2e8a114_1673102962?x-expires=1675836000&x-signature=OFMECD5Tqu5GALn2kyIjM3epUm4%3D",
+        "playAddr": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c004-tx/cf59d43aed15426783713d6215f3b33f/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=3150&bt=1575&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=M2Y4Nzc7NzU0MzVoZWk1ZUBpamZpOjc6ZmRyaDMzZzczNEBgYDQtYS1fNi0xYTBhLTZjYSM1bm1qcjQwYHBgLS1kMS9zcw%3D%3D&expire=1675837313&l=2023020800212883A78A008610802FF895&policy=2&signature=7c0bbe8e74d82de22ffab6bf609c51b3&tk=tt_chain_token",
+        "downloadAddr": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c004-tx/cf59d43aed15426783713d6215f3b33f/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=3150&bt=1575&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=M2Y4Nzc7NzU0MzVoZWk1ZUBpamZpOjc6ZmRyaDMzZzczNEBgYDQtYS1fNi0xYTBhLTZjYSM1bm1qcjQwYHBgLS1kMS9zcw%3D%3D&expire=1675837313&l=2023020800212883A78A008610802FF895&policy=2&signature=7c0bbe8e74d82de22ffab6bf609c51b3&tk=tt_chain_token",
+        "shareCover": [
+          "",
+          "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/2561741246db4aa086971475871a2351_1673102962~tplv-tiktok-play.jpeg?x-expires=1676419200&x-signature=afZJCp%2FSpjGuSXmzxgqH%2FLoAe24%3D",
+          "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/2561741246db4aa086971475871a2351_1673102962~tplv-tiktokx-share-play.jpeg?x-expires=1676419200&x-signature=sI6%2BXWxt2%2FdWtIOoTcI7KiZOiaE%3D"
+        ],
+        "reflowCover": "https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/352c45994c954d3a90655ab405c91a4f_1673102962?x-expires=1675836000&x-signature=b5z6iwpPOkf4M1J8G6hR2ZcPNJY%3D",
+        "bitrate": 1613228,
+        "encodedType": "normal",
+        "format": "mp4",
+        "videoQuality": "normal",
+        "encodeUserTag": "",
+        "codecType": "h264",
+        "definition": "720p",
+        "subtitleInfos": [
+          {
+            "LanguageID": "2",
+            "LanguageCodeName": "eng-US",
+            "Url": "https://v16m-webapp.tiktokcdn-us.com/99f17abdf9f4d49c02e41a6627ea069f/63e33f81/video/tos/useast5/tos-useast5-v-0068-tx/8ae65a96d8ad45f19512ef347b8cb120/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=15246&bt=7623&ds=4&ft=4KLMeMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=13&rc=amZpOjc6ZmRyaDMzZzczNEBpamZpOjc6ZmRyaDMzZzczNEA1bm1qcjQwYHBgLS1kMS9zYSM1bm1qcjQwYHBgLS1kMS9zcw%3D%3D&l=2023020800212883A78A008610802FF895",
+            "UrlExpire": "1675837313",
+            "Format": "webvtt",
+            "Version": "1",
+            "Source": "ASR",
+            "VideoSubtitleID": -1682308014,
+            "Size": "1150"
+          }
+        ],
+        "zoomCover": {
+          "240": "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/352c45994c954d3a90655ab405c91a4f_1673102962~tplv-r00ih4996s-1:240:240.jpeg?x-expires=1675836000&x-signature=v%2FGlYeQNPtWaYbBW0X%2FUmnzCUro%3D",
+          "480": "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/352c45994c954d3a90655ab405c91a4f_1673102962~tplv-r00ih4996s-1:480:480.jpeg?x-expires=1675836000&x-signature=JF56D2iTvy%2Buw8GtIajsKcSUiYY%3D",
+          "720": "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/352c45994c954d3a90655ab405c91a4f_1673102962~tplv-r00ih4996s-1:720:720.jpeg?x-expires=1675836000&x-signature=R6av21WecySmhsTmh2sWn8NLRlw%3D",
+          "960": "https://p19-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/352c45994c954d3a90655ab405c91a4f_1673102962~tplv-r00ih4996s-1:960:960.jpeg?x-expires=1675836000&x-signature=BgoQkDm7ERpftwZ%2BN8%2FWWk1m0fY%3D"
+        },
+        "volumeInfo": {
+          "Loudness": -13.1,
+          "Peak": 1
+        },
+        "bitrateInfo": [
+          {
+            "GearName": "normal_720_0",
+            "Bitrate": 1613228,
+            "QualityType": 10,
+            "PlayAddr": {
+              "Uri": "v12044gd0000cesoca3c77u4m7pfqc8g",
+              "UrlList": [
+                "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c004-tx/cf59d43aed15426783713d6215f3b33f/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=3150&bt=1575&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=M2Y4Nzc7NzU0MzVoZWk1ZUBpamZpOjc6ZmRyaDMzZzczNEBgYDQtYS1fNi0xYTBhLTZjYSM1bm1qcjQwYHBgLS1kMS9zcw%3D%3D&expire=1675837313&l=2023020800212883A78A008610802FF895&policy=2&signature=7c0bbe8e74d82de22ffab6bf609c51b3&tk=tt_chain_token",
+                "https://v19-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-ve-0068c004-tx/cf59d43aed15426783713d6215f3b33f/?a=1988&ch=0&cr=0&dr=0&lr=tiktok_m&cd=0%7C0%7C0%7C0&br=3150&bt=1575&cs=0&ds=3&ft=4KJMyMzm8Zmo0pmml64jVINrdpWrKsdm&mime_type=video_mp4&qs=0&rc=M2Y4Nzc7NzU0MzVoZWk1ZUBpamZpOjc6ZmRyaDMzZzczNEBgYDQtYS1fNi0xYTBhLTZjYSM1bm1qcjQwYHBgLS1kMS9zcw%3D%3D&expire=1675837313&l=2023020800212883A78A008610802FF895&policy=2&signature=7c0bbe8e74d82de22ffab6bf609c51b3&tk=tt_chain_token"
+              ],
+              "DataSize": "5197015",
+              "UrlKey": "v12044gd0000cesoca3c77u4m7pfqc8g_h264_720p_1613228",
+              "FileHash": "1a0c0dce6b00e6a5f805b5fa9195c373",
+              "FileCs": "c:0-22170-b452"
+            },
+            "CodecType": "h264"
+          }
+        ]
+      },
+      "author": "glutenfreefig",
+      "music": {
+        "id": "7064643531196860417",
+        "title": "Good Vibes (Instrumental)",
+        "playUrl": "https://sf16-ies-music-sg.tiktokcdn.com/obj/tos-alisg-ve-2774/bd39abe313404004a72bb175345266b9",
+        "coverLarge": "https://p16-sg.tiktokcdn.com/aweme/720x720/tos-alisg-v-2774/5309b16a3adc415583dde8441d117ec2.jpeg",
+        "coverMedium": "https://p16-sg.tiktokcdn.com/aweme/200x200/tos-alisg-v-2774/5309b16a3adc415583dde8441d117ec2.jpeg",
+        "coverThumb": "https://p16-sg.tiktokcdn.com/aweme/100x100/tos-alisg-v-2774/5309b16a3adc415583dde8441d117ec2.jpeg",
+        "authorName": "Ellen Once Again",
+        "original": false,
+        "duration": 171,
+        "album": "Good Vibes",
+        "scheduleSearchTime": 0
+      },
+      "challenges": [
+        {
+          "id": "549369",
+          "title": "fig",
+          "desc": "",
+          "profileLarger": "",
+          "profileMedium": "",
+          "profileThumb": "",
+          "coverLarger": "",
+          "coverMedium": "",
+          "coverThumb": "",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        },
+        {
+          "id": "141847",
+          "title": "glutenfree",
+          "desc": "",
+          "profileLarger": "",
+          "profileMedium": "",
+          "profileThumb": "",
+          "coverLarger": "",
+          "coverMedium": "",
+          "coverThumb": "",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        },
+        {
+          "id": "7185921247291637802",
+          "title": "glutenfreefig",
+          "desc": "",
+          "profileLarger": "",
+          "profileMedium": "",
+          "profileThumb": "",
+          "coverLarger": "",
+          "coverMedium": "",
+          "coverThumb": "",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        },
+        {
+          "id": "3210073",
+          "title": "celiac",
+          "desc": "",
+          "profileLarger": "",
+          "profileMedium": "",
+          "profileThumb": "",
+          "coverLarger": "",
+          "coverMedium": "",
+          "coverThumb": "",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        },
+        {
+          "id": "181172",
+          "title": "groceryshopping",
+          "desc": "",
+          "profileLarger": "",
+          "profileMedium": "",
+          "profileThumb": "",
+          "coverLarger": "",
+          "coverMedium": "",
+          "coverThumb": "",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        },
+        {
+          "id": "801886",
+          "title": "greenscreen",
+          "desc": "Try out the #GreenScreen Creative Effect! Check out the latest trends using #greenscreen for some inspiration. Just pick an image from your camera roll, stand in front of a plain background, and make the next TikTok masterpiece.",
+          "profileLarger": "https://p16-amd-va.tiktokcdn.com/obj/musically-maliva-obj/8e7b46be07848d4eeccecfe17b97adf1",
+          "profileMedium": "https://p16-amd-va.tiktokcdn.com/obj/musically-maliva-obj/8e7b46be07848d4eeccecfe17b97adf1",
+          "profileThumb": "https://p16-amd-va.tiktokcdn.com/obj/musically-maliva-obj/8e7b46be07848d4eeccecfe17b97adf1",
+          "coverLarger": "https://p16-amd-va.tiktokcdn.com/obj/musically-maliva-obj/e69896f9fc0e263ce07146644fdb1ae4",
+          "coverMedium": "https://p16-amd-va.tiktokcdn.com/obj/musically-maliva-obj/e69896f9fc0e263ce07146644fdb1ae4",
+          "coverThumb": "https://p16-amd-va.tiktokcdn.com/obj/musically-maliva-obj/e69896f9fc0e263ce07146644fdb1ae4",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        },
+        {
+          "id": "79073378",
+          "title": "greenscreenvideo",
+          "desc": "Try out our new #GreenScreenVideo Creative Effect! Just update TikTok, pick a video from your camera roll, stand in front of a plain background, and make the next TikTok masterpiece.",
+          "profileLarger": "https://p16-amd-va.tiktokcdn.com/obj/musically-maliva-obj/6cffd61f5cca26b357952679681bd693",
+          "profileMedium": "https://p16-amd-va.tiktokcdn.com/obj/musically-maliva-obj/6cffd61f5cca26b357952679681bd693",
+          "profileThumb": "https://p16-amd-va.tiktokcdn.com/obj/musically-maliva-obj/6cffd61f5cca26b357952679681bd693",
+          "coverLarger": "https://p16-amd-va.tiktokcdn.com/obj/musically-maliva-obj/10f7cc1434362dbd0f26e3deb01e5118",
+          "coverMedium": "https://p16-amd-va.tiktokcdn.com/obj/musically-maliva-obj/10f7cc1434362dbd0f26e3deb01e5118",
+          "coverThumb": "https://p16-amd-va.tiktokcdn.com/obj/musically-maliva-obj/10f7cc1434362dbd0f26e3deb01e5118",
+          "isCommerce": false,
+          "stats": {
+            "videoCount": 0,
+            "viewCount": 0
+          }
+        }
+      ],
+      "stats": {
+        "diggCount": 25,
+        "shareCount": 1,
+        "commentCount": 4,
+        "playCount": 1019
+      },
+      "duetInfo": {
+        "duetFromId": "0"
+      },
+      "warnInfo": [],
+      "originalItem": false,
+      "officalItem": false,
+      "textExtra": [
+        {
+          "awemeId": "",
+          "start": 27,
+          "end": 31,
+          "hashtagId": "549369",
+          "hashtagName": "fig",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        },
+        {
+          "awemeId": "",
+          "start": 32,
+          "end": 43,
+          "hashtagId": "141847",
+          "hashtagName": "glutenfree",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        },
+        {
+          "awemeId": "",
+          "start": 44,
+          "end": 58,
+          "hashtagId": "7185921247291637802",
+          "hashtagName": "glutenfreefig",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        },
+        {
+          "awemeId": "",
+          "start": 59,
+          "end": 66,
+          "hashtagId": "3210073",
+          "hashtagName": "celiac",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        },
+        {
+          "awemeId": "",
+          "start": 67,
+          "end": 83,
+          "hashtagId": "181172",
+          "hashtagName": "groceryshopping",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        },
+        {
+          "awemeId": "",
+          "start": 86,
+          "end": 98,
+          "hashtagId": "801886",
+          "hashtagName": "greenscreen",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        },
+        {
+          "awemeId": "",
+          "start": 99,
+          "end": 116,
+          "hashtagId": "79073378",
+          "hashtagName": "greenscreenvideo",
+          "type": 1,
+          "subType": 0,
+          "userId": "",
+          "isCommerce": false,
+          "userUniqueId": "",
+          "secUid": ""
+        }
+      ],
+      "secret": false,
+      "forFriend": false,
+      "digged": false,
+      "itemCommentStatus": 0,
+      "showNotPass": false,
+      "vl1": false,
+      "takeDown": 0,
+      "itemMute": false,
+      "effectStickers": [
+        {
+          "name": "Green Screen",
+          "ID": "263840"
+        },
+        {
+          "name": "Green Screen Video",
+          "ID": "454747"
+        }
+      ],
+      "authorStats": {
+        "followerCount": 170,
+        "followingCount": 5,
+        "heart": 333,
+        "heartCount": 333,
+        "videoCount": 12,
+        "diggCount": 8
+      },
+      "privateItem": false,
+      "duetEnabled": true,
+      "stitchEnabled": true,
+      "stickersOnItem": [],
+      "isAd": false,
+      "shareEnabled": true,
+      "comments": [],
+      "duetDisplay": 0,
+      "stitchDisplay": 0,
+      "indexEnabled": true,
+      "adAuthorization": false,
+      "adLabelVersion": 0,
+      "locationCreated": "US",
+      "BAInfo": "",
+      "nickname": "Fig Gluten Free",
+      "authorId": "7184587664987800618",
+      "authorSecId": "MS4wLjABAAAAJmbzjMOWSU9NCiShbWLnbyKclg8_eSBakOOlXA0NQ3mBlRho5Fwy1fvJMJhQraHs",
+      "avatarThumb": "https://p16-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/6d04f3d90e09c3f922035412f0741061~c5_100x100.jpeg?x-expires=1675987200&x-signature=l5ZJB7%2Fv0CJF4Fi6Iaq05liyXuw%3D",
+      "downloadSetting": 0,
+      "authorPrivate": false
+    }
+  },
+  "UserModule": {
+    "users": {
+      "glutenfreefig": {
+        "id": "7184587664987800618",
+        "shortId": "",
+        "uniqueId": "glutenfreefig",
+        "nickname": "Fig Gluten Free",
+        "avatarLarger": "https://p16-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/6d04f3d90e09c3f922035412f0741061~c5_1080x1080.jpeg?x-expires=1675987200&x-signature=sYqYIMlr34I8kDRhXXrfgvWpRg8%3D",
+        "avatarMedium": "https://p16-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/6d04f3d90e09c3f922035412f0741061~c5_720x720.jpeg?x-expires=1675987200&x-signature=mBfdrrgHtIh8UBVbc4cfroL6yYg%3D",
+        "avatarThumb": "https://p16-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/6d04f3d90e09c3f922035412f0741061~c5_100x100.jpeg?x-expires=1675987200&x-signature=l5ZJB7%2Fv0CJF4Fi6Iaq05liyXuw%3D",
+        "signature": "Find gluten-free food you CAN eat!\n\nDownload the Fig app!",
+        "createTime": 0,
+        "verified": false,
+        "secUid": "MS4wLjABAAAAJmbzjMOWSU9NCiShbWLnbyKclg8_eSBakOOlXA0NQ3mBlRho5Fwy1fvJMJhQraHs",
+        "ftc": false,
+        "relation": 0,
+        "openFavorite": false,
+        "commentSetting": 0,
+        "commerceUserInfo": {
+          "commerceUser": false
+        },
+        "duetSetting": 0,
+        "stitchSetting": 0,
+        "privateAccount": false,
+        "secret": false,
+        "isADVirtual": false,
+        "roomId": "",
+        "uniqueIdModifyTime": 0,
+        "ttSeller": false,
+        "region": "US",
+        "downloadSetting": 0,
+        "profileTab": {
+          "showMusicTab": false,
+          "showQuestionTab": false,
+          "showPlayListTab": false
+        },
+        "followingVisibility": 1,
+        "recommendReason": "",
+        "nowInvitationCardUrl": "",
+        "nickNameModifyTime": 1672792287,
+        "isEmbedBanned": false,
+        "profileEmbedPermission": 1,
+        "extraInfo": {
+          "statusCode": 0
+        }
+      }
+    },
+    "stats": {
+      "glutenfreefig": {
+        "followerCount": 170,
+        "followingCount": 5,
+        "heart": 333,
+        "heartCount": 333,
+        "videoCount": 12,
+        "diggCount": 0,
+        "needFix": false
+      }
+    }
+  },
+  "UserPage": {
+    "uniqueId": "glutenfreefig",
+    "statusCode": 0,
+    "secUid": "MS4wLjABAAAAJmbzjMOWSU9NCiShbWLnbyKclg8_eSBakOOlXA0NQ3mBlRho5Fwy1fvJMJhQraHs"
+  },
+  "RecommendUserList": {
+    "uniqueId": "glutenfreefig"
+  },
+  "extras": []
+}
