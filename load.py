@@ -5,12 +5,21 @@ import gspread
 
 LOAD_PATH = "/Users/ericcollins/TikTokData/load/tiktokdata.csv"
 
+def add_is_influencer_column(combined_csv: pd.DataFrame) -> pd.DataFrame:
+    """adds is influencer column to final dataframe"""
+    account_tracker = pd.read_csv('tiktok_accounts_to_track.csv')[['user', 'influencer']]
+    df = combined_csv.merge(account_tracker, how='left', left_on='user_unique_id', right_on='user').drop(columns='user')
+    df['day_over_day_change'] = df['video_play_count'].diff()
+    return df
+    
+
 def run():
     extension = 'csv'
     all_filenames = [i for i in glob.glob('/Users/ericcollins/TikTokData/extract/*.{}'.format(extension))]
-    #combine all files in the list
+    # combine all files in the list
     combined_csv = pd.concat([pd.read_csv(f) for f in all_filenames])
-        #export to csv
+    combined_csv = add_is_influencer_column(combined_csv=combined_csv)
+    # export to csv
     combined_csv.to_csv(LOAD_PATH, index=False, encoding='utf-8-sig')
     
     #Upload to google sheet
