@@ -3,7 +3,7 @@ import pandas as pd
 import datetime
 import os
 
-ACCOUNT_LIST = pd.read_csv('tiktok_accounts_to_track.csv', index_col='user')
+ACCOUNT_LIST = pd.read_csv('/Users/ericcollins/TikTokData/TikTokDataforCreators/tiktok_accounts_to_track.csv', index_col='user')
 
 def data_store_dict_return() -> dict:
     
@@ -60,7 +60,7 @@ def run():
     user_data = []
     date = datetime.datetime.now().strftime('%m-%d-%Y')
     for user in users:
-        filename = f'harvest/{date}_{user}.UserResponse.json'
+        filename = f'TikTokDataforCreators/harvest/{date}_{user}.UserResponse.json'
         with open(filename, 'r') as f:
             data = json.load(f)
         df_user = extract(data=data, user=user)
@@ -69,8 +69,8 @@ def run():
     df_final['data_date'] = datetime.datetime.now().date()
     df_final.set_index('video_id', inplace=True)
     extract_file_name = f'extract_{date}.csv'
-    if extract_file_name not in os.listdir('/Users/ericcollins/TikTokData/extract/'):
-        df_final.to_csv(f'extract/{extract_file_name}')
+    if extract_file_name not in os.listdir('/Users/ericcollins/TikTokData/TikTokDataforCreators/extract/'):
+        df_final.to_csv(f'TikTokDataforCreators/extract/{extract_file_name}')
         print('Extract Complete!')
         return True
     else:

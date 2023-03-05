@@ -14,12 +14,12 @@ def get_user_video_data(username: str) -> pd.DataFrame:
         user = api.user(username)
 
 def run():
-    users = pd.read_csv('tiktok_accounts_to_track.csv')['user']
+    users = pd.read_csv('/Users/ericcollins/TikTokData/TikTokDataforCreators/tiktok_accounts_to_track.csv')['user']
     for user in users:
         get_user_video_data(username=user)
 
 if __name__ == '__main__':
-    users = pd.read_csv('tiktok_accounts_to_track.csv')['user']
+    users = pd.read_csv('/Users/ericcollins/TikTokData/TikTokDataforCreators/tiktok_accounts_to_track.csv')['user']
     for user in users:
         get_user_video_data(username=user, influencer=True)
         
