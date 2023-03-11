@@ -3,15 +3,15 @@ import io
 import glob
 import os
 import urllib.request
+import datetime
 from os import path
+import pandas as pd
 
 import aiohttp
 from tiktokapipy.async_api import AsyncTikTokAPI
 from tiktokapipy.models.video import Video
 from tiktokapipy.models.video import video_link
 
-link = video_link(7187557101076483371)
-directory = ''
 
 async def save_slideshow(video: Video):
     # this filter makes sure the images are padded to all the same size
@@ -67,9 +67,17 @@ async def save_video(video: Video):
         async with session.get(video.video.download_addr) as resp:
             return io.BytesIO(await resp.read())
 
-async def download_video():
+def check_for_video_file(video_id, user):
+    """If video file exists, returns False and video will not be saved"""
+    file = f"{user}_{str(video_id)}.mp4"
+    if file not in os.listdir('/Users/ericcollins/TikTokData/TikTokDataforCreators/videos'):
+        return True
+    else:
+        return False
+async def download_video(video_id: int, user: str):
     # mobile emulation is necessary to retrieve slideshows
     # if you don't want this, you can set emulate_mobile=False and skip if the video has an image_post property
+    link = video_link(video_id)
     async with AsyncTikTokAPI(emulate_mobile=True) as api:
         video: Video = await api.video(link)
         if video.image_post:
@@ -77,8 +85,19 @@ async def download_video():
         else:
             downloaded = await save_video(video)
 
-    return downloaded
+    if check_for_video_file(video_id, user):
+        filepath = f'/Users/ericcollins/TikTokData/TikTokDataforCreators/videos/{user}_{str(video_id)}.mp4'
+        with open(filepath, "wb") as f:
+            f.write(downloaded.getvalue())
+
+
+def run():
+    date_string = datetime.datetime.now().date().strftime('%m-%d-%Y')
+    extract_file = f'/Users/ericcollins/TikTokData/TikTokDataforCreators/extract/extract_{date_string}.csv'
+    extract_data = pd.read_csv(extract_file)
+    extract_data.apply(lambda x: asyncio.run(download_video(video_id=x['video_id'], 
+                                                            user=x['user_unique_id'])), axis=1)
+
+
 if __name__ == '__main__':
-    video = asyncio.run(download_video())
-    with open("output.mp4", "wb") as f:
-        f.write(video.getvalue())
+    run()

@@ -1,5 +1,8 @@
+import datetime
+from turtle import down
 import harvest
 import extract
+import download_videos
 import load
 import time
 
@@ -19,10 +22,19 @@ def run():
     print(f'Extract time: {extract_elapsed_time} s')
 
     if extract_task:
+        # Load into final file
         load_start_time = time.time()
         load_task = load.run()
         load_end_time = time.time()
         load_elapsed_time = load_end_time - load_start_time
         print(f'Load time: {load_elapsed_time} s')
+        
+    # Save videos
+    save_video_start_time = time.time()
+    save_video = download_videos.run()
+    save_video_end_time = time.time()
+    save_video_elapsed_time = save_video_end_time - save_video_start_time
+    print(f'Saving videos took {save_video_elapsed_time} s')
+    
 if __name__ == '__main__':
     run()
