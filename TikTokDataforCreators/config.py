@@ -57,11 +57,11 @@ class ExtractPath:
 
 class LoadPath:
     def __init__(self,
-                 local_paths: bool):
+                 local_paths: bool = USE_LOCAL_PATHS):
         self.local_paths = local_paths
         if self.local_paths:
-            self.data_path_file = f'Users/ericcollins/TikTokData/TikTokDataforCreators/load/data/tiktokdata.csv'
-            self.data_path = f'Users/ericcollins/TikTokData/TikTokDataforCreators/load/data'
+            self.data_path_file = f'/Users/ericcollins/TikTokData/TikTokDataforCreators/load/data/tiktokdata.csv'
+            self.data_path = f'/Users/ericcollins/TikTokData/TikTokDataforCreators/load/data'
         
     
     

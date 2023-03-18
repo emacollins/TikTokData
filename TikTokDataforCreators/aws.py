@@ -9,6 +9,10 @@ from botocore.exceptions import ClientError
 # Let's use Amazon S3
 s3 = boto3.resource('s3')
 
+def upload_data_file():
+    Bucket = 'vidvault-app'
+    Key = f'analytics/tiktokdata.csv'
+    s3.meta.client.upload_file(config.LoadPath().data_path_file, Bucket=Bucket, Key=Key, ExtraArgs=None, Callback=None, Config=None)  
 
 def upload_zip_files(user: str,
                      date: datetime.datetime):
@@ -53,5 +57,6 @@ def create_presigned_url(bucket_name, object_name, expiration=3600*24*7):
     # The response contains the presigned URL
     return response
 if __name__ == '__main__':
-    upload_zip_files(user='tytheproductguy',
-                     date=datetime.datetime.now())
+    #upload_zip_files(user='tytheproductguy',
+                    # date=datetime.datetime.now())
+    upload_data_file()

@@ -23,5 +23,10 @@ def run():
     # export to csv
     combined_csv.to_csv(LOAD_PATH, index=False, encoding='utf-8-sig')
     
+    #Upload to google sheet
+    gc = gspread.oauth(credentials_filename='/Users/ericcollins/TikTokData/TikTokDataforCreators/googledrive/credentials.json')
+    content = open(LOAD_PATH, 'r').read().encode('utf-8') 
+    gc.import_csv('15eA_QYvRQbeCehSouCKEqgYHA8Q1ItSr4TmU1gArZ0g', content)
+    
 if __name__ == '__main__':
     run()
