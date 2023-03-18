@@ -7,6 +7,7 @@ import datetime
 import config
 import logging
 import download_videos
+import airtable
 
 def get_user_video_data(username: str,
                         directory: config.HarvestPath) -> pd.DataFrame:
@@ -27,9 +28,14 @@ def clean_file_names(directory: config.HarvestPath):
             os.rename(directory.user_data_path + '/' + file, directory.user_data_path_file)
         except:
             pass
-           
-        
+ 
+def get_airtable_data():
+    table = airtable.get_table_data()
+    df = airtable.convert_to_dataframe(airtable_table=table)
+    df.to_csv(config.UserSignUpPath().cached_user_table, index=False)
+    
 def run():
+    get_airtable_data()  # Gets info from our airtable table
     user_sign_up_directory = config.UserSignUpPath().cached_user_table
     users = pd.read_csv(user_sign_up_directory)['user']
     for user in users:

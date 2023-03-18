@@ -71,5 +71,4 @@ class LoadPath:
         
 class UserSignUpPath:
     def __init__(self) -> None:
-        self.airtable_raw_data = ''
         self.cached_user_table = '/Users/ericcollins/TikTokData/TikTokDataforCreators/user_sign_up/tiktok_accounts_to_track.csv'
