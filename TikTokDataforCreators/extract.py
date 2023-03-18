@@ -34,6 +34,11 @@ def get_user_video_count(data: dict, user: str):
     video_count = data['UserModule']['stats'][user]['videoCount']
     return video_count
 
+def check_extras(data: dict):
+    """Checks if there are extra data (more than 30 videos)"""
+    extras = data['extras']
+    
+    
 def extract_extras(data: dict, user: str):
     """Extracts out the extra field in the harvested data
 
@@ -75,6 +80,7 @@ def extract_extras(data: dict, user: str):
     
     df = pd.concat(all_videos)
     return df
+
 
 def check_video_count(df: pd.DataFrame, 
                       data: dict,
@@ -120,7 +126,10 @@ def extract(data: dict, user: str) -> pd.DataFrame:
             data_store_dict['used_proper_hastags'].append(False)
     
     df_recent_videos = pd.DataFrame(data=data_store_dict)
-    df_extra_videos = extract_extras(data=data, user=user)
+    if data['extras']:
+        df_extra_videos = extract_extras(data=data, user=user)
+    else:
+        df_extra_videos = pd.DataFrame()
     df = pd.concat([df_recent_videos, df_extra_videos])
     check_video_count(df=df, data=data, user=user)
     return df
@@ -138,6 +147,8 @@ def run():
         user_data.append(df_user)
     df_final = pd.concat(user_data)
     df_final['data_date'] = datetime.datetime.now().date()
+    df_final['video_create_time'] = pd.to_datetime(df_final['video_create_time'],unit='s')
+    df_final = df_final.drop_duplicates(subset=['video_id'])
     df_final.set_index('video_id', inplace=True)
     extract_file_name = f'extract_{date}.csv'
     if extract_file_name not in os.listdir('/Users/ericcollins/TikTokData/TikTokDataforCreators/extract/'):

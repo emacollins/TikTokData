@@ -3,7 +3,7 @@ import glob
 import pandas as pd
 import gspread
 
-LOAD_PATH = "/Users/ericcollins/TikTokData/load/tiktokdata.csv"
+LOAD_PATH = "/Users/ericcollins/TikTokData/TikTokDataforCreators/load/tiktokdata.csv"
 
 def add_is_influencer_column(combined_csv: pd.DataFrame) -> pd.DataFrame:
     """adds is influencer column to final dataframe"""
