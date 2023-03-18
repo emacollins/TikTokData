@@ -4,7 +4,10 @@ import datetime
 import os
 import config
 
+# Drops users that errored in the harvest step
 ACCOUNT_LIST = pd.read_csv(config.UserSignUpPath().cached_user_table, index_col='user')
+BAD_USERS = pd.read_csv(config.UserSignUpPath().bad_users)
+ACCOUNT_LIST = ACCOUNT_LIST.drop(BAD_USERS['username'])
 
 def data_store_dict_return() -> dict:
     
