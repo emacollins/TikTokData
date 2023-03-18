@@ -53,7 +53,7 @@ class ExtractPath:
             if self.user:
                 self.video_path = f'/Users/ericcollins/TikTokData/TikTokDataforCreators/extract/videos/{self.user}'
             if (self.user != None) & (self.date != None):
-                self.video_path_file = f'/Users/ericcollins/TikTokData/TikTokDataforCreators/extract/videos/{self.user}/downloaded_videos_{self.user}-{self.date}'
+                self.video_path_file = f'/Users/ericcollins/TikTokData/TikTokDataforCreators/extract/videos/{self.user}/downloaded_videos_{self.user}-{self.date.strftime(self.datetime_format)}'
 
 class LoadPath:
     def __init__(self,

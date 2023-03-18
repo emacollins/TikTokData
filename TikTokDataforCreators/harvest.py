@@ -19,16 +19,17 @@ def get_user_video_data(username: str,
             user = api.user(username, video_limit=0)
         except:
             print(f'Harvest data error on {username}')
-    clean_file_names(username=username,
-                     directory=directory)
+    clean_file_names(directory=directory)
 
-def clean_file_names(username: str,
-                     directory: config.HarvestPath):
-    for file in os.listdir(directory.video_path):
-        os.rename(directory.user_data_path_file_raw_api, directory.user_data_path_file)
+def clean_file_names(directory: config.HarvestPath):
+    for file in os.listdir(directory.user_data_path):
+        try:
+            os.rename(directory.user_data_path + '/' + file, directory.user_data_path_file)
+        except:
+            pass
            
         
-def run(harvest_videos: bool):
+def run():
     user_sign_up_directory = config.UserSignUpPath().cached_user_table
     users = pd.read_csv(user_sign_up_directory)['user']
     for user in users:
