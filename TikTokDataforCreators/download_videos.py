@@ -9,13 +9,14 @@ import random
 from random import choice
 import datetime
 import pandas as pd
-
+import config
+import shutil
 
 
 # Download All Video From Tiktok User Function
 def download_video_no_watermark(user: str,
                                 video_id: int):
-
+    date = datetime.datetime.now()
     url = "https://tiktok-downloader-download-tiktok-videos-without-watermark.p.rapidapi.com/vid/index"
 
     querystring = {"url":f'https://www.tiktok.com/@{user}r/video/{str(video_id)}'}
@@ -26,19 +27,30 @@ def download_video_no_watermark(user: str,
     }
 
     video_object = requests.request("GET", url, headers=headers, params=querystring).json()
-    
-    if not os.path.exists(f"/Users/ericcollins/TikTokData/TikTokDataforCreators/videos/{user}"):
-        os.makedirs(f"/Users/ericcollins/TikTokData/TikTokDataforCreators/videos/{user}")
+    user_video_harvest_path = config.HarvestPath(user=user,
+                                                 date=date).video_path
+    if not os.path.exists(user_video_harvest_path):
+        os.makedirs(user_video_harvest_path)
         
     download_url = video_object['video'][0]
                        
     video_bytes = requests.get(download_url, stream=True)
-    with open(f'/Users/ericcollins/TikTokData/TikTokDataforCreators/videos/{user}/{str(video_id)}.mp4', 'wb') as out_file:
+    with open(config.HarvestPath(user=user, 
+                                 video_id = video_id,
+                                 date=date).video_path_file, 'wb') as out_file:
         out_file.write(video_bytes.content)
-    
+
+def zip_videos(user: str):
+    date = datetime.datetime.now()
+    if not os.path.exists(config.ExtractPath(user=user).video_path):
+        os.makedirs(config.ExtractPath(user=user).video_path)
+    shutil.make_archive(config.ExtractPath(date=date, user=user).video_path_file, 
+                            'zip', 
+                            config.HarvestPath(user=user, date=date).video_path)
+
 def run():
-    date_string = datetime.datetime.now().date().strftime('%m-%d-%Y')
-    extract_file = f'/Users/ericcollins/TikTokData/TikTokDataforCreators/extract/extract_{date_string}.csv'
+    date = datetime.datetime.now()
+    extract_file = config.ExtractPath(date=date).data_path_file
     extract_data = pd.read_csv(extract_file)
     
     for user in extract_data['user_unique_id'].unique():
@@ -46,6 +58,7 @@ def run():
         for video_id in user_data['video_id']:
             download_video_no_watermark(user=user,
                                         video_id=video_id)
-    
+    # Extract to zip file
+    zip_videos(user=user)
 if __name__ == "__main__":
     run()

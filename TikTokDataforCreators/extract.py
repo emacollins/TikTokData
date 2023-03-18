@@ -2,8 +2,9 @@ import json
 import pandas as pd
 import datetime
 import os
+import config
 
-ACCOUNT_LIST = pd.read_csv('/Users/ericcollins/TikTokData/TikTokDataforCreators/tiktok_accounts_to_track.csv', index_col='user')
+ACCOUNT_LIST = pd.read_csv(config.UserSignUpPath().cached_user_table, index_col='user')
 
 def data_store_dict_return() -> dict:
     
@@ -138,9 +139,11 @@ def extract(data: dict, user: str) -> pd.DataFrame:
 def run():
     users = list(ACCOUNT_LIST.index)
     user_data = []
-    date = datetime.datetime.now().strftime('%m-%d-%Y')
+    date = datetime.datetime.now()
     for user in users:
-        filename = f'TikTokDataforCreators/harvest/{date}_{user}.UserResponse.json'
+        filename = config.HarvestPath(user=user,
+                                      date=date,
+                                    ).user_data_path_file
         with open(filename, 'r') as f:
             data = json.load(f)
         df_user = extract(data=data, user=user)
@@ -150,9 +153,10 @@ def run():
     df_final['video_create_time'] = pd.to_datetime(df_final['video_create_time'],unit='s')
     df_final = df_final.drop_duplicates(subset=['video_id'])
     df_final.set_index('video_id', inplace=True)
-    extract_file_name = f'extract_{date}.csv'
-    if extract_file_name not in os.listdir('/Users/ericcollins/TikTokData/TikTokDataforCreators/extract/'):
-        df_final.to_csv(f'TikTokDataforCreators/extract/{extract_file_name}')
+    extract_file_name = config.ExtractPath(date=datetime.datetime.now()).data_path_file
+    extract_directory = config.ExtractPath(date=datetime.datetime.now()).data_path
+    if extract_file_name not in os.listdir(extract_directory):
+        df_final.to_csv(extract_file_name)
         print('Extract Complete!')
         return True
     else:
