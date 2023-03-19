@@ -72,6 +72,7 @@ class ExtractPath:
                 self.video_path_file = LOCAL_PATH_PREFIX + f'TikTokData/TikTokDataforCreators/extract/videos/{self.user}/downloaded_videos_{self.user}-{self.date.strftime(self.datetime_format)}'
         else:
             self.data_path = S3_URI_PATH_PREFIX + f'TikTokData/TikTokDataforCreators/extract/data'
+            self.data_path_s3_key = f'TikTokData/TikTokDataforCreators/extract/data'
             if self.date:
                 self.data_path_file = S3_URI_PATH_PREFIX + f'TikTokData/TikTokDataforCreators/extract/data/extract_{self.date.strftime(self.datetime_format)}.csv'
                 self.data_path_file_s3_key = f'TikTokData/TikTokDataforCreators/extract/data/extract_{self.date.strftime(self.datetime_format)}.csv'

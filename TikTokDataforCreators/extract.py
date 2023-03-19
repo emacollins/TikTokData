@@ -3,6 +3,7 @@ import pandas as pd
 import datetime
 import os
 import config
+import boto3
 
 # Drops users that errored in the harvest step
 ACCOUNT_LIST = pd.read_csv(config.UserSignUpPath().cached_user_table, index_col='user')
@@ -144,11 +145,10 @@ def run():
     user_data = []
     date = datetime.datetime.now()
     for user in users:
-        filename = config.HarvestPath(user=user,
-                                      date=date,
-                                    ).user_data_path_file
-        with open(filename, 'r') as f:
-            data = json.load(f)
+        s3 = boto3.client('s3')
+        s3_object = s3.get_object(Bucket=config.BUCKET, Key=config.HarvestPath(user=user,
+                                                                               date=date).user_data_path_file_s3_key)
+        data = json.loads(s3_object['Body'].read())
         df_user = extract(data=data, user=user)
         user_data.append(df_user)
     df_final = pd.concat(user_data)
@@ -156,15 +156,7 @@ def run():
     df_final['video_create_time'] = pd.to_datetime(df_final['video_create_time'],unit='s')
     df_final = df_final.drop_duplicates(subset=['video_id'])
     df_final.set_index('video_id', inplace=True)
-    extract_file_name = config.ExtractPath(date=datetime.datetime.now()).data_path_file
-    extract_directory = config.ExtractPath(date=datetime.datetime.now()).data_path
-    if extract_file_name not in os.listdir(extract_directory):
-        df_final.to_csv(extract_file_name)
-        print('Extract Complete!')
-        return True
-    else:
-        print('Data already extracted today!')
-        return False
+    df_final.to_csv(config.ExtractPath(date=date).data_path_file)
         
 
 if __name__ == '__main__':
