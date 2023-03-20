@@ -157,7 +157,8 @@ def run():
     df_final = df_final.drop_duplicates(subset=['video_id'])
     df_final.set_index('video_id', inplace=True)
     df_final.to_csv(config.ExtractPath(date=date).data_path_file)
-        
+    return True
 
 if __name__ == '__main__':
     run()
+    

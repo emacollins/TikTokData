@@ -2,6 +2,8 @@ import datetime
 import pandas as pd
 
 
+# TODO: Create a temp directory class
+
 BUCKET = 'vidvault-app'
 USE_LOCAL_PATHS = False
 LOCAL_PATH_PREFIX = '/Users/ericcollins/'

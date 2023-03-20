@@ -14,7 +14,7 @@ import boto3
 # API works by scrolling down page on TikTok,
 # if user has a lot fo videos, scroll time should be longer
 SCROLL_TIME = 1
-S3 = boto3.resource('s3')
+s3 = boto3.resource('s3')
 
 def get_user_video_data(username: str) -> bool:
     """Takes in username and cleans relevant data for that user."""
@@ -43,8 +43,10 @@ def get_user_video_data(username: str) -> bool:
 def upload_to_s3(directory: str,
                  user: str,
                  date: datetime.datetime):
+    
+    s3 = boto3.resource('s3')
     for file in os.listdir(directory):
-                    S3.meta.client.upload_file(directory + '/' + file, 
+                    s3.meta.client.upload_file(directory + '/' + file, 
                                         Bucket=config.BUCKET, 
                                         Key=config.HarvestPath(user=user,
                                                                date=date).user_data_path_file_s3_key,

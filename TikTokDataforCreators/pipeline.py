@@ -6,7 +6,7 @@ import download_videos
 import load
 import time
 
-
+# TODO: have an input arg of user and then apply 
 def run():
     
     harvest_start_time = time.time()
