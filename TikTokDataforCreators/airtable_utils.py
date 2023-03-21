@@ -94,9 +94,18 @@ def mark_user_videos_uploaded(row_id: str):
     except Exception as e:
         print(e)
         return False
+def mark_video_upload_failed(row_id: str):
+    table = Table(AIRTABLE_API_KEY, BASE_ID, TABLE_NAME)
+    try:
+        table.update(row_id, {"upload_failed": "True"})
+        return True
+    except Exception as e:
+        print(e)
+        return False
+
 if __name__ == '__main__':
     table = get_table_data()
     df = convert_to_dataframe(airtable_table=table)
     df.to_csv('TEST_AIRTABLE_HARVEST.csv', index=False)
-    update_download_link('recKGvmEQKlfQ8600', 'https://vidvault-app.s3.amazonaws.com/customer-videos/tytheproductguy-2023-03-18.zip?AWSAccessKeyId=AKIAZDABZ7ECYCMNF46H&Signature=fBj7zH2cGDUa1fzswM2%2BHLEchzk%3D&Expires=1679734490')
-    mark_user_videos_uploaded('recKGvmEQKlfQ8600')
+    #update_download_link('recKGvmEQKlfQ8600', 'https://vidvault-app.s3.amazonaws.com/customer-videos/tytheproductguy-2023-03-18.zip?AWSAccessKeyId=AKIAZDABZ7ECYCMNF46H&Signature=fBj7zH2cGDUa1fzswM2%2BHLEchzk%3D&Expires=1679734490')
+    #mark_user_videos_uploaded('recKGvmEQKlfQ8600')

@@ -1,2 +1,5 @@
-user,airtable_row_id,airtable_row_create_time,videos_uploaded,customer_email,hashtags,influencer,last_data_pull_date,last_video_pull_date,download_link
-tytheproductguy,recKGvmEQKlfQ8600,2023-03-18T09:32:55.000Z,True,tyler@vidvault.app,,,,,https://vidvault-app.s3.amazonaws.com/customer-videos/tytheproductguy-2023-03-18.zip?AWSAccessKeyId=AKIAZDABZ7ECYCMNF46H&Signature=fBj7zH2cGDUa1fzswM2%2BHLEchzk%3D&Expires=1679734490
+,video_id,user_unique_id,video_create_time,video_digg_count,video_share_count,video_comment_count,video_play_count,hashtags,data_date
+0,7208058352721562922,thephotoverse,2023-03-08 06:28:30,59,0,1,1887,,2023-03-20
+1,7135164889374526763,thephotoverse,2022-08-23 20:03:57,9,0,0,145,,2023-03-20
+2,7133604491537993002,thephotoverse,2022-08-19 15:08:50,10,0,0,115,midjourney;aiart;artificialintelligence,2023-03-20
+3,7133457220632710443,thephotoverse,2022-08-19 05:37:23,11,0,0,280,aiart;midjourney;artificialintelligence;champagnesupernova,2023-03-20

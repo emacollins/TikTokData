@@ -4,6 +4,7 @@
 
 
 from turtle import down
+from httplib2 import UnimplementedHmacDigestAuthOptionError
 import requests
 import tempfile
 import datetime
@@ -12,8 +13,9 @@ import config
 import boto3
 import zipfile
 import os
+import swifter
 
-s3 = boto3.resource('s3')
+
 
 # Download All Video From Tiktok User Function
 def download_video_no_watermark(user: str,
@@ -35,7 +37,7 @@ def download_video_no_watermark(user: str,
     tmp_video_file = tmpdirname + f'/{video_id}.mp4'
     with open(tmp_video_file, 'wb') as out_file:
         out_file.write(video_bytes.content)
-
+    s3 = boto3.resource('s3')
     s3.meta.client.upload_file(tmp_video_file, 
                                 Bucket=config.BUCKET, 
                                 Key=config.HarvestPath(user=user,
@@ -59,6 +61,7 @@ def zip_videos(user: str,
     destination_folder = config.ExtractPath(user=user).video_path_s3_key
 
     # List all .mp4 files in the source folder
+    s3 = boto3.client('s3')
     response = s3.list_objects_v2(Bucket=bucket, Prefix=source_folder)
     mp4_files = [content['Key'] for content in response['Contents'] if content['Key'].endswith('.mp4')]
     
@@ -90,6 +93,7 @@ def run(user: str,
         extract_file = config.ExtractPath(date=date,
                                           user=user).data_path_file
         user_data = pd.read_csv(extract_file)
+        
         for video_id in user_data['video_id'].unique():
             download_video_no_watermark(user=user,
                                         video_id=video_id,
@@ -98,8 +102,12 @@ def run(user: str,
     try:
         zip_videos(user=user,
                date=date)
-    except:
+        return True
+    except Exception as e:
+        print(e)
         return False
+
 if __name__ == "__main__":
     run(user='tytheproductguy',
         date=datetime.datetime.now())
+    
