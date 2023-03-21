@@ -7,13 +7,12 @@ import load
 import time
 
 # TODO: have an input arg of user and then apply 
-def run():
+def run(user: str,
+        airtable_row_id: str,
+        date: datetime.datetime):
     
-    harvest_start_time = time.time()
-    harvest_task = harvest.run()
-    harvest_end_time = time.time()
-    harvest_elapsed_time = harvest_end_time - harvest_start_time
-    print(f'Harvest time: {harvest_elapsed_time} s')
+    harvest_task = harvest.run(user=user,
+                               date=date)
 
     extract_start_time = time.time()
     extract_task = extract.run()

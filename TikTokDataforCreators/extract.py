@@ -5,10 +5,6 @@ import os
 import config
 import boto3
 
-# Drops users that errored in the harvest step
-ACCOUNT_LIST = pd.read_csv(config.UserSignUpPath().cached_user_table, index_col='user')
-BAD_USERS = pd.read_csv(config.UserSignUpPath().bad_users)
-ACCOUNT_LIST = ACCOUNT_LIST.drop(BAD_USERS['username'])
 
 def data_store_dict_return() -> dict:
     
@@ -19,18 +15,8 @@ def data_store_dict_return() -> dict:
                    'video_share_count': [],
                    'video_comment_count': [],
                    'video_play_count': [],
-                   'hashtags': [],
-                   'used_proper_hastags': []}
+                   'hashtags': []}
     return data_store_dict
-
-def check_tags(video_tags: list, username: str) -> bool:
-    """Checks if the creator used at least one of their expected hashtags on the video"""
-    is_influencer = bool(ACCOUNT_LIST.loc[username, 'influencer'])
-    if not is_influencer:
-        return True
-    expected_tags = str(ACCOUNT_LIST.loc[username, 'hashtags']).split(';')
-    check = any(x in video_tags for x in expected_tags)
-    return check
 
 def get_user_video_count(data: dict, user: str):
     """Gets the user's video count for quality check
@@ -39,10 +25,6 @@ def get_user_video_count(data: dict, user: str):
     video_count = data['UserModule']['stats'][user]['videoCount']
     return video_count
 
-def check_extras(data: dict):
-    """Checks if there are extra data (more than 30 videos)"""
-    extras = data['extras']
-    
     
 def extract_extras(data: dict, user: str):
     """Extracts out the extra field in the harvested data
@@ -76,10 +58,6 @@ def extract_extras(data: dict, user: str):
             else:
                 data_store_dict['hashtags'].append('')
                 
-            if check_tags(video_tags=challenges, username=user):
-                data_store_dict['used_proper_hastags'].append(True)
-            else:
-                data_store_dict['used_proper_hastags'].append(False)
         df_page = pd.DataFrame(data=data_store_dict)
         all_videos.append(df_page)
     
@@ -105,6 +83,7 @@ def check_video_count(df: pd.DataFrame,
         return True
     else:
         print(f'{user} did not get all videos. {videos_scraped} / {videos_expected} scraped')
+        return False
      
 def extract(data: dict, user: str) -> pd.DataFrame:
     data_store_dict = data_store_dict_return()
@@ -124,11 +103,6 @@ def extract(data: dict, user: str) -> pd.DataFrame:
             data_store_dict['hashtags'].append(tags_string)
         else:
             data_store_dict['hashtags'].append('')
-        
-        if check_tags(video_tags=challenges, username=user):
-            data_store_dict['used_proper_hastags'].append(True)
-        else:
-            data_store_dict['used_proper_hastags'].append(False)
     
     df_recent_videos = pd.DataFrame(data=data_store_dict)
     if data['extras']:
@@ -140,25 +114,23 @@ def extract(data: dict, user: str) -> pd.DataFrame:
     return df
 
 
-def run():
-    users = list(ACCOUNT_LIST.index)
-    user_data = []
-    date = datetime.datetime.now()
-    for user in users:
-        s3 = boto3.client('s3')
-        s3_object = s3.get_object(Bucket=config.BUCKET, Key=config.HarvestPath(user=user,
-                                                                               date=date).user_data_path_file_s3_key)
-        data = json.loads(s3_object['Body'].read())
-        df_user = extract(data=data, user=user)
-        user_data.append(df_user)
-    df_final = pd.concat(user_data)
+def run(user: str,
+        date: datetime.datetime):
+
+    s3 = boto3.client('s3')
+    s3_object = s3.get_object(Bucket=config.BUCKET, Key=config.HarvestPath(user=user,
+                                                                            date=date).user_data_path_file_s3_key)
+    data = json.loads(s3_object['Body'].read())
+    df_final = extract(data=data, user=user)
     df_final['data_date'] = datetime.datetime.now().date()
     df_final['video_create_time'] = pd.to_datetime(df_final['video_create_time'],unit='s')
     df_final = df_final.drop_duplicates(subset=['video_id'])
     df_final.set_index('video_id', inplace=True)
-    df_final.to_csv(config.ExtractPath(date=date).data_path_file)
+    df_final.to_csv(config.ExtractPath(user=user, 
+                                       date=date).data_path_file)
     return True
 
 if __name__ == '__main__':
-    run()
+    run(user='tytheproductguy',
+        date=datetime.datetime.now())
     
