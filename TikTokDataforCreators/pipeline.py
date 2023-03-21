@@ -11,8 +11,8 @@ import airtable_utils
 from functools import wraps
 import time
 
-TEST_USER = 'thephotoverse'
-TEST_AIRTABLE_ROW = 'recb4iqk60sDmE4cu'
+TEST_USER = 'tylerandhistummy'
+TEST_AIRTABLE_ROW = 'recFxfnl5fAbxcfVf'
 
 def timeit(func):
     @wraps(func)

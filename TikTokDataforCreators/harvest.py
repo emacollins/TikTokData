@@ -10,7 +10,7 @@ import boto3
 # Adjust this to capture more videos
 # API works by scrolling down page on TikTok,
 # if user has a lot fo videos, scroll time should be longer
-SCROLL_TIME = 200
+SCROLL_TIME = 100
 
 def run(user: str, 
         date: datetime.datetime) -> bool:
