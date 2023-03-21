@@ -13,8 +13,6 @@ import config
 import boto3
 import zipfile
 import os
-import swifter
-
 
 
 # Download All Video From Tiktok User Function

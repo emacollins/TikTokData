@@ -56,9 +56,10 @@ def run(user: str,
             url = aws_utils.create_presigned_url(bucket_name=config.BUCKET,
                                         object_name=config.ExtractPath(user=user,
                                                                         date=date).video_path_file_s3_key)
-            airtable_utils.mark_user_videos_uploaded(row_id=airtable_row_id)
             airtable_utils.update_download_link(row_id=airtable_row_id, 
                                                 download_link=url)
+            airtable_utils.mark_user_videos_uploaded(row_id=airtable_row_id)
+            
         except Exception as e:
             airtable_utils.mark_video_upload_failed(row_id=airtable_row_id)
             print(e)
