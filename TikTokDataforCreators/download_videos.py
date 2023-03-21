@@ -83,7 +83,7 @@ def zip_videos(user: str,
 
    
 def run(user: str,
-        date: datetime):  
+        date: datetime) -> bool:  
     # Uses temp directorty to download the files and upload to S3
     with tempfile.TemporaryDirectory(dir=config.LOCAL_PATH_PREFIX) as tmpdirname:
         date = datetime.datetime.now()
@@ -95,9 +95,11 @@ def run(user: str,
                                         video_id=video_id,
                                         tmpdirname=tmpdirname)
         
-    zip_videos(user=user,
+    try:
+        zip_videos(user=user,
                date=date)
-            
+    except:
+        return False
 if __name__ == "__main__":
     run(user='tytheproductguy',
         date=datetime.datetime.now())
