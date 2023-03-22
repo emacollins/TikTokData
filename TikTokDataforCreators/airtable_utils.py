@@ -103,6 +103,17 @@ def mark_video_upload_failed(row_id: str):
         print(e)
         return False
 
+def update_video_counts(row_id: str, videos_scraped: int, total_videos: int):
+    table = Table(AIRTABLE_API_KEY, BASE_ID, TABLE_NAME)
+    try:
+        table.update(row_id, {"total_videos": total_videos})
+        table.update(row_id, {"videos_scraped": videos_scraped})
+        return True
+    except Exception as e:
+        print(e)
+        return False
+
+
 if __name__ == '__main__':
     table = get_table_data()
     df = convert_to_dataframe(airtable_table=table)

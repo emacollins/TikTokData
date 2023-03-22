@@ -1,0 +1,938 @@
+{
+  "AppContext": {
+    "appContext": {
+      "language": "en",
+      "region": "US",
+      "appId": 1233,
+      "appType": "m",
+      "wid": "7213188393671362090",
+      "nonce": "GpeJNOl2VMxgYqsHzs7zB",
+      "botType": "others",
+      "requestId": "12367623679451301574",
+      "clusterRegion": "TTP",
+      "abTestVersion": {
+        "versionName": "70508271,70830115,71057777,71065281,71067639,71096657,70405643,70455309,71057832",
+        "parameters": {
+          "volume_normalize": {
+            "vid": "v1"
+          },
+          "photo_test": {
+            "vid": "v2"
+          },
+          "studio_web_eh_entrance": {
+            "vid": "v1"
+          },
+          "periodic_login_popup_interval": {
+            "vid": "v2"
+          },
+          "xg_volume_test": {
+            "vid": "v2"
+          },
+          "video_serverpush": {
+            "vid": "v1"
+          },
+          "video_feed_redesign": {
+            "vid": "v1"
+          },
+          "video_bitrate_adapt": {
+            "vid": "v1"
+          },
+          "search_video": {
+            "vid": "v1",
+            "botVid": "v1"
+          },
+          "following_red_dot": {
+            "vid": "v2"
+          },
+          "mobile_vodkit": {
+            "vid": "v1"
+          },
+          "mobile_search_test": {
+            "vid": "v2"
+          },
+          "share_button_part1_test": {
+            "vid": "v1"
+          },
+          "comment_refactor_test": {
+            "vid": "v3"
+          },
+          "creator_center_test": {
+            "vid": "v2"
+          },
+          "desktop_weaver_ssr_renderer": {
+            "vid": "v1"
+          },
+          "enhance_video_consumption_test": {
+            "vid": "v3"
+          },
+          "increase_detail_page_cover_quantity_test": {
+            "vid": "v3"
+          },
+          "live_abr_version": {
+            "vid": "v2"
+          },
+          "live_end_improved_metrics": {
+            "vid": "v2"
+          },
+          "live_golive_entrance": {
+            "vid": "v2"
+          },
+          "live_lcp_perf_optimize": {
+            "vid": "v3"
+          },
+          "live_room_age_restriction": {
+            "vid": "v2"
+          },
+          "live_top_viewers": {
+            "vid": "v2"
+          },
+          "optimise_browser_mode": {
+            "vid": "v2"
+          },
+          "pumbaa_enable_test": {
+            "vid": "v1"
+          },
+          "related_videos_video_detail_page": {
+            "vid": "v2"
+          },
+          "search_video_lab": {
+            "vid": "v3"
+          },
+          "share_button_embed_test": {
+            "vid": "v2"
+          },
+          "translation_reduce": {
+            "vid": "v2"
+          },
+          "ttlive_broadcast_topic_version_two": {
+            "vid": "v2"
+          },
+          "video_topic": {
+            "vid": "V2"
+          },
+          "webapp_exp": {
+            "vid": "v1"
+          },
+          "webapp_recommend_language": {
+            "vid": "v2"
+          },
+          "webapp_video_detail_page_related_mask": {
+            "vid": "v2"
+          },
+          "xgplayer_preload_config": {
+            "vid": "v2"
+          }
+        }
+      },
+      "csrfToken": "97CyHbDC-ebG_hVo9Fl7VKtacchP2hUaP4h0",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.5414.46 Safari/537.36 Edg/109.0.5414.46",
+      "encryptedWebid": "1|YyHIfOTNVj2zzPeRlHJIVim4qzEmzJw2E8FdPKzsUfk|1679451301|365f7ab99b02cc9f41bda28f69e5bc003df8b5f366e0b8bab4cd849915d546c0",
+      "host": "www.tiktok.com"
+    },
+    "initialized": true,
+    "lang": "en",
+    "sideNavActive": false
+  },
+  "BizContext": {
+    "bizContext": {
+      "os": "windows",
+      "isMobile": false,
+      "isAndroid": false,
+      "isIOS": false,
+      "jumpType": "m",
+      "navList": [
+        {
+          "title": "Company",
+          "children": [
+            {
+              "title": "About",
+              "href": "https://www.tiktok.com/about?lang=en"
+            },
+            {
+              "title": "Newsroom",
+              "href": "https://newsroom.tiktok.com/"
+            },
+            {
+              "title": "Contact",
+              "href": "https://www.tiktok.com/about/contact?lang=en"
+            },
+            {
+              "title": "Careers",
+              "href": "https://careers.tiktok.com"
+            },
+            {
+              "title": "ByteDance",
+              "href": "https://www.bytedance.com/"
+            }
+          ]
+        },
+        {
+          "title": "Programs",
+          "children": [
+            {
+              "title": "TikTok for Good",
+              "href": "https://www.tiktok.com/forgood"
+            },
+            {
+              "title": "Advertise",
+              "href": "https://www.tiktok.com/business/?attr_source=tt_official_site&attr_medium=tt_official_site_guidance&refer=tiktok_web"
+            },
+            {
+              "title": "Developers",
+              "href": "https://developers.tiktok.com/?refer=tiktok_web"
+            },
+            {
+              "title": "TikTok Rewards",
+              "href": "https://www.tiktok.com/tiktok-rewards/en"
+            },
+            {
+              "title": "TikTok Browse",
+              "href": "https://www.tiktok.com/browse"
+            },
+            {
+              "title": "TikTok Embeds",
+              "href": "https://www.tiktok.com/embed"
+            }
+          ]
+        },
+        {
+          "title": "Support",
+          "children": [
+            {
+              "title": "Help Center",
+              "href": "https://support.tiktok.com/en"
+            },
+            {
+              "title": "Safety Center",
+              "href": "https://www.tiktok.com/safety?lang=en"
+            },
+            {
+              "title": "Creator Portal",
+              "href": "https://www.tiktok.com/creators/creator-portal/en-us/"
+            },
+            {
+              "title": "Community Guidelines",
+              "href": "https://www.tiktok.com/community-guidelines?lang=en"
+            },
+            {
+              "title": "Transparency",
+              "href": "https://www.tiktok.com/transparency?lang=en"
+            },
+            {
+              "title": "Accessibility",
+              "href": "https://www.tiktok.com/accessibility"
+            }
+          ]
+        },
+        {
+          "title": "Legal",
+          "children": [
+            {
+              "title": "Terms of Use",
+              "key": "terms-of-service",
+              "href": "https://www.tiktok.com/legal/terms-of-service?lang=en"
+            },
+            {
+              "title": "Privacy Policy",
+              "key": "privacy-policy-row",
+              "href": "https://www.tiktok.com/legal/privacy-policy-row?lang=en"
+            }
+          ]
+        }
+      ],
+      "config": {
+        "featureFlags": {
+          "feature_tt4b_ads": true,
+          "business_account_open": true,
+          "support_multiline_desc": true
+        },
+        "signUpOpen": true,
+        "cookieBanner": {
+          "load_dynamically": true,
+          "decline_btn_staged_rollout_area": [
+            "ALL"
+          ],
+          "resource": {
+            "prefix": "/pns/tiktok-cookie-banner",
+            "themes": [
+              "default",
+              "ttm"
+            ],
+            "esm": "/pns/tiktok-cookie-banner/{{VERSION}}/default.esm.js",
+            "nomodule": "/pns/tiktok-cookie-banner/{{VERSION}}/default.js",
+            "version": "1.0.0.194"
+          },
+          "i18n": {
+            "cookieBannerTitle": "cookie_title",
+            "cookieBannerTitleNew": "cookie_title_new",
+            "cookieBannerSubTitle": "cookie_subtitle",
+            "cookieBannerSubTitleNew": "cookie_subtitle_new",
+            "cookieBannerSubTitleV2": "cookie_subtitle_v3",
+            "cookieBannerBtnManage": "cookie_btn_manage",
+            "cookieBannerBtnAccept": "cookie_btn_accpet",
+            "cookieBannerBtnDecline": "cookie_btn_decline",
+            "cookiesBannerDetails": "cookies_banner_details",
+            "cookiesBannerCookiesPolicy": "cookies_banner_cookies_policy",
+            "cookiesBannerAccept": "cookies_banner_accept",
+            "webDoNotSellSettingsSavedToast": "web_do_not_sell_settings_saved_toast",
+            "cookieSettingManageYourCookieTitle": "cookie_banner_category_manage",
+            "cookieSettingSave": "save_settings",
+            "cookieSettingAnalyticsAndMarketing": "cookie_banner_subcategory_cookies",
+            "cookieSettingNecessary": "cookie_setting_page_nc_title",
+            "cookieSettingNecessarySubtitle": "cookie_setting_page_nc_subtitle",
+            "cookieSettingNecessaryV2": "cookie_banner_subcategory_essential",
+            "cookieSettingNecessarySubtitleV2": "cookies_essential_desc",
+            "cookieSettingAnalyticsAndMarketingSubtitle": "cookie_setting_page_aam_subtitle",
+            "cookieSettingAnalyticsAndMarketingSubtitleV2": "cookie_analytics_marketing_desc",
+            "cookieManageTip": "cookie_manage_desc"
+          }
+        },
+        "isGrayFilter": false,
+        "nickNameControlDay": "7"
+      },
+      "domains": {
+        "kind": "us",
+        "captcha": "//verification.us.tiktok.com",
+        "imApi": "https://im-api.us.tiktok.com",
+        "imFrontier": "wss://im-ws.us.tiktok.com/ws/v2",
+        "mTApi": "https://us.tiktok.com",
+        "rootApi": "https://us.tiktok.com",
+        "secSDK": "",
+        "slardar": "mon.us.tiktokv.com",
+        "starling": "https://starling.us.tiktokv.com/",
+        "tea": "https://mcs.us.tiktok.com",
+        "libraWebSDK": "https://vmweb.us.tiktok.com",
+        "webcastApi": "https://webcast.us.tiktok.com",
+        "webcastRootApi": "https://webcast.us.tiktok.com",
+        "pipoApi": "https://fp.us.tiktokv.com",
+        "tcc": "",
+        "search": "https://tx-search.tiktokd.net",
+        "aweme": "https://api.us.tiktok.com"
+      },
+      "downloadLink": {
+        "microsoft": {
+          "visible": true,
+          "normal": "https://www.microsoft.com/store/apps/9NH2GPH4JZS4"
+        },
+        "apple": {
+          "visible": true,
+          "normal": "https://www.tiktok.com/download-link/af/id835599320"
+        },
+        "amazon": {
+          "visible": true,
+          "normal": "https://www.amazon.com/dp/B0117U0G3M/"
+        },
+        "google": {
+          "visible": true,
+          "normal": "https://www.tiktok.com/download-link/af/com.zhiliaoapp.musically"
+        }
+      },
+      "deviceLimitRegisterExpired": true,
+      "subdivisions": [
+        "Arizona"
+      ],
+      "geo": [
+        "5551752"
+      ],
+      "geoCity": {
+        "City": "Maricopa County",
+        "Subdivisions": "Arizona",
+        "OriginalSubdivisions": [
+          {
+            "GeoNameID": "5551752",
+            "ASCIName": "Arizona",
+            "Name": "Arizona"
+          }
+        ],
+        "SubdivisionsArr": [
+          "Arizona"
+        ]
+      },
+      "isGoogleBot": false,
+      "isBingBot": false,
+      "isBot": false,
+      "isSearchEngineBot": false,
+      "isTTP": true,
+      "dateFmtLocale": {
+        "name": "en",
+        "months": [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December"
+        ],
+        "monthsShort": [
+          "Jan",
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "Jun",
+          "Jul",
+          "Aug",
+          "Sep",
+          "Oct",
+          "Nov",
+          "Dec"
+        ],
+        "weekdays": [
+          "Sunday",
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "weekdaysShort": [
+          "Sun",
+          "Mon",
+          "Tues",
+          "Wed",
+          "Thurs",
+          "Fri",
+          "Sat"
+        ],
+        "weekdaysMin": [
+          "Su",
+          "Mo",
+          "Tu",
+          "We",
+          "Th",
+          "Fr",
+          "Sa"
+        ],
+        "longDateFormat": {
+          "LT": "h:mm A",
+          "LTS": "h:mm:ss A",
+          "L": "MM/DD/YYYY",
+          "LL": "MMMM D, YYYY",
+          "LLL": "MMMM D, YYYY HH:mm",
+          "LLLL": "dddd MMMM D, YYYY HH:mm",
+          "l": "M/D/YYYY",
+          "ll": "MMM D, YYYY",
+          "lll": "MMM D, YYYY h:mm A",
+          "llll": "ddd MMM D, YYYY h:mm A",
+          "LL-Y": "MMMM D"
+        },
+        "meridiem": {
+          "am": "am",
+          "pm": "pm",
+          "AM": "AM",
+          "PM": "PM"
+        }
+      },
+      "videoPlayerConfig": {
+        "fallback": false
+      },
+      "playbackNormalizePath": {
+        "path": [
+          "/foryou",
+          "/following"
+        ]
+      },
+      "bitrateConfig": {
+        "bitrateLower": 200000,
+        "bitrateRange": [
+          200000,
+          2500000
+        ],
+        "bitrateUpper": 2000000,
+        "mode": "buffer-info",
+        "paramBf": 0.3,
+        "paramBp": 0.7,
+        "paramLower": 0.5,
+        "paramUpper": 1.4,
+        "paramUpperBl": 0.4,
+        "paramVl1": 0.7,
+        "paramVl2": 1,
+        "paramVlLower": 0.5,
+        "paramVlUpper": 0.8,
+        "slidingWindowCountThreshold": 10,
+        "slidingWindowExtraction": "weighted_median",
+        "slidingWindowType": "by_weight",
+        "slidingWindowWeight": "size",
+        "slidingWindowWeightThreshold": 10000000
+      },
+      "searchVideoForLoggedin": true,
+      "studioDownloadEntrance": {
+        "regions": [
+          "BY",
+          "TJ",
+          "TM",
+          "KZ",
+          "GB",
+          "DE",
+          "ES",
+          "FR",
+          "UZ",
+          "KG",
+          "MD",
+          "AC",
+          "AD",
+          "AF",
+          "AG",
+          "AI",
+          "AL",
+          "AM",
+          "AO",
+          "AQ",
+          "AS",
+          "AU",
+          "AW",
+          "AX",
+          "BA",
+          "BB",
+          "BD",
+          "BF",
+          "BG",
+          "BI",
+          "BJ",
+          "BL",
+          "BM",
+          "BN",
+          "BQ",
+          "BS",
+          "BT",
+          "BV",
+          "BW",
+          "BZ",
+          "CA",
+          "CC",
+          "CD",
+          "CF",
+          "CG",
+          "CI",
+          "CK",
+          "CM",
+          "CN",
+          "CS",
+          "CU",
+          "CV",
+          "CW",
+          "CX",
+          "CY",
+          "DK",
+          "DM",
+          "DR",
+          "EA",
+          "EE",
+          "EH",
+          "EN",
+          "ET",
+          "FJ",
+          "FK",
+          "FM",
+          "FO",
+          "GA",
+          "GD",
+          "GE",
+          "GF",
+          "GG",
+          "GH",
+          "GI",
+          "GL",
+          "GN",
+          "GP",
+          "GQ",
+          "GS",
+          "GU",
+          "GW",
+          "GY",
+          "HK",
+          "HR",
+          "HT",
+          "IC",
+          "IE",
+          "IL",
+          "IM",
+          "IN",
+          "IO",
+          "IS",
+          "JE",
+          "KE",
+          "KH",
+          "KI",
+          "KN",
+          "KY",
+          "LA",
+          "LC",
+          "LI",
+          "LK",
+          "LR",
+          "LS",
+          "LU",
+          "LV",
+          "MC",
+          "ME",
+          "MF",
+          "MG",
+          "MH",
+          "MK",
+          "ML",
+          "MM",
+          "MN",
+          "MO",
+          "MP",
+          "MQ",
+          "MS",
+          "MT",
+          "MU",
+          "MV",
+          "MW",
+          "MZ",
+          "NA",
+          "NC",
+          "NE",
+          "NF",
+          "NG",
+          "NJ",
+          "NO",
+          "NR",
+          "NU",
+          "NZ",
+          "PF",
+          "PG",
+          "PK",
+          "PM",
+          "PN",
+          "PR",
+          "PW",
+          "QS",
+          "RE",
+          "RW",
+          "SB",
+          "SC",
+          "SH",
+          "SI",
+          "SJ",
+          "SL",
+          "SM",
+          "SN",
+          "SR",
+          "ST",
+          "SX",
+          "SZ",
+          "TC",
+          "TF",
+          "TG",
+          "TK",
+          "TL",
+          "TO",
+          "TP",
+          "TS",
+          "TV",
+          "TZ",
+          "UG",
+          "UM",
+          "VA",
+          "VC",
+          "VG",
+          "VI",
+          "VU",
+          "WF",
+          "WS",
+          "XA",
+          "XB",
+          "XK",
+          "XX",
+          "YJ",
+          "YT",
+          "ZA",
+          "ZG",
+          "ZM",
+          "ZN",
+          "ZW",
+          "ZZ",
+          "ES",
+          "TR",
+          "AZ",
+          "MA",
+          "LB",
+          "DZ",
+          "ER",
+          "TN",
+          "SS",
+          "BR",
+          "MX",
+          "TH",
+          "ID",
+          "MY",
+          "VN",
+          "PH",
+          "SG",
+          "KR",
+          "JP",
+          "EG",
+          "SY",
+          "PS",
+          "JO",
+          "IQ",
+          "DJ",
+          "KM",
+          "SO",
+          "TD",
+          "OM",
+          "QA",
+          "KW",
+          "AE",
+          "BH",
+          "SA",
+          "YE",
+          "LY",
+          "SD",
+          "MR",
+          "LT",
+          "JM",
+          "CH",
+          "IR",
+          "AN",
+          "FI",
+          "PY",
+          "AR",
+          "GR",
+          "UY",
+          "CR",
+          "DO",
+          "PE",
+          "IT",
+          "TT",
+          "SV",
+          "CZ",
+          "BE",
+          "CO",
+          "TW",
+          "HN",
+          "EC",
+          "SK",
+          "NP",
+          "RS",
+          "NI",
+          "SE",
+          "GT",
+          "CL",
+          "NL",
+          "RO",
+          "HU",
+          "VE",
+          "AT",
+          "PL",
+          "PA",
+          "BO",
+          "GM",
+          "PT"
+        ],
+        "userRegions": [
+          "US",
+          "AS",
+          "GU",
+          "MP",
+          "PR",
+          "VI",
+          "UM"
+        ],
+        "allRegions": false
+      },
+      "liveSuggestConfig": {
+        "isBlockedArea": false,
+        "isRiskArea": true
+      },
+      "liveCenterConfig": {
+        "entrance": true,
+        "showCreatorHubRegion": [
+          "GB",
+          "IQ",
+          "SA",
+          "EG",
+          "AE",
+          "DZ",
+          "MA",
+          "JO",
+          "KW",
+          "LB",
+          "TN",
+          "QA",
+          "OM",
+          "LY",
+          "SO",
+          "YE",
+          "BH",
+          "PS",
+          "MR",
+          "DJ",
+          "SS",
+          "US",
+          "AS",
+          "GU",
+          "MP",
+          "PR",
+          "VI",
+          "UM",
+          "JP"
+        ]
+      },
+      "liveStudioEnable": false,
+      "xgplayerInitHost": {
+        "group1": [
+          "v16-webapp.tiktok.com",
+          "v16m-webapp.tiktokcdn-us.com"
+        ],
+        "group2": [
+          "v16-webapp-prime.tiktok.com",
+          "v16-webapp-prime.us.tiktok.com",
+          "v19-webapp-prime.us.tiktok.com",
+          "v19-webapp-prime.tiktok.com"
+        ]
+      },
+      "videoOrder": {
+        "videoOrder": [
+          {
+            "property": "QualityType",
+            "detail": [
+              10,
+              28,
+              30
+            ]
+          },
+          {
+            "property": "Bitrate",
+            "order": "desc"
+          }
+        ]
+      },
+      "searchLiveForLoggedin": true
+    },
+    "initialized": true
+  },
+  "SEO": {
+    "metaParams": {
+      "title": " | TikTok",
+      "description": " on TikTok | Watch the latest video from .",
+      "canonicalHref": "https://www.tiktok.com/",
+      "robotsContent": "noindex, follow, max-image-preview:large",
+      "applicableDevice": "pc, mobile"
+    },
+    "jsonldList": [],
+    "abtest": {
+      "pageId": "228556610725680752",
+      "vidList": [],
+      "parameters": {
+        "user_page_serp_compliance": {
+          "vid": "v2"
+        }
+      }
+    },
+    "loading": false,
+    "canonical": "https://www.tiktok.com/@t",
+    "pageType": 999,
+    "launchMode": "direct",
+    "trafficType": "no_referrer",
+    "directoryConfig": {
+      "type": "json",
+      "default": {
+        "kepDirectoryVersion1": {
+          "isOpen": false,
+          "itemNumber": 0,
+          "hashSize": 8000,
+          "upperLimitHash": 8000,
+          "lowerLimitHash": 0
+        },
+        "kepDirectoryVersion2": {
+          "isOpen": false,
+          "itemNumber": 0,
+          "hashSize": 160000,
+          "bucketSize": 8000,
+          "upperLimitHash": 160000,
+          "lowerLimitHash": 0,
+          "updatedFrequencyTimer": 21600
+        },
+        "userProfileDirectory": {
+          "isOpen": false,
+          "itemNumber": 400,
+          "hashSize": 40000,
+          "upperLimitHash": 200,
+          "lowerLimitHash": 0
+        },
+        "recommendVideoDirectory": {
+          "isOpen": false,
+          "itemNumber": 400,
+          "hashSize": 40000,
+          "upperLimitHash": 200,
+          "lowerLimitHash": 0
+        },
+        "userVideoDirectory": {
+          "isOpen": false,
+          "itemNumber": 200
+        },
+        "musicVideoDirectory": {
+          "isOpen": false,
+          "itemNumber": 200
+        },
+        "hashtagVideoDirectory": {
+          "isOpen": false,
+          "itemNumber": 200
+        }
+      }
+    }
+  },
+  "SharingMeta": {
+    "value": {
+      "al:ios:url": "snssdk1233://user/profile/",
+      "al:android:url": "snssdk1233://user/profile/",
+      "al:ios:app_store_id": "835599320",
+      "al:ios:app_name": "musical.ly",
+      "al:android:app_name": "musical.ly",
+      "al:android:package": "com.zhiliaoapp.musically",
+      "og:site_name": "TikTok",
+      "og:type": "website",
+      "og:title": " | TikTok",
+      "og:description": " on TikTok | Watch the latest video from .",
+      "fb:app_id": "597615686992125",
+      "twitter:app:id:iphone": "835599320",
+      "twitter:app:id:googleplay": "com.zhiliaoapp.musically",
+      "twitter:card": "summary",
+      "twitter:site": "TikTok",
+      "twitter:title": " | TikTok",
+      "twitter:description": " on TikTok | Watch the latest video from .",
+      "og:image": "https://lf16-tiktok-web.ttwstatic.com/obj/tiktok-web-common-sg/mtact/static/images/share_img.png",
+      "twitter:image": "https://lf16-tiktok-web.ttwstatic.com/obj/tiktok-web-common-sg/mtact/static/images/share_img.png",
+      "og:image:width": "360",
+      "og:image:height": "360",
+      "og:image:alt": " | TikTok"
+    }
+  },
+  "ItemList": {
+    "user-post": {
+      "list": [],
+      "browserList": [],
+      "loading": true,
+      "statusCode": 0,
+      "hasMore": true,
+      "cursor": "0",
+      "preloadList": []
+    },
+    "user-liked": {
+      "list": [],
+      "browserList": [],
+      "loading": true,
+      "statusCode": 0,
+      "hasMore": true,
+      "cursor": "0",
+      "preloadList": []
+    }
+  },
+  "UserPage": {
+    "statusCode": 10221,
+    "profileState": "initial"
+  },
+  "RecommendUserList": {},
+  "extras": []
+}

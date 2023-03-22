@@ -10,6 +10,7 @@ import aws_utils
 import airtable_utils
 from functools import wraps
 import time
+import pandas as pd
 
 TEST_USER = 'thephotoverse'
 TEST_AIRTABLE_ROW = 'recb4iqk60sDmE4cu'
@@ -21,22 +22,25 @@ def timeit(func):
         result = func(*args, **kwargs)
         end_time = time.perf_counter()
         total_time = end_time - start_time
-        print(f'Function {func.__name__} took {total_time:.4f} seconds')
+        print(f'Pipeline took {total_time:.4f} seconds')
         return result
     return timeit_wrapper
 
 # TODO: have an input arg of user and then apply 
 @timeit
-def run(user: str,
-        airtable_row_id: str,
-        date: datetime.datetime):
+def main(user_data: dict):
+    
+    user = user_data['user']
+    airtable_row_id = user_data['airtable_row_id']
+    date=datetime.datetime.now()
     
     harvest.run(user=user, 
                 date=date)
     print(f'Harvest for {user} complete')
     
     extract.run(user=user, 
-                date=date)
+                date=date,
+                airtable_row_id=airtable_row_id)
     print(f'Extract for {user} complete')
     try:
         load.run(user=user, 
@@ -65,9 +69,21 @@ def run(user: str,
             print(e)
             print(f'Could not get url and update airtable for {user}')
 
-    
+def run(user_data: dict):
+    try:
+        user = user_data['user']
+        airtable_row_id = user_data['airtable_row_id']
+        main(user_data=user_data)
+        
+    except Exception as e:
+        print(e)
+        print(f'Pipeline failed on user {user}')
+        bad_users_history = pd.read_csv(config.UserSignUpPath().bad_users)
+        bad_users_current_harvest = pd.DataFrame(data=user_data)
+        bad_users_final = pd.concat([bad_users_history, bad_users_current_harvest])
+        bad_users_final.to_csv(config.UserSignUpPath().bad_users, index=False)
+        airtable_utils.mark_video_upload_failed(row_id=airtable_row_id)
 
 if __name__ == '__main__':
-    run(user=TEST_USER,
-        airtable_row_id=TEST_AIRTABLE_ROW,
-        date=datetime.datetime.now())
+    user_data = {'user': TEST_USER, 'airtable_row_id': TEST_AIRTABLE_ROW}
+    run(user_data)
