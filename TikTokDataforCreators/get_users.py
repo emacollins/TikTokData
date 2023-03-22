@@ -39,26 +39,6 @@ def run():
 
     with multiprocessing.Pool(processes=len(users_to_download)) as pool:
         pool.map(pipeline.run, user_data)
-        # for row in users.itertuples():
-        #     if row.user in set(bad_users_history['user']):
-        #         continue
-        #     try:
-        #         if not row.videos_uploaded:
-        #             pipeline.run(user=row.user,
-        #                          airtable_row_id=row.airtable_row_id,
-        #                          date=date)
-        #         else:
-        #             continue
-    #except Exception as e:
-        #print(e)
-        # print(f'Pipeline failed on user {row.user}')
-        # bad_users['user'].append(row.user)
-        # bad_users['airtable_row_id'].append(row.airtable_row_id)
-        # bad_users_current_harvest = pd.DataFrame(data=bad_users)
-        # bad_users_final = pd.concat([bad_users_history, bad_users_current_harvest])
-        # bad_users_final.to_csv(config.UserSignUpPath().bad_users, index=False)
-        # airtable_utils.mark_video_upload_failed(row_id=row.airtable_row_id)
-        
     print('Run complete')
         
 

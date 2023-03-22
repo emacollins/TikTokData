@@ -10,6 +10,7 @@ import aws_utils
 import airtable_utils
 from functools import wraps
 import time
+import pandas as pd
 
 TEST_USER = 'thephotoverse'
 TEST_AIRTABLE_ROW = 'recb4iqk60sDmE4cu'
@@ -27,7 +28,7 @@ def timeit(func):
 
 # TODO: have an input arg of user and then apply 
 @timeit
-def run(user_data: dict):
+def main(user_data: dict):
     
     user = user_data['user']
     airtable_row_id = user_data['airtable_row_id']
@@ -67,7 +68,20 @@ def run(user_data: dict):
             print(e)
             print(f'Could not get url and update airtable for {user}')
 
-    
+def run(user_data: dict):
+    try:
+        user = user_data['user']
+        airtable_row_id = user_data['airtable_row_id']
+        main(user_data=user_data)
+        
+    except Exception as e:
+        print(e)
+        print(f'Pipeline failed on user {user}')
+        bad_users_history = pd.read_csv(config.UserSignUpPath().bad_users)
+        bad_users_current_harvest = pd.DataFrame(data=user_data)
+        bad_users_final = pd.concat([bad_users_history, bad_users_current_harvest])
+        bad_users_final.to_csv(config.UserSignUpPath().bad_users, index=False)
+        airtable_utils.mark_video_upload_failed(row_id=airtable_row_id)
 
 if __name__ == '__main__':
     user_data = {'user': TEST_USER, 'airtable_row_id': TEST_AIRTABLE_ROW}
