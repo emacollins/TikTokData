@@ -11,8 +11,8 @@ import airtable_utils
 from functools import wraps
 import time
 
-TEST_USER = 'tylerandhistummy'
-TEST_AIRTABLE_ROW = 'recFxfnl5fAbxcfVf'
+TEST_USER = 'thephotoverse'
+TEST_AIRTABLE_ROW = 'recb4iqk60sDmE4cu'
 
 def timeit(func):
     @wraps(func)
@@ -21,15 +21,17 @@ def timeit(func):
         result = func(*args, **kwargs)
         end_time = time.perf_counter()
         total_time = end_time - start_time
-        print(f'Function {func.__name__} took {total_time:.4f} seconds')
+        print(f'Pipeline took {total_time:.4f} seconds')
         return result
     return timeit_wrapper
 
 # TODO: have an input arg of user and then apply 
 @timeit
-def run(user: str,
-        airtable_row_id: str,
-        date: datetime.datetime):
+def run(user_data: dict):
+    
+    user = user_data['user']
+    airtable_row_id = user_data['airtable_row_id']
+    date=datetime.datetime.now()
     
     harvest.run(user=user, 
                 date=date)
@@ -68,6 +70,5 @@ def run(user: str,
     
 
 if __name__ == '__main__':
-    run(user=TEST_USER,
-        airtable_row_id=TEST_AIRTABLE_ROW,
-        date=datetime.datetime.now())
+    user_data = {'user': TEST_USER, 'airtable_row_id': TEST_AIRTABLE_ROW}
+    run(user_data)
