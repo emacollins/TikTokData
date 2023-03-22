@@ -9,7 +9,7 @@ from functools import wraps
 import time
 
 
-# From Harvest
+
 def get_airtable_data():
     table = airtable_utils.get_table_data()
     df = airtable_utils.convert_to_dataframe(airtable_table=table)
@@ -29,19 +29,21 @@ def timeit(func):
 @timeit
 def run():
     get_airtable_data()
-    bad_users = {'user': [],
-                 'airtable_row_id': []}  #Used to collect the users that errored on data pull
     user_sign_up_directory = config.UserSignUpPath().cached_user_table
     bad_users_history = pd.read_csv(config.UserSignUpPath().bad_users)
     users = pd.read_csv(user_sign_up_directory)[['airtable_row_id', 'user', 'videos_uploaded']]
     users_to_download = users.loc[(~users['user'].isin(bad_users_history['user'])) & (users['videos_uploaded'] == False)]
     users_to_download = users_to_download[['airtable_row_id', 'user']]
     user_data = users_to_download.to_dict('records')
-
-    with multiprocessing.Pool(processes=len(users_to_download)) as pool:
-        pool.map(pipeline.run, user_data)
-    print('Run complete')
-        
+    try:
+        with multiprocessing.Pool(processes=len(users_to_download)) as pool:
+            pool.map(pipeline.run, user_data)
+        print('Run complete')
+    except Exception as e:
+        print(e)
+        pass           
 
 if __name__ == '__main__':
-    run()
+    while True:
+        run()
+        time.sleep(10)
