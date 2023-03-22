@@ -39,7 +39,8 @@ def main(user_data: dict):
     print(f'Harvest for {user} complete')
     
     extract.run(user=user, 
-                date=date)
+                date=date,
+                airtable_row_id=airtable_row_id)
     print(f'Extract for {user} complete')
     try:
         load.run(user=user, 

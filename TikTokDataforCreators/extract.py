@@ -4,7 +4,7 @@ import datetime
 import os
 import config
 import boto3
-
+import airtable_utils
 
 def data_store_dict_return() -> dict:
     
@@ -67,7 +67,8 @@ def extract_extras(data: dict, user: str):
 
 def check_video_count(df: pd.DataFrame, 
                       data: dict,
-                      user: str) -> bool:
+                      user: str,
+                      airtable_row_id: str) -> bool:
     """checks if all video data was collected for user
 
     Args:
@@ -78,14 +79,18 @@ def check_video_count(df: pd.DataFrame,
     """
     videos_scraped = len(df['video_id'].unique())
     videos_expected = get_user_video_count(data=data, user=user)
+    airtable_utils.update_video_counts(row_id=airtable_row_id,
+                                           videos_scraped=videos_scraped,
+                                           total_videos=videos_expected)
     
     if videos_scraped == videos_expected:
         return True
+
     else:
         print(f'{user} did not get all videos. {videos_scraped} / {videos_expected} scraped')
         return False
      
-def extract(data: dict, user: str) -> pd.DataFrame:
+def extract(data: dict, user: str, airtable_row_id: str) -> pd.DataFrame:
     data_store_dict = data_store_dict_return()
     for video_id, video_values in data['ItemModule'].items():
         data_store_dict['video_id'].append(video_id)
@@ -110,18 +115,19 @@ def extract(data: dict, user: str) -> pd.DataFrame:
     else:
         df_extra_videos = pd.DataFrame()
     df = pd.concat([df_recent_videos, df_extra_videos])
-    check_video_count(df=df, data=data, user=user)
+    check_video_count(df=df, data=data, user=user, airtable_row_id=airtable_row_id)
     return df
 
 
 def run(user: str,
-        date: datetime.datetime):
+        date: datetime.datetime,
+        airtable_row_id: str):
 
     s3 = boto3.client('s3')
     s3_object = s3.get_object(Bucket=config.BUCKET, Key=config.HarvestPath(user=user,
                                                                             date=date).user_data_path_file_s3_key)
     data = json.loads(s3_object['Body'].read())
-    df_final = extract(data=data, user=user)
+    df_final = extract(data=data, user=user,airtable_row_id=airtable_row_id)
     df_final['data_date'] = datetime.datetime.now().date()
     df_final['video_create_time'] = pd.to_datetime(df_final['video_create_time'],unit='s')
     df_final = df_final.drop_duplicates(subset=['video_id'])
@@ -132,5 +138,6 @@ def run(user: str,
 
 if __name__ == '__main__':
     run(user='tytheproductguy',
-        date=datetime.datetime.now())
+        date=datetime.datetime.now(),
+        airtable_row_id='recKGvmEQKlfQ8600')
     

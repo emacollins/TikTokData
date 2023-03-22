@@ -26,6 +26,7 @@ def timeit(func):
         return result
     return timeit_wrapper    
 
+@timeit
 def run():
     get_airtable_data()
     bad_users = {'user': [],
