@@ -79,9 +79,13 @@ def check_video_count(df: pd.DataFrame,
     """
     videos_scraped = len(df['video_id'].unique())
     videos_expected = get_user_video_count(data=data, user=user)
-    airtable_utils.update_video_counts(row_id=airtable_row_id,
-                                           videos_scraped=videos_scraped,
-                                           total_videos=videos_expected)
+    
+    airtable_utils.update_database_cell(row_id=airtable_row_id,
+                                        field='videos_scraped',
+                                        value=videos_scraped)
+    airtable_utils.update_database_cell(row_id=airtable_row_id,
+                                        field='total_videos',
+                                        value=videos_expected)
     
     if videos_scraped == videos_expected:
         return True

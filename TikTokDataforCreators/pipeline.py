@@ -60,12 +60,17 @@ def main(user_data: dict):
             url = aws_utils.create_presigned_url(bucket_name=config.BUCKET,
                                         object_name=config.ExtractPath(user=user,
                                                                         date=date).video_path_file_s3_key)
-            airtable_utils.update_download_link(row_id=airtable_row_id, 
-                                                download_link=url)
-            airtable_utils.mark_user_videos_uploaded(row_id=airtable_row_id)
-            
+            airtable_utils.update_database_cell(row_id=airtable_row_id,
+                                                field='download_link')
+
+            airtable_utils.update_database_cell(row_id=airtable_row_id,
+                                                field='videos_uploaded',
+                                                value=url)
         except Exception as e:
-            airtable_utils.mark_video_upload_failed(row_id=airtable_row_id)
+            
+            airtable_utils.update_database_cell(row_id=airtable_row_id,
+                                                field='upload_failed',
+                                                value="True")
             print(e)
             print(f'Could not get url and update airtable for {user}')
 
@@ -82,7 +87,11 @@ def run(user_data: dict):
         bad_users_current_harvest = pd.DataFrame(data=user_data)
         bad_users_final = pd.concat([bad_users_history, bad_users_current_harvest])
         bad_users_final.to_csv(config.UserSignUpPath().bad_users, index=False)
-        airtable_utils.mark_video_upload_failed(row_id=airtable_row_id)
+        #airtable_utils.mark_video_upload_failed(row_id=airtable_row_id)  # Old update command
+        airtable_utils.update_database_cell(row_id=airtable_row_id,
+                                            field='upload_failed',
+                                            value="True")
+
 
 if __name__ == '__main__':
     user_data = {'user': TEST_USER, 'airtable_row_id': TEST_AIRTABLE_ROW}
