@@ -1,6 +1,6 @@
 import datetime
 import pandas as pd
-
+import boto3
 
 # TODO: Create a temp directory class
 
@@ -76,3 +76,13 @@ class UserSignUpPath:
         self.bucket = BUCKET
         self.cached_user_table = S3_URI_PATH_PREFIX + 'TikTokData/TikTokDataforCreators/user_sign_up/tiktok_accounts_to_track.csv'
         self.bad_users = S3_URI_PATH_PREFIX + 'TikTokData/TikTokDataforCreators/user_sign_up/bad_users.csv'  #  Usernames that caused errors on the harvest
+
+class Secret_Key:
+    def __init__(self, key_name: str) -> None:
+        self.ssm = boto3.client('ssm')
+        self.key_name = key_name
+        self._get_value
+        
+    def _get_value(self):
+        response = self.ssm.get_parameter(Name=self.key_name, WithDecryption=True)
+        self.value = response['Parameter']['Value']

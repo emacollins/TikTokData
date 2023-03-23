@@ -27,7 +27,7 @@ def download_video_no_watermark(user: str,
     url = "https://tiktok-downloader-download-tiktok-videos-without-watermark.p.rapidapi.com/vid/index"
     querystring = {"url":f'https://www.tiktok.com/@{user}r/video/{str(video_id)}'}
     headers = {
-        "X-RapidAPI-Key": "847b077d69mshaeae673f63126b4p1f4fa8jsn47c20efef8f4",
+        "X-RapidAPI-Key": config.Secret_Key(key_name='X-RAPIDAPI-KEY'),
         "X-RapidAPI-Host": "tiktok-downloader-download-tiktok-videos-without-watermark.p.rapidapi.com"
     }
 

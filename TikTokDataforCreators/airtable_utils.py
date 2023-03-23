@@ -3,6 +3,7 @@ from re import U
 from pyairtable import Table
 import pandas as pd
 from numpy import nan
+import config
 
 """
 Example from Docs
@@ -20,8 +21,8 @@ table.delete("recwAcQdqwe21as")
 
 """
 
-AIRTABLE_API_KEY = 'keyDdCRa1BsB4FG4A'
-BASE_ID = 'appTc74HsWp5MCjaQ'
+AIRTABLE_API_KEY = config.Secret_Key(key_name='AIRTABLE_API_KEY').value
+BASE_ID = config.Secret_Key(key_name='BASE_ID').value
 TABLE_NAME = 'Paying Customer Info'
 
 def get_table_data():
