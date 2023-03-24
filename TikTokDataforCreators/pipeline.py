@@ -61,11 +61,12 @@ def main(user_data: dict):
                                         object_name=config.ExtractPath(user=user,
                                                                         date=date).video_path_file_s3_key)
             airtable_utils.update_database_cell(row_id=airtable_row_id,
-                                                field='download_link')
+                                                field='download_link',
+                                                value=url)
 
             airtable_utils.update_database_cell(row_id=airtable_row_id,
                                                 field='videos_uploaded',
-                                                value=url)
+                                                value="True")
         except Exception as e:
             
             airtable_utils.update_database_cell(row_id=airtable_row_id,
@@ -96,3 +97,4 @@ def run(user_data: dict):
 if __name__ == '__main__':
     user_data = {'user': TEST_USER, 'airtable_row_id': TEST_AIRTABLE_ROW}
     run(user_data)
+    

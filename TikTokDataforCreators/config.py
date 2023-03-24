@@ -81,8 +81,4 @@ class Secret_Key:
     def __init__(self, key_name: str) -> None:
         self.ssm = boto3.client('ssm')
         self.key_name = key_name
-        self._get_value
-        
-    def _get_value(self):
-        response = self.ssm.get_parameter(Name=self.key_name, WithDecryption=True)
-        self.value = response['Parameter']['Value']
+        self.value = self.ssm.get_parameter(Name=self.key_name, WithDecryption=True)['Parameter']['Value']

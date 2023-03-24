@@ -38,29 +38,33 @@ def extract_extras(data: dict, user: str):
     data_store_dict = data_store_dict_return()
     all_videos = []
     for contents in extras:
-        videos = contents['itemList']
-        for video_info in videos:
-            data_store_dict['video_id'].append(video_info.get('id', ''))
-            data_store_dict['user_unique_id'].append(user)
-            data_store_dict['video_create_time'].append(video_info.get('createTime', ''))
-            data_store_dict['video_digg_count'].append(video_info['stats']['diggCount'])
-            data_store_dict['video_share_count'].append(video_info['stats']['shareCount'])
-            data_store_dict['video_comment_count'].append(video_info['stats']['commentCount'])
-            data_store_dict['video_play_count'].append(video_info['stats']['playCount'])
+        try:
+            videos = contents['itemList']
+            for video_info in videos:
+                data_store_dict['video_id'].append(video_info.get('id', ''))
+                data_store_dict['user_unique_id'].append(user)
+                data_store_dict['video_create_time'].append(video_info.get('createTime', ''))
+                data_store_dict['video_digg_count'].append(video_info['stats']['diggCount'])
+                data_store_dict['video_share_count'].append(video_info['stats']['shareCount'])
+                data_store_dict['video_comment_count'].append(video_info['stats']['commentCount'])
+                data_store_dict['video_play_count'].append(video_info['stats']['playCount'])
 
-            challenges = video_info.get('challenges', False)
-            if challenges:
-                video_challenge_tags = []
-                for challenge_info in challenges:
-                     video_challenge_tags.append(challenge_info['title'])
-                tags_string = ';'.join(map(str, video_challenge_tags))
-                data_store_dict['hashtags'].append(tags_string)
-            else:
-                data_store_dict['hashtags'].append('')
-                
-        df_page = pd.DataFrame(data=data_store_dict)
-        all_videos.append(df_page)
-    
+                challenges = video_info.get('challenges', False)
+                if challenges:
+                    video_challenge_tags = []
+                    for challenge_info in challenges:
+                        video_challenge_tags.append(challenge_info['title'])
+                    tags_string = ';'.join(map(str, video_challenge_tags))
+                    data_store_dict['hashtags'].append(tags_string)
+                else:
+                    data_store_dict['hashtags'].append('')
+                    
+            df_page = pd.DataFrame(data=data_store_dict)
+            all_videos.append(df_page)
+        except Exception as e:
+            print(f'Extras page of harvest data skipped for user {user}')
+            continue
+        
     df = pd.concat(all_videos)
     return df
 
@@ -79,6 +83,11 @@ def check_video_count(df: pd.DataFrame,
     """
     videos_scraped = len(df['video_id'].unique())
     videos_expected = get_user_video_count(data=data, user=user)
+    
+    if videos_scraped / videos_expected < 0.99: # Scraper doesnt always work, set threshold to 95% or it will fail and rerun
+        assert 1 == 0
+    
+    
     
     airtable_utils.update_database_cell(row_id=airtable_row_id,
                                         field='videos_scraped',
@@ -141,7 +150,7 @@ def run(user: str,
     return True
 
 if __name__ == '__main__':
-    run(user='tytheproductguy',
+    run(user='poeticone',
         date=datetime.datetime.now(),
-        airtable_row_id='recKGvmEQKlfQ8600')
+        airtable_row_id='recyp76Hk0SxigwfU')
     
