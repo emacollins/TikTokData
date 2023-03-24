@@ -54,7 +54,8 @@ def download_video_no_watermark(user: str,
             return dict()
 
 def zip_videos(user: str,
-        date: datetime.datetime):
+        date: datetime.datetime,
+        tmpdirname: str):
     # The S3 bucket containing the .mp4 files
     bucket = config.BUCKET
 
@@ -73,22 +74,22 @@ def zip_videos(user: str,
     date_string = date.strftime('%m-%d-%Y')
     zip_file_name = f'{user}_downloaded_videos_{date_string}.zip'
     # Zip the .mp4 files
-    with zipfile.ZipFile(zip_file_name, 'w') as zip_file:
+    with zipfile.ZipFile(tmpdirname+'/'+zip_file_name, 'w') as zip_file:
         for file in mp4_files:
             # Download the file from S3
-            tmpfilename = f'{user}_' + file.split('/')[-1]
+            tmpfilename = tmpdirname+f'/{user}_' + file.split('/')[-1]
             s3.download_file(bucket, file, tmpfilename)
             # Add the file to the zip archive
             zip_file.write(tmpfilename)
 
     # Upload the .zip file to S3
-    with open(zip_file_name, 'rb') as data:
+    with open(tmpdirname+'/'+zip_file_name, 'rb') as data:
         s3.upload_fileobj(data, bucket, zip_file_destination_s3_key + '/' + zip_file_name)
         
     # Delete the local .zip and .mp4 files
-    os.remove(zip_file_name)
+    os.remove(tmpdirname+'/'+zip_file_name)
     for file in mp4_files:
-        tmpfilename = f'{user}_' + file.split('/')[-1]
+        tmpfilename = tmpdirname + f'/{user}_' + file.split('/')[-1]
         os.remove(tmpfilename)
 
 async def start_async_process(video_ids: list,
@@ -110,7 +111,7 @@ async def start_async_process(video_ids: list,
 def run(user: str,
         date: datetime) -> bool:  
     # Uses temp directorty to download the files and upload to S3
-    with tempfile.TemporaryDirectory(dir=config.LOCAL_PATH_PREFIX) as tmpdirname:
+    with tempfile.TemporaryDirectory(dir='/Users/tmp/', prefix='videos_inside_') as tmpdirname:
         date = datetime.datetime.now()
         extract_file = config.ExtractPath(date=date,
                                           user=user).data_path_file
@@ -123,13 +124,14 @@ def run(user: str,
                                                            user))
         loop.run_until_complete(future)
         
-    try:
-        zip_videos(user=user,
-               date=date)
-        return True
-    except Exception as e:
-        print(e)
-        return False
+        try:
+            zip_videos(user=user,
+                date=date,
+                tmpdirname=tmpdirname)
+            return True
+        except Exception as e:
+            print(e)
+            return False
 
 if __name__ == "__main__":
     run(user='poeticone',
