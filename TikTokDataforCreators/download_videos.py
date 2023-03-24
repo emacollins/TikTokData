@@ -16,6 +16,7 @@ import config
 import boto3
 import zipfile
 import os
+import pathlib
 
 
 # Download All Video From Tiktok User Function
@@ -59,38 +60,23 @@ def zip_videos(user: str,
     # The S3 bucket containing the .mp4 files
     bucket = config.BUCKET
 
-    # The S3 folder containing the .mp4 files
-    source_folder = config.HarvestPath(user=user,
-                                       date=date).video_path_s3_key
-
     # The S3 folder to which the .zip file will be saved
     zip_file_destination_s3_key = config.ExtractPath(user=user).video_path_s3_key
-
-    # List all .mp4 files in the source folder
     s3 = boto3.client('s3')
-    response = s3.list_objects_v2(Bucket=bucket, Prefix=source_folder)
-    mp4_files = [content['Key'] for content in response['Contents'] if content['Key'].endswith('.mp4')]
-    
     date_string = date.strftime('%m-%d-%Y')
     zip_file_name = f'{user}_downloaded_videos_{date_string}.zip'
+    
     # Zip the .mp4 files
-    with zipfile.ZipFile(tmpdirname+'/'+zip_file_name, 'w') as zip_file:
-        for file in mp4_files:
-            # Download the file from S3
-            tmpfilename = tmpdirname+f'/{user}_' + file.split('/')[-1]
-            s3.download_file(bucket, file, tmpfilename)
-            # Add the file to the zip archive
-            zip_file.write(tmpfilename)
+    with zipfile.ZipFile(zip_file_name, 'w') as zip_file:
+        directory=pathlib.Path(tmpdirname)
+        for file_path in directory.iterdir():
+            zip_file.write(file_path, arcname=file_path.name)
 
     # Upload the .zip file to S3
-    with open(tmpdirname+'/'+zip_file_name, 'rb') as data:
+    with open(zip_file_name, 'rb') as data:
         s3.upload_fileobj(data, bucket, zip_file_destination_s3_key + '/' + zip_file_name)
-        
-    # Delete the local .zip and .mp4 files
-    os.remove(tmpdirname+'/'+zip_file_name)
-    for file in mp4_files:
-        tmpfilename = tmpdirname + f'/{user}_' + file.split('/')[-1]
-        os.remove(tmpfilename)
+    os.remove(zip_file_name)
+    
 
 async def start_async_process(video_ids: list,
                               tmpdirname: str,
@@ -111,7 +97,7 @@ async def start_async_process(video_ids: list,
 def run(user: str,
         date: datetime) -> bool:  
     # Uses temp directorty to download the files and upload to S3
-    with tempfile.TemporaryDirectory(dir='/Users/tmp/', prefix='videos_inside_') as tmpdirname:
+    with tempfile.TemporaryDirectory(dir=config.ROOT_DIRECTORY, prefix=f'{user}_') as tmpdirname:
         date = datetime.datetime.now()
         extract_file = config.ExtractPath(date=date,
                                           user=user).data_path_file
@@ -134,6 +120,6 @@ def run(user: str,
             return False
 
 if __name__ == "__main__":
-    run(user='poeticone',
+    run(user='thephotoverse',
         date=datetime.datetime.now())
     

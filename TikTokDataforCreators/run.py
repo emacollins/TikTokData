@@ -41,7 +41,7 @@ def run():
         print('Run complete')
     except Exception as e:
         print(e)
-        pass           
+        pass            
 
 if __name__ == '__main__':
     while True:
