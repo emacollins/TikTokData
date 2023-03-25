@@ -5,11 +5,9 @@ import boto3
 # TODO: Create a temp directory class
 
 BUCKET = 'vidvault-app'
-LOCAL_PATH_PREFIX = '/Users/ericcollins/'
+LOCAL_PATH_PREFIX = '/app/'
 S3_URI_PATH_PREFIX = 's3://vidvault-app/'
-ROOT_DIRECTORY = '/Users/ericcollins/TikTokData/TikTokDataforCreators'
-
-ACCURACY_THRESHOLD = 0.97
+ROOT_DIRECTORY = '/app'
 
 # Path directories
 class HarvestPath:

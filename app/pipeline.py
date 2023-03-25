@@ -1,6 +1,5 @@
 import datetime
 import config
-from turtle import down
 import harvest
 import extract
 import download_videos
@@ -12,8 +11,8 @@ from functools import wraps
 import time
 import pandas as pd
 
-TEST_USER = 'thephotoverse'
-TEST_AIRTABLE_ROW = 'recb4iqk60sDmE4cu'
+TEST_USER = 'tylerandgerald'
+TEST_AIRTABLE_ROW = 'recMIbljDMr5dGaUQ'
 
 def timeit(func):
     @wraps(func)

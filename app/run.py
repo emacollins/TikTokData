@@ -1,10 +1,8 @@
-import datetime
 import airtable_utils
-import aws_utils
 import config
 import pandas as pd
 import pipeline
-import multiprocessing
+from multiprocessing import get_context
 from functools import wraps
 import time
 
@@ -36,7 +34,7 @@ def run():
     users_to_download = users_to_download[['airtable_row_id', 'user']]
     user_data = users_to_download.to_dict('records')
     try:
-        with multiprocessing.Pool(processes=min([len(users_to_download), 8])) as pool:
+        with get_context("spawn").Pool(processes=min([len(users_to_download), 8])) as pool:
             pool.map(pipeline.run, user_data)
         print('Run complete')
     except Exception as e:
@@ -44,6 +42,4 @@ def run():
         pass            
 
 if __name__ == '__main__':
-    while True:
-        run()
-        time.sleep(10)
+    run()

@@ -84,7 +84,7 @@ def check_video_count(df: pd.DataFrame,
     videos_scraped = len(df['video_id'].unique())
     videos_expected = get_user_video_count(data=data, user=user)
     
-    if videos_scraped / videos_expected < config.ACCURACY_THRESHOLD: # Scraper doesnt always work, set threshold to 95% or it will fail and rerun
+    if videos_scraped / videos_expected < 0.99: # Scraper doesnt always work, set threshold to 95% or it will fail and rerun
         assert 1 == 0
     
     
@@ -150,7 +150,7 @@ def run(user: str,
     return True
 
 if __name__ == '__main__':
-    run(user='poeticone',
+    run(user='tylerandhistummy',
         date=datetime.datetime.now(),
-        airtable_row_id='recyp76Hk0SxigwfU')
+        airtable_row_id='recb4iqk60sDmE4cu')
     
