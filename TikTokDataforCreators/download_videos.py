@@ -6,8 +6,6 @@
 from asyncio import tasks
 from concurrent.futures import ThreadPoolExecutor
 import asyncio
-from turtle import down
-from httplib2 import UnimplementedHmacDigestAuthOptionError
 import requests
 import tempfile
 import datetime

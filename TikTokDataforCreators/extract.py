@@ -84,7 +84,7 @@ def check_video_count(df: pd.DataFrame,
     videos_scraped = len(df['video_id'].unique())
     videos_expected = get_user_video_count(data=data, user=user)
     
-    if videos_scraped / videos_expected < 0.99: # Scraper doesnt always work, set threshold to 95% or it will fail and rerun
+    if videos_scraped / videos_expected < config.ACCURACY_THRESHOLD: # Scraper doesnt always work, set threshold to 95% or it will fail and rerun
         assert 1 == 0
     
     

@@ -22,6 +22,7 @@ def get_scroll_time(user: str):
         json_data = json.load(file)
     video_count = json_data['UserModule']['stats'][user]['videoCount']
     scroll_time = video_count / 5
+    os.remove(filename2)
     return scroll_time
         
 
