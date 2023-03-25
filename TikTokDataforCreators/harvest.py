@@ -1,6 +1,5 @@
 from tiktokapipy.api import TikTokAPI
 import os
-from traitlets import Bool
 import datetime
 import config
 import logging
