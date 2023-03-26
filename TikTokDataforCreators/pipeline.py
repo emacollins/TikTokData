@@ -15,6 +15,16 @@ import pandas as pd
 TEST_USER = 'thephotoverse'
 TEST_AIRTABLE_ROW = 'recb4iqk60sDmE4cu'
 
+def check_if_this_is_pipeline_test(airtable_row_id: str):
+    table = airtable_utils.get_table_data()
+    df = airtable_utils.convert_to_dataframe(airtable_table=table)
+    df = df.set_index('airtable_row_id')
+    is_test = df.loc[airtable_row_id, 'test_run']
+    
+    if is_test:
+        return True
+    else: return False
+
 def timeit(func):
     @wraps(func)
     def timeit_wrapper(*args, **kwargs):
@@ -55,6 +65,12 @@ def main(user_data: dict):
                                      date=date)
     print(f'Videos saved for {user} complete')
     
+    if check_if_this_is_pipeline_test(airtable_row_id):
+        airtable_utils.update_database_cell(row_id=airtable_row_id,
+                                            field='test_run',
+                                            value="False")
+        assert 1 == 0, f"Test run for {user} complete!"
+        
     if save_video:
         try:
             url = aws_utils.create_presigned_url(bucket_name=config.BUCKET,
@@ -85,11 +101,6 @@ def run(user_data: dict):
         print(e)
         print(f'Pipeline failed on user {user}')
         pass
-        #bad_users_history = pd.read_csv(config.UserSignUpPath().bad_users)
-        #bad_users_current_harvest = pd.DataFrame(data=[user_data])
-        #bad_users_final = pd.concat([bad_users_history, bad_users_current_harvest])
-        #bad_users_final.to_csv(config.UserSignUpPath().bad_users, index=False)
-        #airtable_utils.mark_video_upload_failed(row_id=airtable_row_id)  # Old update command
         airtable_utils.update_database_cell(row_id=airtable_row_id,
                                             field='upload_failed',
                                             value="True")

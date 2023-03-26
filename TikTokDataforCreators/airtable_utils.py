@@ -38,11 +38,9 @@ def get_new_structure():
                      'user': [],
                      'videos_uploaded': [],
                      'customer_email': [],
-                     'hashtags': [],
-                     'influencer': [],
-                     'last_data_pull_date': [],
-                     'last_video_pull_date': [],
-                     'download_link': []}
+                     'videos_scraped_threshold': [],
+                     'download_link': [],
+                     'test_run': []}
     return new_structure
 
 def cleaned_dictionary(row, structure):
@@ -52,11 +50,10 @@ def cleaned_dictionary(row, structure):
     new_structure['user'].append(row.get('fields', {}).get('tiktok_username', nan))
     new_structure['videos_uploaded'].append(row.get('fields', {}).get('videos_uploaded', nan))
     new_structure['customer_email'].append(row.get('fields', {}).get('customer_email', nan))
-    new_structure['hashtags'].append(nan)
-    new_structure['influencer'].append(nan)
-    new_structure['last_data_pull_date'].append(nan)
-    new_structure['last_video_pull_date'].append(nan)
+    new_structure['videos_scraped_threshold'].append(row.get('fields', {}).get('videos_scraped_threshold', nan))
     new_structure['download_link'].append(row.get('fields', {}).get('download_link', nan))
+    new_structure['test_run'].append(row.get('fields', {}).get('test_run', nan))
+
 
     
     return new_structure

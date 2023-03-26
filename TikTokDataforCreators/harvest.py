@@ -21,15 +21,17 @@ def get_scroll_time(user: str):
     with open(filename2, 'r') as file:
         json_data = json.load(file)
     video_count = json_data['UserModule']['stats'][user]['videoCount']
-    videos_sec = video_count / 1
     os.remove(filename2)
     
-    if videos_sec > 250:
-        return 250
-    elif videos_sec < 30:
-        return 30
+    # Limit scroll time to within thsee ranges
+    
+    if video_count > config.HARVEST_SCROLL_TIME['MAX']:
+        return config.HARVEST_SCROLL_TIME['MAX']
+    
+    elif video_count < config.HARVEST_SCROLL_TIME['MIN']:
+        return config.HARVEST_SCROLL_TIME['MIN']
     else:
-        return videos_sec        
+        return video_count     
 
 
 def run(user: str, 

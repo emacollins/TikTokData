@@ -6,6 +6,17 @@ import config
 import boto3
 import airtable_utils
 
+def get_user_threshold(airtable_row_id: str):
+    """Implement dynamic thershold. All users default to 0.99
+    to start. Extract will check how many videos we scraped from harvest and 
+    compare to the threshold. videos_scraped / videos_scraped_threshold. If this ratio is less
+    than the threshold, we will descrease threshold and rerun"""
+    table = airtable_utils.get_table_data()
+    df = airtable_utils.convert_to_dataframe(airtable_table=table)
+    df = df.set_index('airtable_row_id')
+    threshold = df.loc[airtable_row_id, 'videos_scraped_threshold']
+    return threshold
+    
 def data_store_dict_return() -> dict:
     
     data_store_dict = {'video_id': [],
@@ -63,7 +74,7 @@ def extract_extras(data: dict, user: str):
             all_videos.append(df_page)
         except Exception as e:
             print(f'Extras page of harvest data skipped for user {user}')
-            continue
+            assert 1 == 0 # Pipeline run should fail if a page was skipped on the scraping
         
     df = pd.concat(all_videos)
     return df
@@ -83,6 +94,7 @@ def check_video_count(df: pd.DataFrame,
     """
     videos_scraped = len(df['video_id'].unique())
     videos_expected = get_user_video_count(data=data, user=user)
+    user_threshold = get_user_threshold(airtable_row_id=airtable_row_id)
     
     airtable_utils.update_database_cell(row_id=airtable_row_id,
                                         field='videos_scraped',
@@ -91,7 +103,12 @@ def check_video_count(df: pd.DataFrame,
                                         field='total_videos',
                                         value=videos_expected)
     
-    if videos_scraped / videos_expected < config.ACCURACY_THRESHOLD: # Scraper doesnt always work, set threshold to 95% or it will fail and rerun
+    if videos_scraped / videos_expected < user_threshold: # Scraper doesnt always work, set threshold to 95% or it will fail and rerun
+        new_user_threshold = user_threshold - config.VIDEOS_SCRAPED_THRESHOLD_DECREASE
+        airtable_utils.update_database_cell(row_id=airtable_row_id,
+                                            field='videos_scraped_threshold',
+                                            value=new_user_threshold)
+        print(f'{user} did not meet the videos scraped threshold, retrying!')
         assert 1 == 0
     
     
