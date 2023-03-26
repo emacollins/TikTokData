@@ -38,7 +38,6 @@ def run():
     user_sign_up_directory = config.UserSignUpPath().cached_user_table
     bad_users_history = pd.read_csv(config.UserSignUpPath().bad_users)
     users = pd.read_csv(user_sign_up_directory)[['airtable_row_id', 'user', 'videos_uploaded', 'test_run']]
-    users.to_csv('users.csv')
     test_users = users.loc[(~users['user'].isin(bad_users_history['user'])) & (users['test_run'] == True)]
     new_users = users.loc[(~users['user'].isin(bad_users_history['user'])) & (users['videos_uploaded'] == False)]
     users_to_download = pd.concat([test_users, new_users])

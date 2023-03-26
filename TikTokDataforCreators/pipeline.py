@@ -66,11 +66,10 @@ def main(user_data: dict):
     print(f'Videos saved for {user} complete')
     
     if check_if_this_is_pipeline_test(airtable_row_id):
-        print(f'User {user} is in test mode! Test pipeline run complete')
         airtable_utils.update_database_cell(row_id=airtable_row_id,
                                             field='test_run',
                                             value="False")
-        assert 1 == 0
+        assert 1 == 0, f"Test run for {user} complete!"
         
     if save_video:
         try:
