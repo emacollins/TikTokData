@@ -9,7 +9,7 @@ LOCAL_PATH_PREFIX = '/Users/ericcollins/'
 S3_URI_PATH_PREFIX = 's3://vidvault-app/'
 ROOT_DIRECTORY = '/Users/ericcollins/TikTokData/TikTokDataforCreators'
 
-ACCURACY_THRESHOLD = 0.97
+ACCURACY_THRESHOLD = 0.93
 
 # Path directories
 class HarvestPath:
