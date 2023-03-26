@@ -84,11 +84,6 @@ def check_video_count(df: pd.DataFrame,
     videos_scraped = len(df['video_id'].unique())
     videos_expected = get_user_video_count(data=data, user=user)
     
-    if videos_scraped / videos_expected < config.ACCURACY_THRESHOLD: # Scraper doesnt always work, set threshold to 95% or it will fail and rerun
-        assert 1 == 0
-    
-    
-    
     airtable_utils.update_database_cell(row_id=airtable_row_id,
                                         field='videos_scraped',
                                         value=videos_scraped)
@@ -96,11 +91,15 @@ def check_video_count(df: pd.DataFrame,
                                         field='total_videos',
                                         value=videos_expected)
     
+    if videos_scraped / videos_expected < config.ACCURACY_THRESHOLD: # Scraper doesnt always work, set threshold to 95% or it will fail and rerun
+        assert 1 == 0
+    
+    
     if videos_scraped == videos_expected:
         return True
 
     else:
-        print(f'{user} did not get all videos. {videos_scraped} / {videos_expected} scraped')
+        print(f'{user} did not get all videos. {videos_scraped} / {videos_expected} scraped, but threshold met.')
         return False
      
 def extract(data: dict, user: str, airtable_row_id: str) -> pd.DataFrame:
@@ -150,7 +149,7 @@ def run(user: str,
     return True
 
 if __name__ == '__main__':
-    run(user='poeticone',
+    run(user='hi.surya',
         date=datetime.datetime.now(),
-        airtable_row_id='recyp76Hk0SxigwfU')
+        airtable_row_id='recLyU8bBKQl2tAJD')
     
