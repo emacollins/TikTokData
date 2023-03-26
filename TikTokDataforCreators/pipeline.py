@@ -67,6 +67,9 @@ def main(user_data: dict):
     
     if check_if_this_is_pipeline_test(airtable_row_id):
         print(f'User {user} is in test mode! Test pipeline run complete')
+        airtable_utils.update_database_cell(row_id=airtable_row_id,
+                                            field='test_run',
+                                            value="False")
         assert 1 == 0
         
     if save_video:
@@ -99,11 +102,6 @@ def run(user_data: dict):
         print(e)
         print(f'Pipeline failed on user {user}')
         pass
-        #bad_users_history = pd.read_csv(config.UserSignUpPath().bad_users)
-        #bad_users_current_harvest = pd.DataFrame(data=[user_data])
-        #bad_users_final = pd.concat([bad_users_history, bad_users_current_harvest])
-        #bad_users_final.to_csv(config.UserSignUpPath().bad_users, index=False)
-        #airtable_utils.mark_video_upload_failed(row_id=airtable_row_id)  # Old update command
         airtable_utils.update_database_cell(row_id=airtable_row_id,
                                             field='upload_failed',
                                             value="True")

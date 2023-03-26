@@ -75,7 +75,6 @@ def extract_extras(data: dict, user: str):
         except Exception as e:
             print(f'Extras page of harvest data skipped for user {user}')
             assert 1 == 0 # Pipeline run should fail if a page was skipped on the scraping
-            continue
         
     df = pd.concat(all_videos)
     return df

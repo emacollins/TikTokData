@@ -8,7 +8,7 @@ import multiprocessing
 from functools import wraps
 import time
 
-
+TEST = True
 
 def get_airtable_data():
     table = airtable_utils.get_table_data()
@@ -22,7 +22,7 @@ def timeit(func):
         result = func(*args, **kwargs)
         end_time = time.perf_counter()
         total_time = end_time - start_time
-        print(f'Get all users took {total_time:.4f} seconds')
+        print(f'Run complete in {total_time:.4f} seconds')
         return result
     return timeit_wrapper    
 
@@ -50,12 +50,14 @@ def run():
     try:
         with multiprocessing.Pool(processes=min([len(users_to_download), 8])) as pool:
             pool.map(pipeline.run, user_data)
-        print('Run complete')
     except Exception as e:
         print(e)
         pass            
 
 if __name__ == '__main__':
+    
     while True:
         run()
         time.sleep(10)
+    
+    
