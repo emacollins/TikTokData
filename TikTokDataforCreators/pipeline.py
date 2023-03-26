@@ -15,6 +15,16 @@ import pandas as pd
 TEST_USER = 'thephotoverse'
 TEST_AIRTABLE_ROW = 'recb4iqk60sDmE4cu'
 
+def check_if_this_is_pipeline_test(airtable_row_id: str):
+    table = airtable_utils.get_table_data()
+    df = airtable_utils.convert_to_dataframe(airtable_table=table)
+    df = df.set_index('airtable_row_id')
+    is_test = df.loc[airtable_row_id, 'test_run']
+    
+    if is_test:
+        return True
+    else: return False
+
 def timeit(func):
     @wraps(func)
     def timeit_wrapper(*args, **kwargs):
@@ -55,6 +65,10 @@ def main(user_data: dict):
                                      date=date)
     print(f'Videos saved for {user} complete')
     
+    if check_if_this_is_pipeline_test(airtable_row_id):
+        print(f'User {user} is in test mode! Test pipeline run complete')
+        assert 1 == 0
+        
     if save_video:
         try:
             url = aws_utils.create_presigned_url(bucket_name=config.BUCKET,
