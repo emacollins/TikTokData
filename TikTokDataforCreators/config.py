@@ -1,6 +1,8 @@
 import datetime
 import pandas as pd
 import boto3
+from TikTokDataforCreators.utils import get_log_timestamp
+import utils
 
 # TODO: Create a temp directory class
 
@@ -88,3 +90,8 @@ class Secret_Key:
         self.ssm = boto3.client('ssm')
         self.key_name = key_name
         self.value = self.ssm.get_parameter(Name=self.key_name, WithDecryption=True)['Parameter']['Value']
+
+class LogPath:
+    def __init__(self) -> None:
+        self.bucket = BUCKET
+        self.s3_key = f'TikTokData/TikTokDataforCreators/logs/{utils.get_log_timestamp()}_run.log'

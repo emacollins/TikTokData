@@ -26,5 +26,18 @@ def create_presigned_url(bucket_name, object_name, expiration=3600*24*30):
     # The response contains the presigned URL
     return response
 
+def upload_to_s3(file_name, bucket, object_name=None):
+    
+    s3_client = boto3.client('s3')
+    if object_name is None:
+        object_name = file_name
+    try:
+        response = s3_client.upload_file(file_name, bucket, object_name)
+        print(f'{file_name} uploaded to S3 bucket {bucket}.')
+    except ClientError as e:
+        logging.info(f'Error uploading {file_name} to S3 bucket {bucket}: {str(e)}')
+        print(f'Error uploading {file_name} to S3 bucket {bucket}: {str(e)}')
+
+
 if __name__ == '__main__':
     pass

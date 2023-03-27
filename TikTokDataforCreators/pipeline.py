@@ -10,7 +10,8 @@ import aws_utils
 import airtable_utils
 from functools import wraps
 import time
-import pandas as pd
+import logging
+import utils
 
 TEST_USER = 'thephotoverse'
 TEST_AIRTABLE_ROW = 'recb4iqk60sDmE4cu'
@@ -57,7 +58,7 @@ def main(user_data: dict):
                  date=date)
         print(f'Load for {user} complete')
     except Exception as e:
-        print(e)
+        logging.info(f'Load of analytics data failed on {user}, proceeding to video download {str(e)}- {utils.get_log_timestamp()}')
         print(f'Load of analytics data failed on {user}, proceeding to video download')
     
     
@@ -88,19 +89,18 @@ def main(user_data: dict):
             airtable_utils.update_database_cell(row_id=airtable_row_id,
                                                 field='upload_failed',
                                                 value="True")
-            print(e)
+            logging.info(f'Could not get url and update airtable for {user} {str(e)}- {utils.get_log_timestamp()}')
             print(f'Could not get url and update airtable for {user}')
+    
+    
 
 def run(user_data: dict):
     try:
         user = user_data['user']
         airtable_row_id = user_data['airtable_row_id']
         main(user_data=user_data)
-        
     except Exception as e:
-        print(e)
-        print(f'Pipeline failed on user {user}')
-        pass
+        logging.info(f'Pipeline for {user} shutdown - {utils.get_log_timestamp()}')
         airtable_utils.update_database_cell(row_id=airtable_row_id,
                                             field='upload_failed',
                                             value="True")

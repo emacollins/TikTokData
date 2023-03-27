@@ -1,14 +1,15 @@
-import datetime
 import airtable_utils
-import aws_utils
 import config
 import pandas as pd
 import pipeline
 import multiprocessing
 from functools import wraps
 import time
+import logging
+import utils
+import aws_utils
+import os
 
-TEST = True
 
 def get_airtable_data():
     table = airtable_utils.get_table_data()
@@ -22,6 +23,7 @@ def timeit(func):
         result = func(*args, **kwargs)
         end_time = time.perf_counter()
         total_time = end_time - start_time
+        logging.info(f'Run time: {total_time:.4f} seconds - {utils.get_log_timestamp()}')
         print(f'Run complete in {total_time:.4f} seconds')
         return result
     return timeit_wrapper    
@@ -50,13 +52,19 @@ def run():
         with multiprocessing.Pool(processes=min([len(users_to_download), 8])) as pool:
             pool.map(pipeline.run, user_data)
     except Exception as e:
-        print(e)
-        pass            
+        if str(e) != "Number of processes must be at least 1":
+            logging.info(f'An unknown error with creating the pipeline pool: {str(e)} - {utils.get_log_timestamp()}')
+        print('No users fed into the pipeline, will check for new customers in 60 seconds')
 
 if __name__ == '__main__':
     
     while True:
+        logging.basicConfig(filename='run.log', level=logging.INFO)
+        logging.info(f'START OF RUN! - {utils.get_log_timestamp()}')
         run()
-        time.sleep(10)
+        logging.info(f'A FULL RUN COMPLETED! - {utils.get_log_timestamp()}')
+        aws_utils.upload_to_s3('run.log', config.BUCKET, config.LogPath().s3_key)
+        os.remove('run.log')
+        time.sleep(60)
     
     

@@ -1,10 +1,12 @@
-import json
 import pandas as pd
-import datetime
-import os
+import utils
 import config
-import boto3
 import airtable_utils
+import logging
+import utils
+import boto3
+import json
+import datetime
 
 def get_user_threshold(airtable_row_id: str):
     """Implement dynamic thershold. All users default to 0.99
@@ -73,8 +75,7 @@ def extract_extras(data: dict, user: str):
             df_page = pd.DataFrame(data=data_store_dict)
             all_videos.append(df_page)
         except Exception as e:
-            print(f'Extras page of harvest data skipped for user {user}')
-            assert 1 == 0 # Pipeline run should fail if a page was skipped on the scraping
+            return pd.DataFrame()
         
     df = pd.concat(all_videos)
     return df
@@ -108,7 +109,8 @@ def check_video_count(df: pd.DataFrame,
         airtable_utils.update_database_cell(row_id=airtable_row_id,
                                             field='videos_scraped_threshold',
                                             value=new_user_threshold)
-        print(f'{user} did not meet the videos scraped threshold, retrying!')
+        logging.info(f'{user} did not meet the videos scraped threshold, will be retried! - {utils.get_log_timestamp()}')
+        print(f'{user} did not meet the videos scraped threshold, will be retried!')
         assert 1 == 0
     
     
@@ -116,6 +118,7 @@ def check_video_count(df: pd.DataFrame,
         return True
 
     else:
+        logging.info(f'{user} did not get all videos. {videos_scraped} / {videos_expected} scraped, but threshold met. - {utils.get_log_timestamp()}')
         print(f'{user} did not get all videos. {videos_scraped} / {videos_expected} scraped, but threshold met.')
         return False
      
@@ -156,14 +159,20 @@ def run(user: str,
     s3_object = s3.get_object(Bucket=config.BUCKET, Key=config.HarvestPath(user=user,
                                                                             date=date).user_data_path_file_s3_key)
     data = json.loads(s3_object['Body'].read())
-    df_final = extract(data=data, user=user,airtable_row_id=airtable_row_id)
+    try:
+        df_final = extract(data=data, user=user,airtable_row_id=airtable_row_id)
+    except Exception as e:
+        logging.info(f'Data cleaning extract step failed for unknown reason {str(e)}- {utils.get_log_timestamp()}')
     df_final['data_date'] = datetime.datetime.now().date()
     df_final['video_create_time'] = pd.to_datetime(df_final['video_create_time'],unit='s')
     df_final = df_final.drop_duplicates(subset=['video_id'])
     df_final.set_index('video_id', inplace=True)
-    df_final.to_csv(config.ExtractPath(user=user, 
-                                       date=date).data_path_file)
-    return True
+    try:
+        df_final.to_csv(config.ExtractPath(user=user, 
+                                           date=date).data_path_file)
+    except:
+        logging.info(f'Upload extract data failed: {str(e)}- {utils.get_log_timestamp()}')
+    
 
 if __name__ == '__main__':
     run(user='hi.surya',

@@ -15,14 +15,16 @@ import boto3
 import zipfile
 import os
 import pathlib
+import logging
+import utils
 
 
 # Download All Video From Tiktok User Function
 def download_video_no_watermark(user: str,
                                 video_id: int,
                                 tmpdirname: str,
-                                session) -> dict:
-    date = datetime.datetime.now()
+                                session,
+                                date: datetime.datetime) -> dict:
     url = "https://tiktok-downloader-download-tiktok-videos-without-watermark.p.rapidapi.com/vid/index"
     querystring = {"url":f'https://www.tiktok.com/@{user}r/video/{str(video_id)}'}
     headers = {
@@ -32,9 +34,9 @@ def download_video_no_watermark(user: str,
 
     with session.get(url, headers=headers, params=querystring) as video_object:
         try:
+            # Download videos from url
             video_object = video_object.json()
             download_url = video_object['video'][0]
-                            
             video_bytes = requests.get(download_url, stream=True)
             tmp_video_file = tmpdirname + f'/{video_id}.mp4'
             with open(tmp_video_file, 'wb') as out_file:
@@ -78,13 +80,14 @@ def zip_videos(user: str,
 
 async def start_async_process(video_ids: list,
                               tmpdirname: str,
-                              user: str):
-    with ThreadPoolExecutor(max_workers=100) as executor:
+                              user: str,
+                              date: datetime.datetime):
+    with ThreadPoolExecutor(max_workers=50) as executor:
         with requests.Session() as session:
             loop = asyncio.get_event_loop()
             tasks = [loop.run_in_executor(executor, 
                                           download_video_no_watermark,
-                                          *(user, video_id, tmpdirname, session))
+                                          *(user, video_id, tmpdirname, session, date))
                      for video_id in video_ids
                      ]
             for video_object in await asyncio.gather(*tasks):
@@ -96,7 +99,6 @@ def run(user: str,
         date: datetime) -> bool:  
     # Uses temp directorty to download the files and upload to S3
     with tempfile.TemporaryDirectory(dir=config.ROOT_DIRECTORY, prefix=f'{user}_') as tmpdirname:
-        date = datetime.datetime.now()
         extract_file = config.ExtractPath(date=date,
                                           user=user).data_path_file
         user_data = pd.read_csv(extract_file)
@@ -105,17 +107,20 @@ def run(user: str,
         loop = asyncio.get_event_loop()
         future = asyncio.ensure_future(start_async_process(video_ids,
                                                            tmpdirname,
-                                                           user))
+                                                           user,
+                                                           date))
         loop.run_until_complete(future)
+        
+        logging.info(f'Raw videos finished downloading for {user}- {utils.get_log_timestamp()}')
         
         try:
             zip_videos(user=user,
                 date=date,
                 tmpdirname=tmpdirname)
-            return True
         except Exception as e:
-            print(e)
-            return False
+            logging.info(f'Zipping videos failed on {user} {str(e)}- {utils.get_log_timestamp()}')
+            assert 1 == 0, f'Zipping videos failed on {user}'
+            
 
 if __name__ == "__main__":
     run(user='thephotoverse',
