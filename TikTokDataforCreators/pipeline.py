@@ -21,7 +21,7 @@ def check_if_this_is_pipeline_test(airtable_row_id: str):
     df = df.set_index('airtable_row_id')
     is_test = df.loc[airtable_row_id, 'test_run']
     
-    if is_test:
+    if is_test == 'True':
         return True
     else: return False
 
