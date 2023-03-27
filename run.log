@@ -1,5 +1,6 @@
-INFO:aiobotocore.credentials:Found credentials in shared credentials file: ~/.aws/credentials
-INFO:aiobotocore.credentials:Found credentials in shared credentials file: ~/.aws/credentials
-INFO:root:A full run completed - 03-26-2023_H:M:S
-INFO:root:A full run completed - 03-26-2023_H:M:S
-INFO:root:A full run completed - 03-26-2023_H:M:S
+2023-03-26 23:11:46,861 - run_log - INFO - START OF RUN! - 03-26-2023_23:11:46
+2023-03-26 23:11:46,861 - run_log - INFO - START OF RUN! - 03-26-2023_23:11:46
+2023-03-26 23:13:57,331 - run_log - INFO - START OF RUN!
+2023-03-26 23:13:57,331 - run_log - INFO - START OF RUN!
+2023-03-26 23:17:43,430 - run_log - INFO - START OF RUN!
+2023-03-26 23:20:48,828 - run_log - INFO - START OF RUN!

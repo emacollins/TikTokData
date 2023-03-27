@@ -5,11 +5,22 @@ import pipeline
 import multiprocessing
 from functools import wraps
 import time
-import logging
 import utils
 import aws_utils
 import os
+import logging
+import glob
+import harvest
+import extract
+import download_videos
+import pipeline
 
+def cleanup():
+    files_to_remove = ['*.UserResponse.json', '*.zip', '*.log']
+    for file_type in files_to_remove:
+        for file_path in glob.glob(file_type):
+            os.remove(file_path)
+    
 
 def get_airtable_data():
     table = airtable_utils.get_table_data()
@@ -23,17 +34,17 @@ def timeit(func):
         result = func(*args, **kwargs)
         end_time = time.perf_counter()
         total_time = end_time - start_time
-        logging.info(f'Run time: {total_time:.4f} seconds - {utils.get_log_timestamp()}')
+        logger.info(f'Run time: {total_time:.4f} seconds - {utils.get_log_timestamp()}')
         print(f'Run complete in {total_time:.4f} seconds')
         return result
     return timeit_wrapper    
 
 @timeit
-def run():
+def run() -> bool:
     """This runs the entire process. It first checks which users have 
     not yet been sent their videos (from Airtable database), and then 
     groups those users into a multiprocessing pool so each pipeline is 
-    run concurrently
+    run concurrently. Returns True if a run processed no users.
     """
     # Get customer database and clean
     get_airtable_data()
@@ -53,18 +64,30 @@ def run():
             pool.map(pipeline.run, user_data)
     except Exception as e:
         if str(e) != "Number of processes must be at least 1":
-            logging.info(f'An unknown error with creating the pipeline pool: {str(e)} - {utils.get_log_timestamp()}')
-        print('No users fed into the pipeline, will check for new customers in 60 seconds')
+            logger.info(f'An unknown error with creating the pipeline pool: {str(e)} - {utils.get_log_timestamp()}')
+            return False
+        else:
+            print('No users fed into the pipeline, will check for new customers in 60 seconds')
+            return True
 
 if __name__ == '__main__':
     
     while True:
-        logging.basicConfig(filename='run.log', level=logging.INFO)
-        logging.info(f'START OF RUN! - {utils.get_log_timestamp()}')
-        run()
-        logging.info(f'A FULL RUN COMPLETED! - {utils.get_log_timestamp()}')
-        aws_utils.upload_to_s3('run.log', config.BUCKET, config.LogPath().s3_key)
-        os.remove('run.log')
+        
+        log_filename = 'run.log'
+        logger = logging.getLogger('run_log')
+        logging.basicConfig(filename=log_filename, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+        logger.setLevel(logging.INFO)
+        print('RUN STARTED')
+        logger.info(f'START OF RUN!')
+        check_run = run()
+        logger.info(f'A FULL RUN COMPLETED!')
+        print('RUN ENDED')
+        if check_run:
+            pass
+        else:
+            aws_utils.upload_to_s3('run.log', config.BUCKET, config.LogPath().s3_key)
+        cleanup()
         time.sleep(60)
     
     

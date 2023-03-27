@@ -7,6 +7,7 @@ import utils
 import boto3
 import json
 import datetime
+logger = logging.getLogger('run_log.' + __name__)
 
 def get_user_threshold(airtable_row_id: str):
     """Implement dynamic thershold. All users default to 0.99
@@ -109,7 +110,7 @@ def check_video_count(df: pd.DataFrame,
         airtable_utils.update_database_cell(row_id=airtable_row_id,
                                             field='videos_scraped_threshold',
                                             value=new_user_threshold)
-        logging.info(f'{user} did not meet the videos scraped threshold, will be retried! - {utils.get_log_timestamp()}')
+        logger.info(f'{user} did not meet the videos scraped threshold, will be retried! - {utils.get_log_timestamp()}')
         print(f'{user} did not meet the videos scraped threshold, will be retried!')
         assert 1 == 0
     
@@ -118,7 +119,7 @@ def check_video_count(df: pd.DataFrame,
         return True
 
     else:
-        logging.info(f'{user} did not get all videos. {videos_scraped} / {videos_expected} scraped, but threshold met. - {utils.get_log_timestamp()}')
+        logger.info(f'{user} did not get all videos. {videos_scraped} / {videos_expected} scraped, but threshold met. - {utils.get_log_timestamp()}')
         print(f'{user} did not get all videos. {videos_scraped} / {videos_expected} scraped, but threshold met.')
         return False
      
@@ -162,7 +163,7 @@ def run(user: str,
     try:
         df_final = extract(data=data, user=user,airtable_row_id=airtable_row_id)
     except Exception as e:
-        logging.info(f'Data cleaning extract step failed for unknown reason {str(e)}- {utils.get_log_timestamp()}')
+        logger.info(f'Data cleaning extract step failed for unknown reason {str(e)}- {utils.get_log_timestamp()}')
     df_final['data_date'] = datetime.datetime.now().date()
     df_final['video_create_time'] = pd.to_datetime(df_final['video_create_time'],unit='s')
     df_final = df_final.drop_duplicates(subset=['video_id'])
@@ -171,7 +172,7 @@ def run(user: str,
         df_final.to_csv(config.ExtractPath(user=user, 
                                            date=date).data_path_file)
     except:
-        logging.info(f'Upload extract data failed: {str(e)}- {utils.get_log_timestamp()}')
+        logger.info(f'Upload extract data failed: {str(e)}- {utils.get_log_timestamp()}')
     
 
 if __name__ == '__main__':

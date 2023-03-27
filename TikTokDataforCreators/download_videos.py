@@ -17,7 +17,7 @@ import os
 import pathlib
 import logging
 import utils
-
+logger = logging.getLogger('run_log.' + __name__)
 
 # Download All Video From Tiktok User Function
 def download_video_no_watermark(user: str,
@@ -111,14 +111,14 @@ def run(user: str,
                                                            date))
         loop.run_until_complete(future)
         
-        logging.info(f'Raw videos finished downloading for {user}- {utils.get_log_timestamp()}')
+        logger.info(f'Raw videos finished downloading for {user}- {utils.get_log_timestamp()}')
         
         try:
             zip_videos(user=user,
                 date=date,
                 tmpdirname=tmpdirname)
         except Exception as e:
-            logging.info(f'Zipping videos failed on {user} {str(e)}- {utils.get_log_timestamp()}')
+            logger.info(f'Zipping videos failed on {user} {str(e)}- {utils.get_log_timestamp()}')
             assert 1 == 0, f'Zipping videos failed on {user}'
             
 

@@ -1,7 +1,6 @@
 import datetime
 import pandas as pd
 import boto3
-from TikTokDataforCreators.utils import get_log_timestamp
 import utils
 
 # TODO: Create a temp directory class

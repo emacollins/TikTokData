@@ -3,7 +3,7 @@ import pandas as pd
 import config
 import boto3
 from io import BytesIO
-    
+
 
 def run(user:str, 
         date: datetime.datetime):

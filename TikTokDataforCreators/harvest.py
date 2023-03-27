@@ -7,6 +7,12 @@ import tempfile
 import boto3
 import json
 import utils
+import harvest
+import extract
+import download_videos
+import pipeline
+
+logger = logging.getLogger('run_log.' + __name__)
 
 HARVEST_TEST_USER = 'figapp'
 
@@ -16,8 +22,9 @@ def get_scroll_time(user: str):
                     data_dump_file=filename) as api:
         try:
             user_object = api.user(user, video_limit=0)
-        except:
-            return 200
+        except Exception as e:
+            logger.info(f'Harvest scrape error for {user}: {str(e)} - {utils.get_log_timestamp()}')
+            assert 1 == 0, f'Harvest scrape error for {user}: {str(e)}'
         
     filename2 = f'{user}.UserResponse.json'
     with open(filename2, 'r') as file:
@@ -53,7 +60,7 @@ def run(user: str,
                                  date=date)
                 
             except Exception as e:
-                logging.info(f'Harvest scrape error for {user}: {str(e)} - {utils.get_log_timestamp()}')
+                logger.info(f'Harvest scrape error for {user}: {str(e)} - {utils.get_log_timestamp()}')
                 assert 1 == 0, f'Harvest scrape error on {user}: {str(e)}'
 
           
