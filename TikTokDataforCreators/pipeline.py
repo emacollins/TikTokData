@@ -93,7 +93,7 @@ def main(user_data: dict):
 
 def run(user_data: dict):
     try:
-        user = user_data['user']
+        user = user_data['user'].lower()
         airtable_row_id = user_data['airtable_row_id']
         main(user_data=user_data)
         
