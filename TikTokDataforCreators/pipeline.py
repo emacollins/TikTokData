@@ -11,8 +11,10 @@ import airtable_utils
 from functools import wraps
 import time
 import pandas as pd
+import numpy as np
+import math
 
-TEST_USER = 'thephotoverse'
+TEST_USER = 'THEPHOTOVERSE'
 TEST_AIRTABLE_ROW = 'recb4iqk60sDmE4cu'
 
 def check_if_this_is_pipeline_test(airtable_row_id: str):
@@ -24,6 +26,21 @@ def check_if_this_is_pipeline_test(airtable_row_id: str):
     if is_test == 'True':
         return True
     else: return False
+
+def check_if_threshold_set(airtable_row_id: str):
+    table = airtable_utils.get_table_data()
+    df = airtable_utils.convert_to_dataframe(airtable_table=table)
+    df = df.set_index('airtable_row_id')
+    threshold = df.loc[airtable_row_id, 'videos_scraped_threshold']
+    try:
+        threshold = float(threshold)
+    except:
+        return False
+    
+    if math.isnan(threshold):
+        return False
+    else: return True
+
 
 def timeit(func):
     @wraps(func)
@@ -40,9 +57,18 @@ def timeit(func):
 @timeit
 def main(user_data: dict):
     
-    user = user_data['user']
+    user = user_data['user'].lower()
     airtable_row_id = user_data['airtable_row_id']
     date=datetime.datetime.now()
+    
+    # Check if thre
+    threshold_check = check_if_threshold_set(airtable_row_id)
+    if threshold_check:
+        pass
+    else:
+        airtable_utils.update_database_cell(row_id=airtable_row_id,
+                                                field='videos_scraped_threshold',
+                                                value=0.99)
     
     harvest.run(user=user, 
                 date=date)
@@ -93,7 +119,8 @@ def main(user_data: dict):
 
 def run(user_data: dict):
     try:
-        user = user_data['user'].lower()
+        user = user_data['user']
+        user = user.lower()
         airtable_row_id = user_data['airtable_row_id']
         main(user_data=user_data)
         

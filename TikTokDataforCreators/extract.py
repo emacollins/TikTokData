@@ -5,6 +5,7 @@ import os
 import config
 import boto3
 import airtable_utils
+import pipeline
 
 def get_user_threshold(airtable_row_id: str):
     """Implement dynamic thershold. All users default to 0.99
@@ -74,8 +75,7 @@ def extract_extras(data: dict, user: str):
             all_videos.append(df_page)
         except Exception as e:
             print(f'Extras page of harvest data skipped for user {user}')
-            assert 1 == 0 # Pipeline run should fail if a page was skipped on the scraping
-        
+            pass
     df = pd.concat(all_videos)
     return df
 

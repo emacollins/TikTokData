@@ -29,28 +29,19 @@ def download_video_no_watermark(user: str,
         "X-RapidAPI-Key": config.Secret_Key(key_name='X-RAPIDAPI-KEY').value,
         "X-RapidAPI-Host": "tiktok-downloader-download-tiktok-videos-without-watermark.p.rapidapi.com"
     }
-
-    with session.get(url, headers=headers, params=querystring) as video_object:
-        try:
-            video_object = video_object.json()
-            download_url = video_object['video'][0]
-                            
-            video_bytes = requests.get(download_url, stream=True)
-            tmp_video_file = tmpdirname + f'/{video_id}.mp4'
-            with open(tmp_video_file, 'wb') as out_file:
-                out_file.write(video_bytes.content)
-            s3 = boto3.resource('s3')
-            s3.meta.client.upload_file(tmp_video_file, 
-                                        Bucket=config.BUCKET, 
-                                        Key=config.HarvestPath(user=user,
-                                                                date=date,
-                                                                video_id=video_id).video_path_file_s3_key,
-                                        ExtraArgs=None, 
-                                        Callback=None, 
-                                        Config=None)  
-            return video_object
-        except:
-            return dict()
+    try:
+        with session.get(url, headers=headers, params=querystring) as video_object:
+                video_object = video_object.json()
+                download_url = video_object['video'][0]
+                                
+                video_bytes = requests.get(download_url, stream=True)
+                tmp_video_file = tmpdirname + f'/{video_id}.mp4'
+                with open(tmp_video_file, 'wb') as out_file:
+                    out_file.write(video_bytes.content)
+                  
+                return video_object
+    except:
+        return dict()
 
 def zip_videos(user: str,
         date: datetime.datetime,
