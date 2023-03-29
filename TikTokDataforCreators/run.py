@@ -5,28 +5,17 @@ import config
 import pandas as pd
 import pipeline
 import multiprocessing
-from functools import wraps
 import time
+from vidvault_utils import timeit
 
 TEST = True
 
 def get_airtable_data():
     table = airtable_utils.get_table_data()
     df = airtable_utils.convert_to_dataframe(airtable_table=table)
-    df.to_csv(config.UserSignUpPath().cached_user_table, index=False)
+    df.to_csv(config.UserSignUpPath().cached_user_table, index=False)   
 
-def timeit(func):
-    @wraps(func)
-    def timeit_wrapper(*args, **kwargs):
-        start_time = time.perf_counter()
-        result = func(*args, **kwargs)
-        end_time = time.perf_counter()
-        total_time = end_time - start_time
-        print(f'Run complete in {total_time:.4f} seconds')
-        return result
-    return timeit_wrapper    
-
-@timeit
+@timeit(timed_message='******Entire Run')
 def run():
     """This runs the entire process. It first checks which users have 
     not yet been sent their videos (from Airtable database), and then 

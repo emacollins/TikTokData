@@ -6,6 +6,7 @@ import config
 import boto3
 import airtable_utils
 import pipeline
+from vidvault_utils import timeit
 
 def get_user_threshold(airtable_row_id: str):
     """Implement dynamic thershold. All users default to 0.99
@@ -147,7 +148,7 @@ def extract(data: dict, user: str, airtable_row_id: str) -> pd.DataFrame:
     check_video_count(df=df, data=data, user=user, airtable_row_id=airtable_row_id)
     return df
 
-
+@timeit(message='Extract')
 def run(user: str,
         date: datetime.datetime,
         airtable_row_id: str):

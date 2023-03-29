@@ -13,9 +13,10 @@ import time
 import pandas as pd
 import numpy as np
 import math
+import vidvault_utils
 
-TEST_USER = 'THEPHOTOVERSE'
-TEST_AIRTABLE_ROW = 'recb4iqk60sDmE4cu'
+TEST_USER = 'https://www.tiktok.com/@figapp?l'
+TEST_AIRTABLE_ROW = 'reclM3jB9bWcBQG2y'
 
 def check_if_this_is_pipeline_test(airtable_row_id: str):
     table = airtable_utils.get_table_data()
@@ -54,14 +55,17 @@ def timeit(func):
     return timeit_wrapper
 
 # TODO: have an input arg of user and then apply 
-@timeit
+
 def main(user_data: dict):
-    
-    user = user_data['user'].lower()
+
+    user_raw = user_data['user']
+    user = vidvault_utils.clean_user(user=user_raw)
     airtable_row_id = user_data['airtable_row_id']
     date=datetime.datetime.now()
+    start_time = time.time()
+    print(f'Pipeline for {user} started!')
     
-    # Check if thre
+    # Airtable wont auto fill threshold, so need to do manually and default to 0.99
     threshold_check = check_if_threshold_set(airtable_row_id)
     if threshold_check:
         pass
@@ -72,16 +76,14 @@ def main(user_data: dict):
     
     harvest.run(user=user, 
                 date=date)
-    print(f'Harvest for {user} complete')
     
     extract.run(user=user, 
                 date=date,
                 airtable_row_id=airtable_row_id)
-    print(f'Extract for {user} complete')
     try:
         load.run(user=user, 
                  date=date)
-        print(f'Load for {user} complete')
+        
     except Exception as e:
         print(e)
         print(f'Load of analytics data failed on {user}, proceeding to video download')
@@ -116,11 +118,12 @@ def main(user_data: dict):
                                                 value="True")
             print(e)
             print(f'Could not get url and update airtable for {user}')
-
+    elapsed_time = time.time() - start_time
+    total_time = round(elapsed_time, 4)
+    print(f'Pipeline for {user} | complete in {total_time:.4f} seconds')
 def run(user_data: dict):
     try:
         user = user_data['user']
-        user = user.lower()
         airtable_row_id = user_data['airtable_row_id']
         main(user_data=user_data)
         
