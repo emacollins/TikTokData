@@ -16,8 +16,8 @@ if SYSTEM == 'MAC':
     LOCAL_PATH_PREFIX = '/Users/ericcollins/'
     ROOT_DIRECTORY = '/Users/ericcollins/TikTokData/TikTokDataforCreators'
 elif SYSTEM == 'LINUX':
-    LOCAL_PATH_PREFIX = '/vidvault/'
-    ROOT_DIRECTORY = '/vidvault/TikTokData/TikTokDataforCreators'
+    LOCAL_PATH_PREFIX = '/home/vidvault/'
+    ROOT_DIRECTORY = '/home/vidvault/TikTokData/TikTokDataforCreators'
 
 VIDEOS_SCRAPED_THRESHOLD_DECREASE = 0.02
 
