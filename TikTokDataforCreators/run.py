@@ -15,7 +15,7 @@ def get_airtable_data():
     df = airtable_utils.convert_to_dataframe(airtable_table=table)
     df.to_csv(config.UserSignUpPath().cached_user_table, index=False)   
 
-@timeit(timed_message='******Entire Run')
+@timeit(message='******Entire Run')
 def run():
     """This runs the entire process. It first checks which users have 
     not yet been sent their videos (from Airtable database), and then 
