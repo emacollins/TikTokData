@@ -1,13 +1,19 @@
 import datetime
 import pandas as pd
 import boto3
-
 # TODO: Create a temp directory class
 
-BUCKET = 'vidvault-app'
+
+
 LOCAL_PATH_PREFIX = '/app/'
-S3_URI_PATH_PREFIX = 's3://vidvault-app/'
 ROOT_DIRECTORY = '/app'
+
+BUCKET = 'vidvault-app'
+S3_URI_PATH_PREFIX = 's3://vidvault-app/'
+VIDEOS_SCRAPED_THRESHOLD_DECREASE = 0.02
+
+HARVEST_SCROLL_TIME = {'MAX': 250,
+                       'MIN': 5}
 
 # Path directories
 class HarvestPath:

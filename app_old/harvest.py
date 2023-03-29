@@ -7,7 +7,6 @@ import tempfile
 import boto3
 import json
 import extract
-from vidvault_utils import timeit
 
 # Adjust this to capture more videos
 # API works by scrolling down page on TikTok,
@@ -16,39 +15,36 @@ from vidvault_utils import timeit
 def get_scroll_time(user: str):
     filename = f'{user}'
     with TikTokAPI(scroll_down_time=1,navigation_retries=5, navigation_timeout=0, 
-                    data_dump_file=filename) as api:
-        user_object = api.user(user, video_limit=0)
+                    data_dump_file=filename, headless=True, navigator_type='firefox') as api:
+        try:
+            user_object = api.user(user, video_limit=0)
+        except:
+            return 200
     filename2 = f'{user}.UserResponse.json'
     with open(filename2, 'r') as file:
         json_data = json.load(file)
     video_count = json_data['UserModule']['stats'][user]['videoCount']
-    os.remove(filename2)
-    
-    # Limit scroll time to within thsee ranges
-    
-    if video_count > config.HARVEST_SCROLL_TIME['MAX']:
-        return config.HARVEST_SCROLL_TIME['MAX']
-    
-    elif video_count < config.HARVEST_SCROLL_TIME['MIN']:
-        return config.HARVEST_SCROLL_TIME['MIN']
-    else:
-        return video_count     
+    scroll_time = video_count / 2
+    return scroll_time
+        
 
-@timeit(message='Scrape TikTok')
+
 def run(user: str, 
         date: datetime.datetime) -> bool:
     """Takes in username and cleans relevant data for that user."""
     scroll_time = get_scroll_time(user=user)
+    print('Scroll time: ' +str(scroll_time))
     date_string = date.strftime('%m-%d-%Y')
     with tempfile.TemporaryDirectory(dir=config.LOCAL_PATH_PREFIX) as tmpdirname:
         filename = tmpdirname + f'/{date_string}'
         with TikTokAPI(scroll_down_time=scroll_time,navigation_retries=5, navigation_timeout=0, 
-                    data_dump_file=filename) as api:
+                    data_dump_file=filename, headless=True, navigator_type='firefox') as api:
             try:
                 user_object = api.user(user, video_limit=0)
                 upload_to_s3(directory=tmpdirname,
                                  user=user,
                                  date=date)
+                
                 return True
             except Exception as e:
                 print(e)
@@ -73,7 +69,5 @@ def upload_to_s3(directory: str,
 if __name__ == '__main__':
     user = 'tylerandhistummy'
     date = datetime.datetime.now()
-    run(user='tytheproductguy',
+    run(user=user,
         date=datetime.datetime.now())
-    extract.run(user=user,
-                date=date)
