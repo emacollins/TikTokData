@@ -12,7 +12,7 @@ ROOT_DIRECTORY = '/Users/ericcollins/TikTokData/TikTokDataforCreators'
 VIDEOS_SCRAPED_THRESHOLD_DECREASE = 0.02
 
 HARVEST_SCROLL_TIME = {'MAX': 250,
-                       'MIN': 30}
+                       'MIN': 5}
 
 # Path directories
 class HarvestPath:

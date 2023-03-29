@@ -3,8 +3,9 @@ import pandas as pd
 import config
 import boto3
 from io import BytesIO
-    
+from vidvault_utils import timeit
 
+@timeit(message='Load')
 def run(user:str, 
         date: datetime.datetime):
     # Initialize S3 client

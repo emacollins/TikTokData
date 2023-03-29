@@ -7,6 +7,7 @@ import tempfile
 import boto3
 import json
 import extract
+from vidvault_utils import timeit
 
 # Adjust this to capture more videos
 # API works by scrolling down page on TikTok,
@@ -33,7 +34,7 @@ def get_scroll_time(user: str):
     else:
         return video_count     
 
-
+@timeit(message='Scrape TikTok')
 def run(user: str, 
         date: datetime.datetime) -> bool:
     """Takes in username and cleans relevant data for that user."""

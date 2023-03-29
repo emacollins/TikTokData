@@ -15,9 +15,10 @@ import boto3
 import zipfile
 import os
 import pathlib
+import aws_utils
+from vidvault_utils import timeit
+import time
 
-
-# Download All Video From Tiktok User Function
 def download_video_no_watermark(user: str,
                                 video_id: int,
                                 tmpdirname: str,
@@ -42,7 +43,7 @@ def download_video_no_watermark(user: str,
                 return video_object
     except:
         return dict()
-
+@timeit(message='ZIP all videos')
 def zip_videos(user: str,
         date: datetime.datetime,
         tmpdirname: str):
@@ -53,18 +54,20 @@ def zip_videos(user: str,
     zip_file_destination_s3_key = config.ExtractPath(user=user).video_path_s3_key
     s3 = boto3.client('s3')
     date_string = date.strftime('%m-%d-%Y')
-    zip_file_name = f'{user}_downloaded_videos_{date_string}.zip'
+    zip_file_path = f'{user}_downloaded_videos_{date_string}.zip'
     
     # Zip the .mp4 files
-    with zipfile.ZipFile(zip_file_name, 'w') as zip_file:
+    with zipfile.ZipFile(zip_file_path, 'w') as zip_file:
         directory=pathlib.Path(tmpdirname)
         for file_path in directory.iterdir():
             zip_file.write(file_path, arcname=file_path.name)
 
+    return zip_file_path
+    
     # Upload the .zip file to S3
-    with open(zip_file_name, 'rb') as data:
-        s3.upload_fileobj(data, bucket, zip_file_destination_s3_key + '/' + zip_file_name)
-    os.remove(zip_file_name)
+    #with open(zip_file_path, 'rb') as data:
+        #s3.upload_fileobj(data, bucket, zip_file_destination_s3_key + '/' + zip_file_path)
+    
     
 
 async def start_async_process(video_ids: list,
@@ -82,16 +85,19 @@ async def start_async_process(video_ids: list,
                 pass
         
             
-   
+@timeit('download_videos() run')   
 def run(user: str,
         date: datetime) -> bool:  
     # Uses temp directorty to download the files and upload to S3
+    s3 = boto3.client('s3')
     with tempfile.TemporaryDirectory(dir=config.ROOT_DIRECTORY, prefix=f'{user}_') as tmpdirname:
         date = datetime.datetime.now()
         extract_file = config.ExtractPath(date=date,
                                           user=user).data_path_file
         user_data = pd.read_csv(extract_file)
         video_ids = list(set(user_data['video_id']))
+        start_time = time.time()
+        
         
         loop = asyncio.get_event_loop()
         future = asyncio.ensure_future(start_async_process(video_ids,
@@ -99,13 +105,33 @@ def run(user: str,
                                                            user))
         loop.run_until_complete(future)
         
+        elapsed_time = time.time() - start_time
+        total_time = round(elapsed_time, 4)
+        print(f'Individual video downloads for {user} | complete in {total_time:.4f} seconds')
+        
         try:
-            zip_videos(user=user,
+            zip_file_path = zip_videos(user=user,
                 date=date,
                 tmpdirname=tmpdirname)
-            return True
         except Exception as e:
             print(e)
+            print(f'Zipping files for {user} failed!')
+            return False
+        
+        try: 
+            try:
+                aws_utils.upload_zip_extract_file_to_s3(zip_file_path=zip_file_path, user=user, date=date)
+                os.remove(zip_file_path)
+                return True
+            except Exception as e:
+                print(f'Multipart upload failed for {user}, switching to upload_file()')
+                s3.upload_file(zip_file_path, config.BUCKET, config.ExtractPath(user=user, date=date).video_path_file_s3_key)
+                os.remove(zip_file_path)
+                return True
+                return True
+        except Exception as e:
+            print(e)
+            print(f'Uploading zip file to S3 for {user} S3 failed!')
             return False
 
 if __name__ == "__main__":
