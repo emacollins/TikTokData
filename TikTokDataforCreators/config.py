@@ -6,7 +6,7 @@ import os
 # TODO: Create a temp directory class
 load_dotenv()
 
-SYSTEM = os.getenv('SYSTEM')
+SYSTEM = 'MAC'
 
 S3_URI_PATH_PREFIX = 's3://vidvault-app/'
 BUCKET = 'vidvault-app'
