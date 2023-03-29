@@ -13,9 +13,10 @@ import time
 import pandas as pd
 import numpy as np
 import math
+import vidvault_utils
 
-TEST_USER = 'tylerandhistummy'
-TEST_AIRTABLE_ROW = 'recFxfnl5fAbxcfVf'
+TEST_USER = 'https://www.tiktok.com/@figapp?l'
+TEST_AIRTABLE_ROW = 'reclM3jB9bWcBQG2y'
 
 def check_if_this_is_pipeline_test(airtable_row_id: str):
     table = airtable_utils.get_table_data()
@@ -57,7 +58,8 @@ def timeit(func):
 
 def main(user_data: dict):
 
-    user = user_data['user'].lower()
+    user_raw = user_data['user']
+    user = vidvault_utils.clean_user(user=user_raw)
     airtable_row_id = user_data['airtable_row_id']
     date=datetime.datetime.now()
     start_time = time.time()
@@ -122,7 +124,6 @@ def main(user_data: dict):
 def run(user_data: dict):
     try:
         user = user_data['user']
-        user = user.lower()
         airtable_row_id = user_data['airtable_row_id']
         main(user_data=user_data)
         

@@ -119,16 +119,16 @@ def run(user: str,
             return False
         
         try: 
-            try:
-                aws_utils.upload_zip_extract_file_to_s3(zip_file_path=zip_file_path, user=user, date=date)
-                os.remove(zip_file_path)
-                return True
-            except Exception as e:
-                print(f'Multipart upload failed for {user}, switching to upload_file()')
-                s3.upload_file(zip_file_path, config.BUCKET, config.ExtractPath(user=user, date=date).video_path_file_s3_key)
-                os.remove(zip_file_path)
-                return True
-                return True
+            #try:
+                #aws_utils.upload_zip_extract_file_to_s3(zip_file_path=zip_file_path, user=user, date=date)
+                #os.remove(zip_file_path)
+                #return True
+            #except Exception as e:
+            print(f'Multipart upload failed for {user}, switching to upload_file()')
+            s3.upload_file(zip_file_path, config.BUCKET, config.ExtractPath(user=user, date=date).video_path_file_s3_key)
+            os.remove(zip_file_path)
+            return True
+                
         except Exception as e:
             print(e)
             print(f'Uploading zip file to S3 for {user} S3 failed!')

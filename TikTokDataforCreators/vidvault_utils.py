@@ -1,5 +1,6 @@
 from functools import wraps
 import time
+import re
 
 
 def timeit(message='Elapsed time:', user=None, date=None):
@@ -18,5 +19,16 @@ def timeit(message='Elapsed time:', user=None, date=None):
     return decorator
 
 
-
+def clean_user(user: str):
+    # Remove any special characters like @ symbols and make it all lowercase
+    
+    # Extract the username if the user string includes a URL
+    if '//' in user:
+        if '?' in user:
+            user = user.split('/')[-1].split('?')[0].strip('@')
+        else:
+            # Extract the username if the user string is just a username
+            user = user.split('@')[-1]
+    user = re.sub(r'[^\w\s]', '', user).lower()
+    return user
 

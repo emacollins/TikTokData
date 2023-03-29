@@ -1,13 +1,23 @@
 import datetime
 import pandas as pd
 import boto3
-
+from dotenv import load_dotenv
+import os
 # TODO: Create a temp directory class
+load_dotenv()
 
-BUCKET = 'vidvault-app'
-LOCAL_PATH_PREFIX = '/Users/ericcollins/'
+SYSTEM = os.getenv('SYSTEM')
+
 S3_URI_PATH_PREFIX = 's3://vidvault-app/'
-ROOT_DIRECTORY = '/Users/ericcollins/TikTokData/TikTokDataforCreators'
+BUCKET = 'vidvault-app'
+
+
+if SYSTEM == 'MAC':
+    LOCAL_PATH_PREFIX = '/Users/ericcollins/'
+    ROOT_DIRECTORY = '/Users/ericcollins/TikTokData/TikTokDataforCreators'
+elif SYSTEM == 'LINUX':
+    LOCAL_PATH_PREFIX = '/vidvault/'
+    ROOT_DIRECTORY = '/vidvault/TikTokData/TikTokDataforCreators'
 
 VIDEOS_SCRAPED_THRESHOLD_DECREASE = 0.02
 
