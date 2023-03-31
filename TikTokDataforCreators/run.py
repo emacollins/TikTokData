@@ -32,12 +32,7 @@ def run():
     users_to_download = pd.concat([test_users, new_users])
     users_to_download = users_to_download[['airtable_row_id', 'user']]
     users_to_download = users_to_download[['airtable_row_id', 'user']]
-    try:
-        users_to_download = users_to_download.sample(1)
-        
-    except Exception as e:
-	    users_to_download = pd.DataFrame()
-    
+    users_to_download = users_to_download.head(5)
     user_data = users_to_download.to_dict('records')
     
     try:

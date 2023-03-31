@@ -28,7 +28,7 @@ def check_if_this_is_pipeline_test(airtable_row_id: str):
         return True
     else: return False
 
-def check_if_threshold_set(airtable_row_id: str):
+def check_if_threshold_set(airtable_row_id: str, user:str):
     table = airtable_utils.get_table_data()
     df = airtable_utils.convert_to_dataframe(airtable_table=table)
     df = df.set_index('airtable_row_id')
@@ -36,9 +36,13 @@ def check_if_threshold_set(airtable_row_id: str):
     try:
         threshold = float(threshold)
     except:
+        print('Problem with check if threshold set function!')
         return False
     
-    if math.isnan(threshold):
+    if (math.isnan(threshold)):
+        return False
+    elif (threshold <= config.MINIMUM_VIDOES_SCRAPED_ACCURACY_THRESHOLD):
+        print(f'Warning, minmum threshold met for {user}')
         return False
     else: return True
 
@@ -66,7 +70,7 @@ def main(user_data: dict):
     print(f'Pipeline for {user} started!')
     
     # Airtable wont auto fill threshold, so need to do manually and default to 0.99
-    threshold_check = check_if_threshold_set(airtable_row_id)
+    threshold_check = check_if_threshold_set(airtable_row_id, user_raw)
     if threshold_check:
         pass
     else:

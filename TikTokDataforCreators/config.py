@@ -19,9 +19,10 @@ elif SYSTEM == 'LINUX':
     LOCAL_PATH_PREFIX = '/home/vidvault/'
     ROOT_DIRECTORY = '/home/vidvault/TikTokData/TikTokDataforCreators'
 
-VIDEOS_SCRAPED_THRESHOLD_DECREASE = 0.02
+VIDEOS_SCRAPED_THRESHOLD_DECREASE = 0.01
+MINIMUM_VIDOES_SCRAPED_ACCURACY_THRESHOLD = .90
 
-HARVEST_SCROLL_TIME = {'MAX': 250,
+HARVEST_SCROLL_TIME = {'MAX': 320,
                        'MIN': 5}
 
 # Path directories
