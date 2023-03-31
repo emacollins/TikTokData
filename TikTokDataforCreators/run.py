@@ -33,11 +33,10 @@ def run():
     users_to_download = users_to_download[['airtable_row_id', 'user']]
     users_to_download = users_to_download[['airtable_row_id', 'user']]
     users_to_download = users_to_download.head(5)
-    user_data = users_to_download.to_dict('records')
     
     try:
         with multiprocessing.Pool(processes=min([len(users_to_download), 8])) as pool:
-            pool.map(pipeline.run, user_data)
+            pool.map(pipeline.run, users_to_download.to_dict('records'))
     except Exception as e:
         print(e)
         pass            
@@ -45,7 +44,11 @@ def run():
 if __name__ == '__main__':
     
     while True:
-        run()
+        try:
+            run()
+        except Exception as e:
+            print(f'Entire run failed, retrying: {str(e)}')
+            pass
         time.sleep(10)
     
     

@@ -3,7 +3,6 @@ import config
 from turtle import down
 import harvest
 import extract
-import download_videos
 import load
 import time
 import aws_utils
