@@ -43,7 +43,7 @@ def run(user: str,
     with tempfile.TemporaryDirectory(dir=config.LOCAL_PATH_PREFIX) as tmpdirname:
         filename = tmpdirname + f'/{date_string}'
         with TikTokAPI(scroll_down_time=scroll_time,navigation_retries=5, navigation_timeout=0, 
-                    data_dump_file=filename) as api:
+                    data_dump_file=filename, navigator_type='chromium') as api:
             try:
                 user_object = api.user(user, video_limit=0)
                 upload_to_s3(directory=tmpdirname,

@@ -32,7 +32,7 @@ def run():
     users_to_download = pd.concat([test_users, new_users])
     users_to_download = users_to_download[['airtable_row_id', 'user']]
     users_to_download = users_to_download[['airtable_row_id', 'user']]
-    users_to_download = users_to_download.head(5)
+    users_to_download = users_to_download.head(1)
     
     try:
         with multiprocessing.Pool(processes=min([len(users_to_download), 8])) as pool:

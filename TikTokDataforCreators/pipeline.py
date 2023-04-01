@@ -13,6 +13,7 @@ import pandas as pd
 import numpy as np
 import math
 import vidvault_utils
+import harvest_v2
 
 TEST_USER = 'https://www.tiktok.com/@figapp?l'
 TEST_AIRTABLE_ROW = 'reclM3jB9bWcBQG2y'
@@ -77,19 +78,10 @@ def main(user_data: dict):
                                                 field='videos_scraped_threshold',
                                                 value=0.99)
     
-    harvest.run(user=user, 
-                date=date)
-    
-    extract.run(user=user, 
+    harvest_v2.run(user=user, 
                 date=date,
                 airtable_row_id=airtable_row_id)
-    try:
-        load.run(user=user, 
-                 date=date)
-        
-    except Exception as e:
-        print(e)
-        print(f'Load of analytics data failed on {user}, proceeding to video download')
+    
     
     airtable_utils.update_database_cell(row_id=airtable_row_id,
                                                 field='scrape_completed',
