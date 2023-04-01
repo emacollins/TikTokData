@@ -1,4 +1,3 @@
-import os
 from re import U
 from pyairtable import Table
 import pandas as pd
@@ -21,15 +20,16 @@ table.delete("recwAcQdqwe21as")
 
 """
 
+
 AIRTABLE_API_KEY = config.Secret_Key(key_name='AIRTABLE_API_KEY').value
 BASE_ID = config.Secret_Key(key_name='BASE_ID').value
 TABLE_NAME = 'Paying Customer Info'
 
-def get_table_data():
+def get_table_data() -> pd.DataFrame:
     
     table = Table(AIRTABLE_API_KEY, BASE_ID, TABLE_NAME)
-    #df = pd.DataFrame(data=table.all()['fields']).to_csv('TEST-airtable.csv',index=False)
-    return table.all()
+    df = convert_to_dataframe(airtable_table=table.all())
+    return df
 
 def get_new_structure():
     
@@ -38,11 +38,11 @@ def get_new_structure():
                      'user': [],
                      'videos_uploaded': [],
                      'customer_email': [],
-                     'hashtags': [],
-                     'influencer': [],
-                     'last_data_pull_date': [],
-                     'last_video_pull_date': [],
-                     'download_link': []}
+                     'videos_scraped_threshold': [],
+                     'download_link': [],
+                     'test_run': [],
+                     'scrape_completed': [],
+                     'in_progress': []}
     return new_structure
 
 def cleaned_dictionary(row, structure):
@@ -52,23 +52,22 @@ def cleaned_dictionary(row, structure):
     new_structure['user'].append(row.get('fields', {}).get('tiktok_username', nan))
     new_structure['videos_uploaded'].append(row.get('fields', {}).get('videos_uploaded', nan))
     new_structure['customer_email'].append(row.get('fields', {}).get('customer_email', nan))
-    new_structure['hashtags'].append(nan)
-    new_structure['influencer'].append(nan)
-    new_structure['last_data_pull_date'].append(nan)
-    new_structure['last_video_pull_date'].append(nan)
+    new_structure['videos_scraped_threshold'].append(row.get('fields', {}).get('videos_scraped_threshold', nan))
     new_structure['download_link'].append(row.get('fields', {}).get('download_link', nan))
-
-    
+    new_structure['test_run'].append(row.get('fields', {}).get('test_run', nan))
+    new_structure['scrape_completed'].append(row.get('fields', {}).get('scrape_completed', nan))
+    new_structure['in_progress'].append(row.get('fields', {}).get('in_progress', nan))
     return new_structure
 
 def convert_to_dataframe(airtable_table: list) -> pd.DataFrame:
     """Takes the raw output of the airtable query and makes tabular
 
+    *** TREAT ALL FIELDS
     Args:
         airtable_table (list): This is the output of get_table()
 
     Returns:
-        pd.DataFrame: Tabular dataset
+        pd.DataFrame: Tabular dataset,  *** TREAT ALL FIELDS AS STRINGS
     """
     new_structure = get_new_structure()
     for row in airtable_table:
@@ -90,8 +89,8 @@ def update_database_cell(row_id: str,
         return False
 
 
+
 if __name__ == '__main__':
-    table = get_table_data()
-    df = convert_to_dataframe(airtable_table=table)
+    df = get_table_data()
     df.to_csv('TEST_AIRTABLE_HARVEST.csv', index=False)
     

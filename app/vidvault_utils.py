@@ -29,6 +29,8 @@ def clean_user(user: str):
         else:
             # Extract the username if the user string is just a username
             user = user.split('@')[-1]
+    user = user.replace('@', '')
+    user = user.replace(' ', '')
     user = user.lower()
     return user
 
