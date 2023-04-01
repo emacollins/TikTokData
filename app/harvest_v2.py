@@ -69,8 +69,7 @@ def get_user_threshold(airtable_row_id: str):
     to start. Extract will check how many videos we scraped from harvest and 
     compare to the threshold. videos_scraped / videos_scraped_threshold. If this ratio is less
     than the threshold, we will descrease threshold and rerun"""
-    table = airtable_utils.get_table_data()
-    df = airtable_utils.convert_to_dataframe(airtable_table=table)
+    df = airtable_utils.get_table_data()
     df = df.set_index('airtable_row_id')
     threshold = df.loc[airtable_row_id, 'videos_scraped_threshold']
     return threshold

@@ -92,10 +92,13 @@ def run(user_data: dict):
     try:
         user = user_data['user']
         airtable_row_id = user_data['airtable_row_id']
+        
+        # Turn on in_progress field in database
         airtable_utils.update_database_cell(row_id=airtable_row_id,
                                                 field='in_progress',
                                                 value="True")
-        main(user_data=user_data)
+        main(user_data=user_data) 
+        
         airtable_utils.update_database_cell(row_id=airtable_row_id,
                                                 field='in_progress',
                                                 value="False")
