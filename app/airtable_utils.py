@@ -40,7 +40,8 @@ def get_new_structure():
                      'videos_scraped_threshold': [],
                      'download_link': [],
                      'test_run': [],
-                     'scrape_completed': []}
+                     'scrape_completed': [],
+                     'in_progress': []}
     return new_structure
 
 def cleaned_dictionary(row, structure):
@@ -54,6 +55,7 @@ def cleaned_dictionary(row, structure):
     new_structure['download_link'].append(row.get('fields', {}).get('download_link', nan))
     new_structure['test_run'].append(row.get('fields', {}).get('test_run', nan))
     new_structure['scrape_completed'].append(row.get('fields', {}).get('scrape_completed', nan))
+    new_structure['in_progress'].append(row.get('fields', {}).get('in_progress', nan))
     
     return new_structure
 

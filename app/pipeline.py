@@ -1,14 +1,12 @@
+import math
+import time
 import datetime
 import config
 import download_videos
-import load
-import time
 import aws_utils
 import airtable_utils
-from functools import wraps
-import time
-import math
 import vidvault_utils
+import harvest_v2
 
 TEST_USER = 'tytheproductguy'
 TEST_AIRTABLE_ROW = 'recKGvmEQKlfQ8600'
@@ -37,7 +35,7 @@ def check_if_threshold_set(airtable_row_id: str):
         return False
     else: return True
 
-
+@vidvault_utils.timeit('Pipeline')
 def main(user_data: dict):
 
     user_raw = user_data['user']
@@ -46,6 +44,15 @@ def main(user_data: dict):
     date=datetime.datetime.now()
     start_time = time.time()
     print(f'Pipeline for {user} started!')
+    
+    harvest_v2.run(user=user, 
+                date=date,
+                airtable_row_id=airtable_row_id)
+    
+    
+    airtable_utils.update_database_cell(row_id=airtable_row_id,
+                                                field='scrape_completed',
+                                                value="True")
 
 
     save_video = download_videos.run(user=user, 
@@ -81,10 +88,17 @@ def main(user_data: dict):
     total_time = round(elapsed_time, 4)
     print(f'Pipeline for {user} | complete in {total_time:.4f} seconds')
 def run(user_data: dict):
+    
     try:
         user = user_data['user']
         airtable_row_id = user_data['airtable_row_id']
+        airtable_utils.update_database_cell(row_id=airtable_row_id,
+                                                field='in_progress',
+                                                value="True")
         main(user_data=user_data)
+        airtable_utils.update_database_cell(row_id=airtable_row_id,
+                                                field='in_progress',
+                                                value="False")
         
     except Exception as e:
         print(e)
@@ -93,6 +107,9 @@ def run(user_data: dict):
         airtable_utils.update_database_cell(row_id=airtable_row_id,
                                             field='upload_failed',
                                             value="True")
+        airtable_utils.update_database_cell(row_id=airtable_row_id,
+                                                field='in_progress',
+                                                value="False")
 
 
 if __name__ == '__main__':

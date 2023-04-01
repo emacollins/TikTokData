@@ -25,15 +25,15 @@ def run():
     # Get customer database and clean
     get_airtable_data()
     user_sign_up_directory = config.UserSignUpPath().cached_user_table
-    bad_users_history = pd.read_csv(config.UserSignUpPath().bad_users)
     users = pd.read_csv(user_sign_up_directory)[['airtable_row_id', 'user', 'videos_uploaded', 'test_run', 'scrape_completed']]
-    test_users = users.loc[(~users['user'].isin(bad_users_history['user'])) & (users['test_run'] == True)]
-    new_users = users.loc[(~users['user'].isin(bad_users_history['user'])) & (users['videos_uploaded'] == False) & (users['scrape_completed'] == True)]
+    test_users = users.loc[(users['test_run'] == True)]
+    new_users = users.loc[(users['videos_uploaded'] == False) &
+                          (users['scrape_completed'] == True) &
+                          (users['in_progress'] == False)]
     users_to_download = pd.concat([test_users, new_users])
     users_to_download = users_to_download[['airtable_row_id', 'user']]
-    users_to_download = users_to_download[['airtable_row_id', 'user']]
     try:
-        users_to_download = users_to_download.sample(1)
+        users_to_download = users_to_download.head(1)
         user_data = users_to_download.to_dict('records')[0]
     except:
         print('No users to download videos for right now!')
