@@ -37,7 +37,6 @@ if __name__ == '__main__':
     
     try:
         run()
-        time.sleep(10)
     except Exception as e:
         print(f'Run level failed, retrying: {str(e)}')
     
