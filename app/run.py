@@ -22,7 +22,7 @@ def run():
     new_users = users.loc[(users['videos_uploaded'] == 'False') &
                           (users['in_progress'] == 'False')]
     users_to_download = pd.concat([test_users, new_users])
-    users_to_download = users_to_download[['airtable_row_id', 'user']]
+    users_to_download = users_to_download[['airtable_row_id', 'user', 'scrape_completed']]
     try:
         users_to_download = users_to_download.head(1)
         user_data = users_to_download.to_dict('records')[0]

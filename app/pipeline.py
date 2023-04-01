@@ -12,8 +12,7 @@ TEST_USER = 'tytheproductguy'
 TEST_AIRTABLE_ROW = 'recKGvmEQKlfQ8600'
 
 def check_if_this_is_pipeline_test(airtable_row_id: str):
-    table = airtable_utils.get_table_data()
-    df = airtable_utils.convert_to_dataframe(airtable_table=table)
+    df = airtable_utils.get_table_data()
     df = df.set_index('airtable_row_id')
     is_test = df.loc[airtable_row_id, 'test_run']
     
@@ -41,18 +40,21 @@ def main(user_data: dict):
     user_raw = user_data['user']
     user = vidvault_utils.clean_user(user=user_raw)
     airtable_row_id = user_data['airtable_row_id']
+    scrape_completed = user_data['scrape_completed']
     date=datetime.datetime.now()
     start_time = time.time()
     print(f'Pipeline for {user} started!')
     
-    harvest_v2.run(user=user, 
-                date=date,
-                airtable_row_id=airtable_row_id)
+    if scrape_completed == 'False':
     
-    
-    airtable_utils.update_database_cell(row_id=airtable_row_id,
-                                                field='scrape_completed',
-                                                value="True")
+        harvest_v2.run(user=user, 
+                    date=date,
+                    airtable_row_id=airtable_row_id)
+        
+        
+        airtable_utils.update_database_cell(row_id=airtable_row_id,
+                                                    field='scrape_completed',
+                                                    value="True")
 
 
     save_video = download_videos.run(user=user, 
@@ -92,6 +94,7 @@ def run(user_data: dict):
     try:
         user = user_data['user']
         airtable_row_id = user_data['airtable_row_id']
+        
         
         # Turn on in_progress field in database
         airtable_utils.update_database_cell(row_id=airtable_row_id,
