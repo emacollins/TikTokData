@@ -5,8 +5,8 @@ import boto3
 
 
 
-LOCAL_PATH_PREFIX = '/home/vidvault/TikTokData/app/'
-ROOT_DIRECTORY = '/home/vidvault/TikTokData/app'
+LOCAL_PATH_PREFIX = '/app/'
+ROOT_DIRECTORY = '/app'
 
 BUCKET = 'vidvault-app'
 S3_URI_PATH_PREFIX = 's3://vidvault-app/'

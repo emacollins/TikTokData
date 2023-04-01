@@ -24,7 +24,7 @@ def run():
     users_to_download = pd.concat([test_users, new_users])
     users_to_download = users_to_download[['airtable_row_id', 'user', 'scrape_completed']]
     try:
-        users_to_download = users_to_download.head(1)
+        users_to_download = users_to_download.sample(1)
         user_data = users_to_download.to_dict('records')[0]
     except:
         print('No users to download videos for right now!')
@@ -34,11 +34,11 @@ def run():
         pass            
 
 if __name__ == '__main__':
-    while True:
-        try:
-            run()
-            time.sleep(10)
-        except Exception as e:
-            print(f'Run level failed, retrying: {str(e)}')
+    
+    try:
+        run()
+        time.sleep(10)
+    except Exception as e:
+        print(f'Run level failed, retrying: {str(e)}')
     
     
