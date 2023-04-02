@@ -8,8 +8,8 @@ import airtable_utils
 import vidvault_utils
 import harvest_v2
 
-TEST_USER = 'tytheproductguy'
-TEST_AIRTABLE_ROW = 'recKGvmEQKlfQ8600'
+TEST_USER = 'witchyasamother'
+TEST_AIRTABLE_ROW = 'reclh4aYdI8Z18HNc'
 
 def check_if_this_is_pipeline_test(airtable_row_id: str):
     df = airtable_utils.get_table_data()
@@ -131,6 +131,7 @@ def run(user_data: dict):
 
 
 if __name__ == '__main__':
-    user_data = {'user': TEST_USER, 'airtable_row_id': TEST_AIRTABLE_ROW}
+    user_data = {'user': TEST_USER, 'airtable_row_id': TEST_AIRTABLE_ROW, 
+                 'scrape_completed': 'False'}
     run(user_data)
     

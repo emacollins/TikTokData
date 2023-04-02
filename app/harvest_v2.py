@@ -5,15 +5,36 @@ import json
 import airtable_utils
 import config
 import vidvault_utils
+import time
 
 def flatten_list(l):
     return [item for sublist in l for item in sublist]
+
+def check_for_api_error(data: dict) -> bool:
+    """Returns True if an eeror is found in the data"""
+    if 'error' in data:
+        if data['error'] == 'API error, please contact us.':
+            print('Scrape API error, retrying!')
+            time.sleep(1)
+            return True
+    if 'statusCode' in data:
+        if data['statusCode'] == '10101':
+            print('10101 Status code on scrape, retrying')
+            time.sleep(1)
+            return True
+    if 'messages' in data:
+        if data['messages'] == 'The API is unreachable, please contact the API provider':
+            print('API is unreachable message on scrape, retrying')
+            time.sleep(1)
+            return True
+    return False
+    
 
 def get_user_sec_uid(user: str):
 
     url = "https://scraptik.p.rapidapi.com/web/get-user"
 
-    querystring = {"username":user}
+    querystring = {"username": user}
 
     headers = {
         "X-RapidAPI-Key": config.Secret_Key(key_name='SCRAPTIK_RAPIDAPI').value,
@@ -40,13 +61,17 @@ def get_user_videos(user_secUid: str):
         querystring = {"secUid": secUid,"count":"30","cursor":cursor}
 
         headers = {
-            "X-RapidAPI-Key": "2eeb3e0118msh858f7a2fd2695cbp1a0abdjsn212f30c29918",
+            "X-RapidAPI-Key": config.Secret_Key(key_name='SCRAPTIK_RAPIDAPI').value,
             "X-RapidAPI-Host": "scraptik.p.rapidapi.com"
         }
 
         response = requests.request("GET", url, headers=headers, params=querystring)
     
         data = json.loads(response.text)
+        
+        if check_for_api_error(data=data):
+            continue
+        
         try:
             hasMore = data['hasMore']
         except:
@@ -57,6 +82,7 @@ def get_user_videos(user_secUid: str):
             pass
         try:
             master_itemList.append(data['itemList'])
+            time.sleep(.5)
         except:
             pass
         
@@ -132,9 +158,9 @@ def run(user: str,
     
     
 if __name__ == '__main__':
-    run(user='kara_in_florida',
+    run(user='witchyasamother',
         date=datetime.datetime.now(),
-        airtable_row_id='recx3A6RM6knuCFU0')
+        airtable_row_id='reclh4aYdI8Z18HNc')
     
     
     
