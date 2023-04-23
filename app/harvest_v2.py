@@ -7,32 +7,46 @@ import config
 import vidvault_utils
 import time
 
+ERROR_COUNT = 0
+
 def flatten_list(l):
     return [item for sublist in l for item in sublist]
 
 def check_for_api_error(data: dict) -> bool:
-    """Returns True if an eeror is found in the data"""
+    
+    global ERROR_COUNT
+    
+    if ERROR_COUNT > 10:
+        assert 1 == 0, 'Error count of 10 reached on harvest'
+    
+    """Returns True if an error is found in the data"""
     if 'error' in data:
         if data['error'] == 'API error, please contact us.':
             print('Scrape API error, retrying!')
             time.sleep(1)
+            ERROR_COUNT =+ 1
             return True
     if 'statusCode' in data:
         if data['statusCode'] == '10101':
             print('10101 Status code on scrape, retrying')
             time.sleep(1)
+            ERROR_COUNT =+ 1
             return True
     if 'messages' in data:
         if data['messages'] == 'The API is unreachable, please contact the API provider':
             print('API is unreachable message on scrape, retrying')
             time.sleep(1)
+            ERROR_COUNT =+ 1
             return True
+    if 'status_code' in data:
+        if data['status_code'] != 200:
+            status_code = data['status_code']
     return False
     
 
-def get_user_sec_uid(user: str):
+def get_user_uid(user: str):
 
-    url = "https://scraptik.p.rapidapi.com/web/get-user"
+    url = "https://scraptik.p.rapidapi.com/get-user"
 
     querystring = {"username": user}
 
@@ -44,21 +58,18 @@ def get_user_sec_uid(user: str):
     response = requests.request("GET", url, headers=headers, params=querystring)
 
     data = json.loads(response.text)
-    return data['userInfo']['user']['secUid']
+    return data['user']['uid']
 
-def get_user_videos(user_secUid: str):
+def get_user_videos(user_id: str):
     hasMore = True
     cursor = "0"
     master_itemList = []
     while hasMore:
-    
-    
-        secUid = user_secUid
         
 
-        url = "https://scraptik.p.rapidapi.com/web/user-posts"
+        url = "https://scraptik.p.rapidapi.com/user-posts"
 
-        querystring = {"secUid": secUid,"count":"30","cursor":cursor}
+        querystring = {"user_id": user_id, "count":"30", "max_cursor": str(cursor)}
 
         headers = {
             "X-RapidAPI-Key": config.Secret_Key(key_name='SCRAPTIK_RAPIDAPI').value,
@@ -73,15 +84,17 @@ def get_user_videos(user_secUid: str):
             continue
         
         try:
-            hasMore = data['hasMore']
+            hasMore = data['has_more']
+            if hasMore == 0:
+                hasMore = False
         except:
             hasMore = False
         try:
-            cursor = data['cursor']
+            cursor = data['max_cursor']
         except:
             pass
         try:
-            master_itemList.append(data['itemList'])
+            master_itemList.append(data['aweme_list'])
             time.sleep(.5)
         except:
             pass
@@ -131,11 +144,8 @@ def check_video_count(df: pd.DataFrame,
         assert 1 == 0
     
     
-    if videos_scraped == videos_expected:
-        return True
-
-    else:
-        print(f'{user} did not get all videos. {videos_scraped} / {videos_expected} scraped, but threshold met.')
+    if videos_scraped >= videos_expected:
+        print(f'{videos_scraped} / {videos_expected} videos scraped')
         return True
      
 
@@ -143,13 +153,13 @@ def check_video_count(df: pd.DataFrame,
 def run(user: str,
         date: datetime.datetime,
         airtable_row_id: str):
-    user_secUid = get_user_sec_uid(user)
-    user_videos = get_user_videos(user_secUid=user_secUid)
+    user_id = get_user_uid(user)
+    user_videos = get_user_videos(user_id=user_id)
     video_stats = {"video_id": [], "user_video_count": []}
     
     for video in user_videos:
-        video_stats['video_id'].append(video['id'])
-        video_stats['user_video_count'].append(video['authorStats']['videoCount'])
+        video_stats['video_id'].append(video['aweme_id'])
+        video_stats['user_video_count'].append(video['author']['aweme_count'])
     
     df = pd.DataFrame(data=video_stats)
     check_video_count(df,user,airtable_row_id)
