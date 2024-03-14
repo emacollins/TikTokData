@@ -53,7 +53,7 @@ def main(user_data: dict):
         
         threshold_check = check_if_threshold_set(airtable_row_id, user=user_raw)
         if threshold_check:
-            pass
+            print("Threshold set, running harvest")
         else:
             airtable_utils.update_database_cell(row_id=airtable_row_id,
                                                     field='videos_scraped_threshold',

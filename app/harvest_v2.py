@@ -154,7 +154,9 @@ def run(user: str,
         date: datetime.datetime,
         airtable_row_id: str):
     user_id = get_user_uid(user)
+    print(f'User ID: {user_id}')
     user_videos = get_user_videos(user_id=user_id)
+    print(f'User Videos Scraped: {len(user_videos)}')
     video_stats = {"video_id": [], "user_video_count": []}
     
     for video in user_videos:
@@ -163,6 +165,7 @@ def run(user: str,
     
     df = pd.DataFrame(data=video_stats)
     check_video_count(df,user,airtable_row_id)
+    print("Video count checked")
     df.set_index('video_id', inplace=True)
     df.to_csv(config.ExtractPath(user=user, date=date).data_path_file)
     
